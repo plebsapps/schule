@@ -77,3 +77,17 @@ Da Administratorrechte auf dem Server ein interaktives sudo-Passwort verlangen, 
 Die privilegierten Installationsschritte wurden als manuelle Betriebsanleitung dokumentiert. Dieses Vorgehen hält den Quellcode nachvollziehbar und vermeidet das riskante Umgehen der Serverberechtigungen.
 
 Beim Umschalten von Django auf den Produktionsmodus zeigte der Container-Healthcheck zunächst einen Fehler: `ALLOWED_HOSTS` erlaubte korrekt nur die Produktivdomain, der interne Check sendete aber `127.0.0.1` als Host. Statt die Sicherheitsregel durch eine zusätzliche Hostfreigabe abzuschwächen, wurde der Healthcheck so angepasst, dass er den echten Produktivhost und das erwartete HTTPS-Proxyprotokoll mitsendet.
+
+## Erfolgreiche HTTPS-Inbetriebnahme
+
+Nach dem Merge der geprüften Vorlagen führte der Serveradministrator die privilegierten Schritte direkt im Serverterminal aus. Danach wurden unabhängig geprüft:
+
+- dauerhafte Weiterleitung von HTTP auf HTTPS
+- gültiges Let's-Encrypt-Zertifikat ausschließlich für `schule.plebsapps.de`
+- Weiterleitung nicht angemeldeter Benutzer zur Anmeldeseite
+- HSTS, Frame-Schutz, MIME-Sniffing-Schutz und Referrer-Policy
+- erfolgreicher öffentlicher Healthcheck
+- gesunder Zustand beider Projektcontainer
+- aktivierter Certbot-Timer
+
+Es wurde kein Standardbenutzer mit veröffentlichtem Passwort angelegt. Der erste Administrator wird interaktiv im Container erstellt, damit das Passwort weder im Repository noch in Chat- oder Befehlsprotokollen erscheint.
