@@ -80,3 +80,12 @@ buch/build/arbeiten-mit-codex-zwischenstand.epub
 ```
 
 `buch/build/` enthält generierte Ausgaben und wird nicht versioniert. Maßgebliche Quellen bleiben die Markdown-Dateien, `metadata.yaml` und `epub.css`.
+
+## Veröffentlichte Zwischenstände
+
+Geprüfte EPUB-Zwischenstände werden als GitHub-Prereleases veröffentlicht. Dadurch bleiben Binärdateien aus der Git-Historie heraus, sind aber direkt über das öffentliche Repository abrufbar.
+
+- [Praxislehrbuch – Zwischenstand 2026-07-10](https://github.com/plebsapps/schule/releases/tag/book-preview-2026-07-10)
+- [EPUB direkt herunterladen](https://github.com/plebsapps/schule/releases/download/book-preview-2026-07-10/arbeiten-mit-codex-zwischenstand.epub)
+
+Die Release-Notizen nennen Quell-Commit, Buildwerkzeug und SHA-256-Prüfsumme. Ein veröffentlichter Download wird nach dem Upload erneut heruntergeladen und gegen die lokale Prüfsumme verglichen.
