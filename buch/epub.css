@@ -1,0 +1,71 @@
+body {
+  color: #1a2538;
+  font-family: serif;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  color: #172443;
+  font-family: sans-serif;
+  line-height: 1.2;
+  page-break-after: avoid;
+}
+
+h1 {
+  margin-top: 2em;
+  border-bottom: 0.08em solid #2864dc;
+  padding-bottom: 0.25em;
+}
+
+h2 {
+  margin-top: 1.6em;
+}
+
+p,
+li {
+  orphans: 3;
+  widows: 3;
+}
+
+blockquote {
+  margin: 1.2em 0;
+  border-left: 0.25em solid #2864dc;
+  padding: 0.25em 1em;
+  background: #f4f6fa;
+}
+
+code {
+  font-family: monospace;
+}
+
+pre {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  border: 0.08em solid #dde3ec;
+  padding: 0.8em;
+  background: #f7f8fb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+}
+
+th,
+td {
+  border: 0.08em solid #cfd6e2;
+  padding: 0.4em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #eaf1ff;
+}
+
+a {
+  color: #1c53c4;
+}

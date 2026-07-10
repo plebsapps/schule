@@ -64,3 +64,19 @@ Vor der Aufnahme werden echte personenbezogene Daten, Secrets, Zugangstokens und
 ## Vollständigkeitsprinzip
 
 Nach jeder größeren Aufgabe werden Kapitel, Kommandoreferenz und Projektchronik geprüft. Die Chronik dient als Inhaltsregister: Ein Ereignis gilt für das Buch erst dann als erfasst, wenn Ausgangslage, Prompt, Entscheidung, wichtige Befehle, Prüfungen, Blocker, Sicherheitsaspekte und Ergebnis dokumentiert oder eindeutig einem geplanten Kapitel zugeordnet sind.
+
+## EPUB-Zwischenstand erzeugen
+
+Der EPUB-Export verwendet ein fest versioniertes offizielles Pandoc-Containerimage und benötigt keine globale Pandoc-Installation:
+
+```bash
+./scripts/build-book-epub.sh
+```
+
+Die Ausgabe entsteht unter:
+
+```text
+buch/build/arbeiten-mit-codex-zwischenstand.epub
+```
+
+`buch/build/` enthält generierte Ausgaben und wird nicht versioniert. Maßgebliche Quellen bleiben die Markdown-Dateien, `metadata.yaml` und `epub.css`.
