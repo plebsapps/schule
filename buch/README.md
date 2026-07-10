@@ -13,20 +13,54 @@ Ziel ist ein späteres Lehrbuch, das nicht nur fertige Ergebnisse zeigt, sondern
 
 Alle Inhalte müssen ohne echte Schülerdaten, ohne Secrets und ohne produktive Zugangsdaten auskommen.
 
-## Vorgesehene Kapitel
+## Modell- und Dokumentationsgrundlage
+
+Dieses Praxislehrbuch entsteht auf Grundlage der Projektarbeit mit GPT-5.6 Sol (`gpt-5.6-sol`). Die Befehls- und Funktionsbeschreibungen beziehen sich auf den dokumentierten Stand vom 10. Juli 2026.
+
+Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nennt jede Referenz die zugehörige Oberfläche und unterscheidet zwischen dauerhaftem Arbeitsprinzip und versionsabhängiger Bedienung.
+
+## Buchstruktur
+
+### Teil I: Projekt und Ausgangslage
 
 1. Projektstart, Planung und Repository-Anlage
 2. Vom Plan zum technischen Django-Grundgerüst
 3. Professionelles UI-Grundsystem und sichere Beispieldaten
-4. Projektplanung mit `PLAN.md`
-5. Datenschutz und Sicherheit als Codex-Leitplanken
-6. Git, GitHub und nachvollziehbare Änderungen
-7. Umsetzung der Fachmodule
-8. Tests und Qualitätssicherung
-9. Betrieb, Deployment und Dokumentation
+
+### Teil II: Codex verstehen und bedienen
+
+4. GPT-5.6 Sol, Codex-Oberflächen und Befehlsarten
+5. Gute Prompts und dauerhafte Projektregeln
+6. Berechtigungen, Sandbox und sichere Ausführung
+
+### Teil III: Praktische Weiterentwicklung
+
+7. Fachmodelle und Migrationen
+8. Rollen und serverseitige Berechtigungen
+9. Noteneingabe, Konfliktschutz und Freigabe
+10. Zeugnisversionen und PDF-Erzeugung
+11. Import, Audit, Backup und Restore
+
+### Anhang
+
+- [Codex-Kommandoreferenz](anhang-codex-kommandoreferenz.md)
+- [Projektchronik und Vollständigkeitskontrolle](projektchronik.md)
+- Git-, Docker- und Betriebsbefehle
+- Glossar und Checklisten
+
+## Vorhandene Kapitel
+
+- [Kapitel 1: Projektstart, Planung und Repository-Anlage](01-projektstart-planung-repository.md)
+- [Kapitel 2: Vom Plan zum technischen Grundgerüst](02-django-grundgeruest.md)
+- [Kapitel 3: Ein professionelles UI mit sicheren Beispieldaten](03-ui-grundsystem-beispieldaten.md)
+- [Kapitel 4: GPT-5.6 Sol und die Codex-Oberflächen](04-gpt-5-6-sol-codex-oberflaechen.md)
 
 ## Redaktion der Prompts
 
 Projektbezogene Prompts werden als Bestandteil der jeweiligen Kapitel dokumentiert. Für eine lesbare Druckfassung werden Rechtschreibung, Grammatik, Zeichensetzung und Struktur verbessert. Die fachliche Absicht bleibt dabei unverändert; die Buchfassung wird als redaktionell überarbeiteter Prompt gekennzeichnet und nicht als wörtliches Transkript ausgegeben.
 
 Vor der Aufnahme werden echte personenbezogene Daten, Secrets, Zugangstokens und sensible lokale Systemdetails entfernt oder durch künstliche Platzhalter ersetzt.
+
+## Vollständigkeitsprinzip
+
+Nach jeder größeren Aufgabe werden Kapitel, Kommandoreferenz und Projektchronik geprüft. Die Chronik dient als Inhaltsregister: Ein Ereignis gilt für das Buch erst dann als erfasst, wenn Ausgangslage, Prompt, Entscheidung, wichtige Befehle, Prüfungen, Blocker, Sicherheitsaspekte und Ergebnis dokumentiert oder eindeutig einem geplanten Kapitel zugeordnet sind.
