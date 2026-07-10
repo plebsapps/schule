@@ -851,6 +851,6 @@ Vorgesehene öffentliche Domain:
 https://schule.plebsapps.de
 ```
 
-Nginx und HTTPS werden erst nach erfolgreicher Prüfung des Anwendungsstacks in einem getrennten, ausdrücklich freizugebenden Server-Schritt eingerichtet.
+Nginx und HTTPS wurden nach erfolgreicher Prüfung des Anwendungsstacks in einem getrennten, ausdrücklich freigegebenen Server-Schritt eingerichtet.
 
-Für diesen Schritt liegen versionierte Bootstrap- und TLS-Vorlagen sowie eine Betriebsanleitung unter `nginx/` und `docs/deployment.md` vor. Die Installation auf dem Server benötigt Administratorrechte.
+Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. HTTP wird auf HTTPS umgeleitet, Django bleibt ausschließlich an `127.0.0.1:8005` gebunden, und das Let's-Encrypt-Zertifikat wird durch den aktivierten Certbot-Timer erneuert. Versionierte Bootstrap- und TLS-Vorlagen sowie die Betriebsanleitung liegen unter `nginx/` und `docs/deployment.md` vor.

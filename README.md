@@ -2,7 +2,7 @@
 
 Dieses Repository enthält die Planung und schrittweise Umsetzung einer webbasierten Zeugnisverwaltung für Schulen. Die Anwendung soll eine bestehende Excel- und Seriendrucklösung ablösen und sensible Schülerdaten innerhalb einer kontrollierten Serverumgebung verarbeiten.
 
-Der aktuelle Stand ist das technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthcheck und Basistests sind vorhanden. Fachmodule und ein Produktiv-Deployment folgen in späteren Phasen.
+Der aktuelle Stand ist das öffentlich erreichbare technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthchecks, Nginx und HTTPS sind vorhanden. Fachmodule folgen in späteren Phasen.
 
 ## Zielbild
 
@@ -57,7 +57,7 @@ docker compose up --build -d
 docker compose ps
 ```
 
-Die Anwendung ist anschließend ausschließlich lokal am Server unter `http://127.0.0.1:8005` erreichbar. Der öffentliche Zugriff über `https://schule.plebsapps.de` wird erst im separaten Nginx-/HTTPS-Schritt eingerichtet.
+Docker veröffentlicht die Anwendung ausschließlich lokal am Server unter `http://127.0.0.1:8005`. Der öffentliche Zugriff erfolgt über Nginx unter `https://schule.plebsapps.de`.
 
 Ein Administratorkonto wird bewusst nicht automatisch mit einem Standardpasswort erstellt:
 
@@ -96,7 +96,7 @@ Die initiale Migration für das projektspezifische Benutzer-Modell liegt unter `
 
 ## Deployment
 
-Das vorgesehene Ziel ist `https://schule.plebsapps.de`. Docker veröffentlicht Django nur an `127.0.0.1:8005`. Die geprüften Nginx-Vorlagen und manuellen HTTPS-Schritte stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
+Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx beendet TLS und leitet Anfragen intern weiter. Die geprüften Vorlagen und Betriebsabläufe stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
 
 ## Backup und Wiederherstellung
 
@@ -114,7 +114,7 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 - Es existieren noch keine fachlichen Apps für Schüler, Klassen, Noten oder Zeugnisse.
 - Rollen und fachliche Berechtigungen sind noch nicht implementiert.
-- Nginx, HTTPS, Backup und Restore sind noch nicht eingerichtet.
+- Backup und Restore sind noch nicht eingerichtet und getestet.
 - Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
 - Offene Fachfragen sind in `PLAN.md` aufgeführt.
 

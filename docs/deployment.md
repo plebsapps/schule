@@ -1,5 +1,20 @@
 # Deployment auf `schule.plebsapps.de`
 
+## Aktueller Betriebsstand
+
+Das erste Deployment wurde am 10. Juli 2026 erfolgreich abgeschlossen:
+
+- HTTP leitet auf HTTPS um.
+- Let's Encrypt liefert ein Zertifikat für `schule.plebsapps.de` aus.
+- Django läuft mit deaktiviertem Debug-Modus und sicheren Cookies.
+- HSTS ist für ein Jahr mit `includeSubDomains` aktiv.
+- Nginx leitet ausschließlich an `127.0.0.1:8005` weiter.
+- PostgreSQL besitzt keinen veröffentlichten Host-Port.
+- `schule-web` und `schule-db` sind gesund.
+- der Certbot-Timer ist aktiviert.
+
+Ein separater `certbot renew --dry-run` benötigt Administratorrechte und bleibt als regelmäßige Betriebsprüfung erforderlich.
+
 ## Voraussetzungen
 
 - DNS-A-Record zeigt auf den vorgesehenen Server.
