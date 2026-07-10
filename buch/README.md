@@ -16,7 +16,7 @@ Alle Inhalte müssen ohne echte Schülerdaten, ohne Secrets und ohne produktive 
 ## Vorgesehene Kapitel
 
 1. Projektstart, Planung und Repository-Anlage
-2. Arbeitsregeln mit `AGENTS.md`
+2. Vom Plan zum technischen Django-Grundgerüst
 3. Projektplanung mit `PLAN.md`
 4. Datenschutz und Sicherheit als Codex-Leitplanken
 5. Git, GitHub und nachvollziehbare Änderungen
