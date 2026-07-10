@@ -860,3 +860,9 @@ Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. HTTP wird auf 
 Für die weitere Fachentwicklung ist ein responsives, serverseitig gerendertes Designsystem umgesetzt. Login, Navigation, Dashboard-Karten, Tabellen, Fortschrittsanzeigen, Status und Formulare besitzen ein einheitliches Grundlayout. Externe Fonts, Trackingdienste und unnötiges JavaScript werden nicht verwendet.
 
 Bis zur fachlichen Klärung des Datenmodells zeigt das Dashboard ausschließlich klar gekennzeichnete, flüchtige und vollständig künstliche Beispieldaten. Diese werden nicht in der Datenbank gespeichert und dürfen nicht als reale Schüler-, Klassen- oder Notendaten interpretiert werden.
+
+### Praxislehrbuch
+
+Die Buchstruktur unterscheidet Projektchronik, Fachkapitel und versionsbezogene Referenzen. GPT-5.6 Sol (`gpt-5.6-sol`) ist als Arbeitsgrundlage benannt. Eine eigene Kommandoreferenz erfasst die aktuell dokumentierten Slash-Kommandos der Desktop-App und der Codex CLI sowie die im Projekt verwendeten Codex-, Git-, Docker- und Django-Befehle.
+
+Die Projektchronik wird nach jeder größeren Aufgabe fortgeschrieben. Dadurch bleiben Prompts, Entscheidungen, Befehle, Tests, Blocker, Sicherheitsüberlegungen und Ergebnisse bis zur späteren Druckfassung nachvollziehbar.
