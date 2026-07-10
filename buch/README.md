@@ -17,12 +17,13 @@ Alle Inhalte müssen ohne echte Schülerdaten, ohne Secrets und ohne produktive 
 
 1. Projektstart, Planung und Repository-Anlage
 2. Vom Plan zum technischen Django-Grundgerüst
-3. Projektplanung mit `PLAN.md`
-4. Datenschutz und Sicherheit als Codex-Leitplanken
-5. Git, GitHub und nachvollziehbare Änderungen
-6. Umsetzung des Django-Grundgerüsts
-7. Tests und Qualitätssicherung
-8. Betrieb, Deployment und Dokumentation
+3. Professionelles UI-Grundsystem und sichere Beispieldaten
+4. Projektplanung mit `PLAN.md`
+5. Datenschutz und Sicherheit als Codex-Leitplanken
+6. Git, GitHub und nachvollziehbare Änderungen
+7. Umsetzung der Fachmodule
+8. Tests und Qualitätssicherung
+9. Betrieb, Deployment und Dokumentation
 
 ## Redaktion der Prompts
 

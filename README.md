@@ -4,6 +4,8 @@ Dieses Repository enthält die Planung und schrittweise Umsetzung einer webbasie
 
 Der aktuelle Stand ist das öffentlich erreichbare technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthchecks, Nginx und HTTPS sind vorhanden. Fachmodule folgen in späteren Phasen.
 
+Die Anwendung besitzt ein responsives, serverseitig gerendertes UI-Grundsystem. Das aktuelle Dashboard zeigt ausschließlich deutlich gekennzeichnete künstliche Beispieldaten; diese sind nicht in der Datenbank gespeichert und legen das spätere Fachmodell nicht fest.
+
 ## Zielbild
 
 Vorgesehen sind Django, PostgreSQL, Docker Compose, Nginx, pytest sowie eine serverseitige HTML-zu-PDF-Erzeugung. Zentrale Anforderungen sind rollenbasierte serverseitige Berechtigungen, unveränderliche freigegebene Zeugnisse, Versionierung, Audit-Protokollierung und Schutz vor Bearbeitungskonflikten.
@@ -121,6 +123,8 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 ## Datenschutz und Sicherheit
 
 Dieses öffentliche Repository darf ausschließlich Quellcode, künstliche Testdaten und nicht sensible Dokumentation enthalten. Echte Schülerdaten, Zeugnisse, Zugangsdaten, Tokens, produktive Konfigurationen und Backups dürfen niemals veröffentlicht werden.
+
+Gestaltungs- und Barrierefreiheitsregeln sind in [docs/ui-guidelines.md](docs/ui-guidelines.md) dokumentiert.
 
 ## Lizenz
 

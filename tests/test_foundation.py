@@ -1,6 +1,9 @@
 import pytest
 from django.contrib.auth import get_user_model
+from django.contrib.staticfiles import finders
 from django.urls import reverse
+
+from apps.core.demo_data import DEMO_DASHBOARD
 
 
 @pytest.mark.django_db
@@ -26,7 +29,32 @@ def test_authenticated_user_can_open_home(client):
     response = client.get(reverse("home"))
 
     assert response.status_code == 200
-    assert "Die Anmeldung funktioniert" in response.content.decode()
+    content = response.content.decode()
+    assert "Ausschließlich künstliche Beispieldaten" in content
+    assert "Lehrkraft Beispiel" in content
+
+
+@pytest.mark.django_db
+def test_demo_dashboard_does_not_create_domain_records(client):
+    user = get_user_model().objects.create_user(username="kuenstliche-lehrkraft")
+    client.force_login(user)
+
+    client.get(reverse("home"))
+
+    assert get_user_model().objects.count() == 1
+    assert DEMO_DASHBOARD["school_year"] == "2026/2027"
+
+
+def test_login_page_uses_local_design_assets(client):
+    response = client.get(reverse("login"))
+    content = response.content.decode()
+
+    assert response.status_code == 200
+    assert 'label for="id_username"' in content
+    assert 'label for="id_password"' in content
+    assert "https://fonts." not in content
+    assert "Keine echten Schülerdaten" in content
+    assert finders.find("css/app.css") is not None
 
 
 def test_custom_user_model_is_configured(settings):
