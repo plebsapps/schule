@@ -96,7 +96,7 @@ Die initiale Migration für das projektspezifische Benutzer-Modell liegt unter `
 
 ## Deployment
 
-Das vorgesehene Ziel ist `https://schule.plebsapps.de`. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx und HTTPS werden separat eingerichtet, nachdem der Anwendungsstack erfolgreich geprüft wurde. Änderungen an Nginx oder Zertifikaten sind manuelle, ausdrücklich freizugebende Serverarbeiten.
+Das vorgesehene Ziel ist `https://schule.plebsapps.de`. Docker veröffentlicht Django nur an `127.0.0.1:8005`. Die geprüften Nginx-Vorlagen und manuellen HTTPS-Schritte stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
 
 ## Backup und Wiederherstellung
 

@@ -64,3 +64,16 @@ Die Korrektur bestand nicht darin, den Container wieder als Root auszuführen. S
 ## Bewusste offene Sicherheitsentscheidung
 
 Djangos Deployment-Prüfung meldete HSTS-Preload als nicht aktiviert. Diese Warnung wurde bewusst nicht durch unüberlegtes Aktivieren oder Ausblenden beseitigt. Die Aufnahme in Browser-Preload-Listen ist langfristig und setzt einen dauerhaft zuverlässigen HTTPS-Betrieb voraus. Der offene Punkt wurde deshalb für die spätere Nginx-/HTTPS-Phase dokumentiert.
+
+## Vorbereitung von Nginx und HTTPS
+
+Das bereits vorhandene Let's-Encrypt-Zertifikat für `plebsapps.de` wurde über den öffentlich ausgelieferten Zertifikatsinhalt geprüft. Es enthielt `pdb.plebsapps.de`, `plebsapps.de` und `www.plebsapps.de`, aber nicht `schule.plebsapps.de`. Für die neue Anwendung ist deshalb ein eigenes Zertifikat erforderlich.
+
+Da Administratorrechte auf dem Server ein interaktives sudo-Passwort verlangen, wurden keine Zugangsdaten im Chat oder in Befehlsausgaben übertragen. Stattdessen entstanden zwei versionierte Nginx-Vorlagen:
+
+1. eine reine HTTP-Bootstrap-Site für die Certbot-Prüfung
+2. eine endgültige HTTPS-Site mit Weiterleitung und sicheren Proxy-Headern
+
+Die privilegierten Installationsschritte wurden als manuelle Betriebsanleitung dokumentiert. Dieses Vorgehen hält den Quellcode nachvollziehbar und vermeidet das riskante Umgehen der Serverberechtigungen.
+
+Beim Umschalten von Django auf den Produktionsmodus zeigte der Container-Healthcheck zunächst einen Fehler: `ALLOWED_HOSTS` erlaubte korrekt nur die Produktivdomain, der interne Check sendete aber `127.0.0.1` als Host. Statt die Sicherheitsregel durch eine zusätzliche Hostfreigabe abzuschwächen, wurde der Healthcheck so angepasst, dass er den echten Produktivhost und das erwartete HTTPS-Proxyprotokoll mitsendet.
