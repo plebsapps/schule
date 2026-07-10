@@ -866,3 +866,5 @@ Bis zur fachlichen Klärung des Datenmodells zeigt das Dashboard ausschließlich
 Die Buchstruktur unterscheidet Projektchronik, Fachkapitel und versionsbezogene Referenzen. GPT-5.6 Sol (`gpt-5.6-sol`) ist als Arbeitsgrundlage benannt. Eine eigene Kommandoreferenz erfasst die aktuell dokumentierten Slash-Kommandos der Desktop-App und der Codex CLI sowie die im Projekt verwendeten Codex-, Git-, Docker- und Django-Befehle.
 
 Die Projektchronik wird nach jeder größeren Aufgabe fortgeschrieben. Dadurch bleiben Prompts, Entscheidungen, Befehle, Tests, Blocker, Sicherheitsüberlegungen und Ergebnisse bis zur späteren Druckfassung nachvollziehbar.
+
+Ein wiederholbarer EPUB3-Zwischenstand kann über das versionsfeste offizielle Pandoc-Containerimage erzeugt werden. Die Markdown-Dateien bleiben die maßgeblichen Quellen; generierte EPUB-Dateien werden nicht versioniert.

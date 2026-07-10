@@ -16,3 +16,9 @@ Alle Versionen sind kontrolliert festgelegt. Aktualisierungen erfolgen über eig
 | PostgreSQL 17.10 Bookworm | Relationale Datenbank | PostgreSQL License | Offizielles Image mit festem Patchstand; Datenbank nicht nach außen veröffentlicht | Bestehende externe PostgreSQL-Instanz, jedoch mit höherem Betriebs- und Isolationsaufwand |
 
 Die Binary-Variante von Psycopg ist für das reproduzierbare Grundgerüst pragmatisch. Vor einem gehärteten Produktivbetrieb wird geprüft, ob ein Build gegen systemeigene `libpq`-Pakete bevorzugt werden soll.
+
+## Dokumentationswerkzeug
+
+| Abhängigkeit | Zweck | Lizenz | Sicherheitsrelevanz und Wartung | Alternative ohne Abhängigkeit |
+|---|---|---|---|---|
+| Pandoc 3.10.0.0 im offiziellen Container `pandoc/core` | Wiederholbarer EPUB3-Export des Praxislehrbuchs | GPL-2.0-or-later; enthaltene Komponenten können eigene kompatible Lizenzen besitzen | Nur für lokale Dokumenterzeugung; kein Teil des Anwendungscontainers; versionsfestes offizielles Image | Manuelle EPUB-Erstellung wäre fehleranfällig; eine globale Pandoc-Installation würde den Server verändern |

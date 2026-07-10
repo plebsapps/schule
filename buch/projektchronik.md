@@ -22,6 +22,7 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | Staticfiles | `STATICFILES_DIRS`, WhiteNoise und Live-CSS-Prüfung | Kapitel 3 | erfasst |
 | Codex-Grundlage | GPT-5.6 Sol, Oberflächen und Befehlsarten | Kapitel 4 | erfasst |
 | Codex-Kommandos | App-, CLI-, Git-, Docker- und Django-Referenz | Kommandoreferenz | erfasst |
+| EPUB-Zwischenstand | wiederholbarer Pandoc-Containerbuild, Metadaten und EPUB-CSS | `buch/README.md` und Buildskript | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
 | Betrieb | Backup, Restore-Test, Monitoring, Aufbewahrung | zukünftige Kapitel | offen |
@@ -35,6 +36,11 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | #3 | Nginx- und HTTPS-Vorbereitung | gemergt |
 | #4 | erfolgreicher HTTPS-Betrieb dokumentiert | gemergt |
 | #5 | UI-Grundsystem und künstliches Demo-Dashboard | gemergt |
+| #6 | Buchstruktur, GPT-5.6-Sol-Grundlage und Codex-Kommandoreferenz | gemergt |
+
+## Redaktionell überarbeiteter Prompt zum EPUB-Zwischenstand
+
+> Merge den aktuellen Buchstand nach `main` und erstelle anschließend eine EPUB-Datei als Zwischenstand des Praxislehrbuchs.
 
 ## Wiederkehrender Abschlusscheck
 
