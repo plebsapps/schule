@@ -1,0 +1,25 @@
+# Praxislehrbuch Arbeiten mit Codex
+
+Dieses Verzeichnis sammelt die Erkenntnisse aus der praktischen Arbeit mit Codex an diesem Projekt.
+
+Ziel ist ein späteres Lehrbuch, das nicht nur fertige Ergebnisse zeigt, sondern den Arbeitsprozess nachvollziehbar macht:
+
+- Wie wird ein Projekt mit Codex gestartet?
+- Welche Informationen braucht Codex vor der Umsetzung?
+- Wie werden Regeln in `AGENTS.md` formuliert?
+- Wie wird ein Plan in `PLAN.md` gepflegt?
+- Wie werden GitHub, Git und lokale Dateien sauber zusammengeführt?
+- Welche Fehler treten in der Praxis auf und wie werden sie gelöst?
+
+Alle Inhalte müssen ohne echte Schülerdaten, ohne Secrets und ohne produktive Zugangsdaten auskommen.
+
+## Vorgesehene Kapitel
+
+1. Projektstart, Planung und Repository-Anlage
+2. Arbeitsregeln mit `AGENTS.md`
+3. Projektplanung mit `PLAN.md`
+4. Datenschutz und Sicherheit als Codex-Leitplanken
+5. Git, GitHub und nachvollziehbare Änderungen
+6. Umsetzung des Django-Grundgerüsts
+7. Tests und Qualitätssicherung
+8. Betrieb, Deployment und Dokumentation

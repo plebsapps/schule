@@ -517,3 +517,23 @@ Nach jeder grösseren Aufgabe soll Codex berichten:
 6. welche Migrationen entstanden sind
 7. welche manuellen Schritte notwendig sind
 8. welche Risiken oder offenen Punkte verbleiben
+
+## 26. Praxislehrbuch Arbeiten mit Codex
+
+Dieses Projekt dient zusätzlich als Praxisgrundlage für ein Lehrbuch zum Arbeiten mit Codex.
+
+Alle übertragbaren Erkenntnisse aus der Zusammenarbeit mit Codex müssen im Verzeichnis `buch/` dokumentiert werden.
+
+Dazu gehören insbesondere:
+
+- Ausgangslage und Ziel der Aufgabe
+- verwendete Codex-Arbeitsweise
+- wichtige Entscheidungen
+- konkrete Befehle und Git-Schritte
+- Fehler, Blocker und deren Lösung
+- Sicherheits- und Datenschutzüberlegungen
+- Erkenntnisse für zukünftige Codex-Nutzung
+
+Die Buchdokumentation darf keine echten Schülerdaten, keine Secrets, keine Zugangstokens und keine sensiblen lokalen Systemdetails enthalten.
+
+Wenn eine Aufgabe für das Lehrbuch relevant ist, muss Codex prüfen, ob eine Datei in `buch/` ergänzt oder neu angelegt werden muss.

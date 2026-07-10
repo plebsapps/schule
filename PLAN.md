@@ -651,6 +651,7 @@ zeugnisverwaltung/
 ├── static/
 ├── tests/
 ├── scripts/
+├── buch/
 ├── docs/
 ├── backups/
 └── nginx/
@@ -687,6 +688,7 @@ Der externe Zugriff erfolgt ausschliesslich über Nginx und HTTPS.
 - Notenskalen und Sonderwerte erfassen
 - Datenschutzanforderungen klären
 - technische Serverumgebung prüfen
+- Codex-Arbeitsweise und Projekterkenntnisse für das Praxislehrbuch in `buch/` dokumentieren
 
 ### Phase 2: Technisches Grundgerüst
 
