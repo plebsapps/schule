@@ -23,3 +23,9 @@ Alle Inhalte müssen ohne echte Schülerdaten, ohne Secrets und ohne produktive 
 6. Umsetzung des Django-Grundgerüsts
 7. Tests und Qualitätssicherung
 8. Betrieb, Deployment und Dokumentation
+
+## Redaktion der Prompts
+
+Projektbezogene Prompts werden als Bestandteil der jeweiligen Kapitel dokumentiert. Für eine lesbare Druckfassung werden Rechtschreibung, Grammatik, Zeichensetzung und Struktur verbessert. Die fachliche Absicht bleibt dabei unverändert; die Buchfassung wird als redaktionell überarbeiteter Prompt gekennzeichnet und nicht als wörtliches Transkript ausgegeben.
+
+Vor der Aufnahme werden echte personenbezogene Daten, Secrets, Zugangstokens und sensible lokale Systemdetails entfernt oder durch künstliche Platzhalter ersetzt.

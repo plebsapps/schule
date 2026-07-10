@@ -537,3 +537,52 @@ Dazu gehören insbesondere:
 Die Buchdokumentation darf keine echten Schülerdaten, keine Secrets, keine Zugangstokens und keine sensiblen lokalen Systemdetails enthalten.
 
 Wenn eine Aufgabe für das Lehrbuch relevant ist, muss Codex prüfen, ob eine Datei in `buch/` ergänzt oder neu angelegt werden muss.
+
+## 27. Prompts als Bestandteil des Praxislehrbuchs
+
+Die für das Projekt relevanten Benutzer-Prompts müssen als nachvollziehbare Arbeitsaufträge im Verzeichnis `buch/` dokumentiert werden.
+
+Für die Druckfassung werden die Prompts redaktionell überarbeitet:
+
+- Rechtschreibung, Grammatik und Zeichensetzung korrigieren
+- Formulierungen verständlich und eindeutig strukturieren
+- fachliche Absicht und Umfang des ursprünglichen Prompts unverändert erhalten
+- keine Anforderungen ergänzen oder entfernen
+- bei wesentlichen Unklarheiten die redaktionelle Annahme kenntlich machen
+- Prompts typografisch einheitlich und druckbar darstellen
+
+Die Buchfassung ist eine sprachlich verbesserte Fassung und darf nicht fälschlich als wörtliches Transkript bezeichnet werden.
+
+Prompts dürfen nicht in das Buch übernommen werden, wenn sie echte Schülerdaten, Secrets, Zugangstokens oder sensible lokale Systemdetails enthalten. Solche Inhalte müssen vor der Dokumentation entfernt oder durch eindeutig künstliche Platzhalter ersetzt werden.
+
+## 28. Professioneller Git-Workflow
+
+Änderungen dürfen grundsätzlich nicht direkt auf dem Standard-Branch `main` oder `master` entwickelt werden.
+
+Für jede fachlich zusammenhängende Aufgabe ist vor der ersten Änderung ein eigener Branch vom aktuellen Standard-Branch zu erstellen.
+
+Empfohlene Branch-Präfixe:
+
+```text
+feat/
+fix/
+docs/
+test/
+refactor/
+chore/
+security/
+```
+
+Der Ablauf ist:
+
+1. aktuellen Git-Status prüfen
+2. Standard-Branch aktualisieren, sofern dies ohne Überschreiben fremder Änderungen möglich ist
+3. aussagekräftigen Feature-Branch erstellen
+4. kleine, thematisch klare Commits erstellen
+5. Branch zu GitHub pushen
+6. Pull Request gegen den Standard-Branch erstellen
+7. Tests und Prüfungen erfolgreich abschliessen
+8. Änderungen prüfen und nachvollziehbar mergen
+9. Feature-Branch nach erfolgreichem Merge löschen, sofern er nicht mehr benötigt wird
+
+Direkte Commits und direkte Pushes auf `main` oder `master` sind nur mit ausdrücklicher Freigabe zulässig. Codex darf einen Pull Request nicht automatisch mergen, wenn Prüfungen fehlschlagen, Freigaben fehlen oder Konflikte bestehen.
