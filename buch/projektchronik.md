@@ -23,6 +23,7 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | Codex-Grundlage | GPT-5.6 Sol, Oberflächen und Befehlsarten | Kapitel 4 | erfasst |
 | Codex-Kommandos | App-, CLI-, Git-, Docker- und Django-Referenz | Kommandoreferenz | erfasst |
 | EPUB-Zwischenstand | wiederholbarer Pandoc-Containerbuild, Metadaten und EPUB-CSS | `buch/README.md` und Buildskript | erfasst |
+| GitHub-Buchrelease | EPUB als öffentlicher Prerelease-Download mit SHA-256-Prüfung | `buch/README.md` und Release-Notizen | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
 | Betrieb | Backup, Restore-Test, Monitoring, Aufbewahrung | zukünftige Kapitel | offen |
@@ -37,6 +38,7 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | #4 | erfolgreicher HTTPS-Betrieb dokumentiert | gemergt |
 | #5 | UI-Grundsystem und künstliches Demo-Dashboard | gemergt |
 | #6 | Buchstruktur, GPT-5.6-Sol-Grundlage und Codex-Kommandoreferenz | gemergt |
+| #7 | wiederholbarer EPUB3-Buildprozess | gemergt |
 
 ## Redaktionell überarbeiteter Prompt zum EPUB-Zwischenstand
 
