@@ -8,7 +8,7 @@ Der erste praktische Schritt bestand nicht aus Anwendungscode, sondern aus Proje
 
 - `PLAN.md` beschreibt Ziel, Architektur, fachliche Anforderungen, Risiken und Umsetzungsphasen.
 - `AGENTS.md` beschreibt verbindliche Arbeitsregeln für Codex.
-- Das GitHub-Repository `plebsapps/schule` wurde angelegt.
+- Das GitHub-Repository `plebsapps/schule` wurde zunächst privat angelegt und später für die offene Weiterentwicklung vorbereitet.
 - Die beiden Dateien wurden als Initialstand committed und auf den Branch `main` gepusht.
 
 ## Erkenntnis 1: Gute Codex-Arbeit beginnt vor dem Code
@@ -97,22 +97,25 @@ Die Lösung war ein gezielter `safe.directory`-Eintrag für dieses Projekt:
 git config --global --add safe.directory C:/dev/schule
 ```
 
-## Sicherheitsentscheidung
+## Weiterentwickelte Sicherheitsentscheidung
 
-Das GitHub-Repository wurde privat angelegt.
+Das GitHub-Repository wurde in der ersten Projektphase privat angelegt. Später fiel die Entscheidung, Quellcode und allgemeine Projektdokumentation unter der GPLv3 öffentlich weiterzuentwickeln.
 
-Begründung:
+Für ein öffentliches Repository gelten deshalb verbindliche Grenzen:
 
-- Das Projekt betrifft perspektivisch sensible Schuldaten.
-- Bereits Planungsdokumente enthalten Sicherheits- und Architekturüberlegungen.
-- Ein privates Repository reduziert unnötige Offenlegung in der frühen Projektphase.
+- keine echten Schülerdaten oder Zeugnisse
+- keine Secrets, Zugangstokens oder produktiven Konfigurationen
+- keine Backups oder sensiblen lokalen Systemdetails
+- ausschließlich künstliche und anonymisierte Testdaten
+
+Die Veröffentlichung des Quellcodes bedeutet ausdrücklich nicht, dass die später verarbeiteten Schuldaten öffentlich sein dürfen.
 
 ## Ergebnis
 
 Nach dem ersten Schritt lagen vor:
 
 - ein lokales Git-Repository
-- ein privates GitHub-Repository
+- ein zunächst privates GitHub-Repository mit dokumentiertem Weg zur öffentlichen GPLv3-Veröffentlichung
 - `AGENTS.md`
 - `PLAN.md`
 - ein sauberer Initialcommit
@@ -121,3 +124,20 @@ Nach dem ersten Schritt lagen vor:
 ## Übertragbare Regel
 
 Bei Projekten mit sensiblen Daten sollte Codex zuerst Regeln, Plan und Repository-Struktur stabilisieren. Erst danach sollte Anwendungscode entstehen.
+
+## Redaktionell überarbeitete Prompts
+
+Die folgenden Arbeitsaufträge wurden für die Druckfassung sprachlich überarbeitet. Inhalt und Absicht wurden nicht verändert.
+
+### Arbeitsauftrag: Projektregeln und Plan lesen
+
+> Lies zunächst die Dateien `AGENTS.md` und `PLAN.md` vollständig. Nimm noch keine Änderungen vor, da weitere Ergänzungen folgen.
+
+### Arbeitsauftrag: Buch, Git-Workflow, README und Lizenz
+
+> Ergänze die Projektregeln und Dokumentation um folgende Punkte:
+>
+> 1. Die relevanten Prompts sollen im Praxislehrbuch gespeichert werden. Für die Druckfassung sind Rechtschreibung, Grammatik und Form zu verbessern, ohne die fachliche Absicht zu verändern.
+> 2. Halte in `AGENTS.md` fest, dass nicht direkt auf dem Standard-Branch gearbeitet wird. Für jedes Feature ist ein eigener Branch anzulegen; die Integration in den Standard-Branch erfolgt professionell über Git und GitHub.
+> 3. Erstelle eine `README.md` im Wurzelverzeichnis des Repositorys.
+> 4. Stelle das GitHub-Repository auf öffentlich um und lizenziere das Projekt unter der GPLv3.
