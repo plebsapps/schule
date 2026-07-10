@@ -852,3 +852,5 @@ https://schule.plebsapps.de
 ```
 
 Nginx und HTTPS werden erst nach erfolgreicher Prüfung des Anwendungsstacks in einem getrennten, ausdrücklich freizugebenden Server-Schritt eingerichtet.
+
+Für diesen Schritt liegen versionierte Bootstrap- und TLS-Vorlagen sowie eine Betriebsanleitung unter `nginx/` und `docs/deployment.md` vor. Die Installation auf dem Server benötigt Administratorrechte.
