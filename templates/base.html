@@ -1,20 +1,53 @@
+{% load static %}
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
   <title>{% block title %}Zeugnisverwaltung{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
 </head>
-<body>
-  <header>
-    <h1>Zeugnisverwaltung</h1>
-    {% if user.is_authenticated %}
-      <form method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button type="submit">Abmelden</button>
-      </form>
-    {% endif %}
-  </header>
-  <main>{% block content %}{% endblock %}</main>
+<body class="{% if user.is_authenticated %}app-shell{% else %}auth-shell{% endif %}">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+  {% if user.is_authenticated %}
+    <aside class="sidebar" aria-label="Hauptnavigation">
+      <a class="brand" href="{% url 'home' %}" aria-label="Zeugnisverwaltung – Übersicht">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <span><strong>Zeugnis</strong><small>Verwaltung</small></span>
+      </a>
+      <nav class="primary-nav">
+        <p class="nav-label">Arbeitsbereich</p>
+        <a class="nav-item is-active" href="{% url 'home' %}" aria-current="page"><span aria-hidden="true">▦</span> Übersicht</a>
+        {% if user.is_staff %}
+          <p class="nav-label">Administration</p>
+          <a class="nav-item" href="{% url 'admin:index' %}"><span aria-hidden="true">⚙</span> Django-Administration</a>
+        {% endif %}
+      </nav>
+      <div class="sidebar-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span><strong>System online</strong><small>Gesicherte Verbindung</small></span>
+      </div>
+    </aside>
+    <div class="app-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Schulische Zeugnisverwaltung</p>
+          <p class="topbar-title">{% block page_title %}Übersicht{% endblock %}</p>
+        </div>
+        <div class="user-menu">
+          <span class="avatar" aria-hidden="true">{{ user.username|first|upper }}</span>
+          <span class="user-name"><strong>{{ user.get_full_name|default:user.username }}</strong><small>Angemeldet</small></span>
+          <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="button button-quiet" type="submit">Abmelden</button>
+          </form>
+        </div>
+      </header>
+      <main id="main-content" class="main-content">{% block content %}{% endblock %}</main>
+    </div>
+  {% else %}
+    <main id="main-content" class="auth-main">{% block auth_content %}{% endblock %}</main>
+  {% endif %}
 </body>
 </html>

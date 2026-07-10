@@ -1,6 +1,71 @@
 {% extends "base.html" %}
 
+{% block title %}Übersicht | Zeugnisverwaltung{% endblock %}
+{% block page_title %}Übersicht{% endblock %}
+
 {% block content %}
-  <h2>Projektgrundgerüst</h2>
-  <p>Die Anmeldung funktioniert. Fachmodule werden in den nächsten Phasen ergänzt.</p>
+  <div class="demo-banner" role="note">
+    <span class="demo-badge">DEMO</span>
+    <p><strong>Ausschließlich künstliche Beispieldaten.</strong> Diese Ansicht dient der Gestaltung und bildet noch kein verbindliches Fachmodell ab.</p>
+  </div>
+
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">{{ dashboard.school_year }} · {{ dashboard.period }}</p>
+      <h1>Guten Tag, {{ user.first_name|default:user.username }}.</h1>
+      <p>Hier sehen Sie den beispielhaften Bearbeitungsstand Ihrer Klassen.</p>
+    </div>
+    <span class="period-badge"><span class="status-dot" aria-hidden="true"></span> Eingabe geöffnet</span>
+  </section>
+
+  <section class="summary-grid" aria-label="Beispielhafte Kennzahlen">
+    {% for item in dashboard.summary %}
+      <article class="summary-card tone-{{ item.tone }}">
+        <p>{{ item.label }}</p>
+        <strong>{{ item.value }}</strong>
+        <small>{{ item.detail }}</small>
+      </article>
+    {% endfor %}
+  </section>
+
+  <div class="dashboard-grid">
+    <section class="panel panel-wide" aria-labelledby="classes-title">
+      <div class="panel-header">
+        <div><p class="eyebrow">Bearbeitungsstand</p><h2 id="classes-title">Meine Beispielklassen</h2></div>
+        <span class="muted">{{ dashboard.period }}</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Klasse</th><th>Klassenleitung</th><th>Fortschritt</th><th>Fehlend</th><th>Status</th></tr></thead>
+          <tbody>
+            {% for class in dashboard.classes %}
+              <tr>
+                <td><strong>{{ class.name }}</strong></td>
+                <td>{{ class.lead }}</td>
+                <td>
+                  <div class="progress-label"><span>{{ class.complete }} %</span></div>
+                  <div class="progress" role="progressbar" aria-label="Fortschritt Klasse {{ class.name }}" aria-valuenow="{{ class.complete }}" aria-valuemin="0" aria-valuemax="100"><span style="width: {{ class.complete }}%"></span></div>
+                </td>
+                <td>{{ class.missing }}</td>
+                <td><span class="status-chip">{{ class.status }}</span></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="tasks-title">
+      <div class="panel-header"><div><p class="eyebrow">Nächste Schritte</p><h2 id="tasks-title">Offene Aufgaben</h2></div></div>
+      <ul class="task-list">
+        {% for task in dashboard.tasks %}
+          <li>
+            <span class="task-check" aria-hidden="true"></span>
+            <div><strong>{{ task.title }}</strong><small>{{ task.context }}</small></div>
+            <span class="task-priority">{{ task.priority }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
 {% endblock %}

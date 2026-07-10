@@ -854,3 +854,9 @@ https://schule.plebsapps.de
 Nginx und HTTPS wurden nach erfolgreicher Prüfung des Anwendungsstacks in einem getrennten, ausdrücklich freigegebenen Server-Schritt eingerichtet.
 
 Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. HTTP wird auf HTTPS umgeleitet, Django bleibt ausschließlich an `127.0.0.1:8005` gebunden, und das Let's-Encrypt-Zertifikat wird durch den aktivierten Certbot-Timer erneuert. Versionierte Bootstrap- und TLS-Vorlagen sowie die Betriebsanleitung liegen unter `nginx/` und `docs/deployment.md` vor.
+
+### UI-Grundsystem
+
+Für die weitere Fachentwicklung ist ein responsives, serverseitig gerendertes Designsystem umgesetzt. Login, Navigation, Dashboard-Karten, Tabellen, Fortschrittsanzeigen, Status und Formulare besitzen ein einheitliches Grundlayout. Externe Fonts, Trackingdienste und unnötiges JavaScript werden nicht verwendet.
+
+Bis zur fachlichen Klärung des Datenmodells zeigt das Dashboard ausschließlich klar gekennzeichnete, flüchtige und vollständig künstliche Beispieldaten. Diese werden nicht in der Datenbank gespeichert und dürfen nicht als reale Schüler-, Klassen- oder Notendaten interpretiert werden.

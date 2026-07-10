@@ -8,6 +8,7 @@ Alle Versionen sind kontrolliert festgelegt. Aktualisierungen erfolgen über eig
 | django-axes 8.3.1 | Sperre nach wiederholten Anmeldefehlern | MIT | Verhindert ungebremste Brute-Force-Versuche; aktives Jazzband-Projekt | Eigene Middleware wäre möglich, aber fehleranfälliger |
 | psycopg 3.3.4 mit Binary-Extra | PostgreSQL-Treiber | LGPL-3.0-only | Datenbankzugriff; stabile, aktiv gepflegte Psycopg-3-Reihe | Systemweit kompiliertes `psycopg[c]` reduziert gebündelte Binärdateien, erhöht aber Build-Komplexität |
 | Gunicorn 26.0.0 | Produktionsgeeigneter WSGI-Prozess | MIT | Begrenzt und verwaltet Webprozesse; aktiv gepflegt | Djangos Entwicklungsserver ist nicht produktionsgeeignet |
+| WhiteNoise 6.12.0 | Auslieferung versionierter und komprimierter statischer Dateien aus dem isolierten Webcontainer | MIT | Produktionsstabile WSGI-Middleware; verhindert eine zusätzliche schreibbare Host-Freigabe zwischen Nginx und Container | Nginx könnte ein gemeinsames Host-Verzeichnis ausliefern, würde aber zusätzliche Volume- und Rechteverwaltung erfordern |
 | pytest 9.1.1 | Testausführung | MIT | Nur Entwicklung und CI; aktiv gepflegt | Djangos integrierter Testrunner |
 | pytest-django 4.12.0 | Django-Integration für pytest | BSD-3-Clause | Nur Entwicklung und CI; aktiv gepflegt | Djangos integrierter Testrunner |
 | Ruff 0.15.20 | Linting und Formatprüfung | MIT | Nur Entwicklung und CI; aktiv gepflegt | Separate Werkzeuge wie Flake8, isort und Black |
