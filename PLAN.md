@@ -828,3 +828,27 @@ Vor Beginn der eigentlichen Implementierung müssen folgende Unterlagen anonymis
 - Vorgaben zu Datenschutz und Aufbewahrung
 
 Das Datenmodell darf erst nach Analyse dieser Unterlagen als verbindlich angesehen werden.
+
+## 24. Aktueller Umsetzungsstand
+
+### Technisches Grundgerüst
+
+Für Phase 2 ist umgesetzt:
+
+- Django 5.2 LTS mit modularer App-Struktur
+- projektspezifisches Benutzer-Modell vor den ersten fachlichen Migrationen
+- serverseitige Anmeldung und geschützte Startseite
+- Sperre nach wiederholten fehlgeschlagenen Anmeldeversuchen
+- PostgreSQL in einem projektbezogenen Docker-Compose-Stack
+- Webcontainer ohne Rootrechte
+- ausschließlich lokale Bindung an `127.0.0.1:8005`
+- Healthchecks für PostgreSQL und Django
+- Basistests und statische Qualitätskonfiguration
+
+Vorgesehene öffentliche Domain:
+
+```text
+https://schule.plebsapps.de
+```
+
+Nginx und HTTPS werden erst nach erfolgreicher Prüfung des Anwendungsstacks in einem getrennten, ausdrücklich freizugebenden Server-Schritt eingerichtet.

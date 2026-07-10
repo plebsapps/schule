@@ -2,7 +2,7 @@
 
 Dieses Repository enthält die Planung und schrittweise Umsetzung einer webbasierten Zeugnisverwaltung für Schulen. Die Anwendung soll eine bestehende Excel- und Seriendrucklösung ablösen und sensible Schülerdaten innerhalb einer kontrollierten Serverumgebung verarbeiten.
 
-Der aktuelle Stand ist die Planungsphase. Anwendungscode und produktive Konfigurationen sind noch nicht vorhanden.
+Der aktuelle Stand ist das technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthcheck und Basistests sind vorhanden. Fachmodule und ein Produktiv-Deployment folgen in späteren Phasen.
 
 ## Zielbild
 
@@ -12,7 +12,9 @@ Die fachlichen Anforderungen und Umsetzungsphasen stehen in [PLAN.md](PLAN.md). 
 
 ## Voraussetzungen
 
-Für den aktuellen Planungsstand werden nur Git und ein Markdown-Editor benötigt. Die Voraussetzungen für die spätere Anwendung werden mit dem technischen Grundgerüst konkretisiert und versioniert dokumentiert.
+- Git
+- Docker Engine mit Docker Compose v2
+- alternativ Python 3.13 für eine lokale Entwicklung ohne Docker
 
 ## Lokale Installation
 
@@ -21,31 +23,84 @@ git clone https://github.com/plebsapps/schule.git
 cd schule
 ```
 
-Eine installierbare Anwendung existiert derzeit noch nicht.
+Kopiere anschließend die Beispielkonfiguration:
+
+```bash
+cp .env.example .env
+```
+
+Ersetze in `.env` zwingend `POSTGRES_PASSWORD` und `DJANGO_SECRET_KEY` durch lange, zufällige Werte. `.env` wird von Git ignoriert.
 
 ## Konfiguration
 
-Es gibt noch keine Laufzeitkonfiguration. Mit dem Django-Grundgerüst wird eine `.env.example` ohne echte Geheimnisse bereitgestellt. Secrets und echte Schülerdaten dürfen nicht in das Repository gelangen.
+Die Laufzeitkonfiguration erfolgt über Umgebungsvariablen. `.env.example` dokumentiert alle derzeit benötigten Werte. Für den späteren HTTPS-Betrieb müssen insbesondere folgende Werte gesetzt sein:
+
+```dotenv
+DJANGO_DEBUG=false
+DJANGO_ALLOWED_HOSTS=schule.plebsapps.de
+DJANGO_CSRF_TRUSTED_ORIGINS=https://schule.plebsapps.de
+DJANGO_SECURE_COOKIES=true
+DJANGO_SECURE_SSL_REDIRECT=true
+DJANGO_SECURE_HSTS_SECONDS=31536000
+DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=true
+DJANGO_SECURE_HSTS_PRELOAD=false
+```
+
+Secrets und echte Schülerdaten dürfen nicht in das Repository gelangen.
 
 ## Start
 
-Die Anwendung kann im aktuellen Planungsstand noch nicht gestartet werden. Der spätere lokale Start über Docker Compose wird hier dokumentiert.
+Der projektbezogene Stack wird gebaut und gestartet mit:
+
+```bash
+docker compose up --build -d
+docker compose ps
+```
+
+Die Anwendung ist anschließend ausschließlich lokal am Server unter `http://127.0.0.1:8005` erreichbar. Der öffentliche Zugriff über `https://schule.plebsapps.de` wird erst im separaten Nginx-/HTTPS-Schritt eingerichtet.
+
+Ein Administratorkonto wird bewusst nicht automatisch mit einem Standardpasswort erstellt:
+
+```bash
+docker compose exec web python manage.py createsuperuser
+```
+
+Stoppen ohne Datenverlust:
+
+```bash
+docker compose down
+```
+
+`docker compose down -v` löscht die projektbezogene Datenbank und darf nur nach ausdrücklicher Prüfung verwendet werden.
 
 ## Tests
 
-Es existieren noch keine automatisierten Tests, da noch kein Anwendungscode vorhanden ist. Testbefehle und Qualitätsprüfungen werden mit dem technischen Grundgerüst ergänzt.
+Tests und statische Prüfungen laufen in einer lokalen Python-Umgebung:
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements/dev.txt
+pytest
+ruff check .
+ruff format --check .
+python manage.py check
+python manage.py makemigrations --check --dry-run
+```
+
+Alle Testdaten sind künstlich.
 
 ## Migrationen
 
-Es existieren noch keine Datenbankmigrationen. Datenbankänderungen werden später ausschließlich über versionierte Django-Migrationen durchgeführt.
+Die initiale Migration für das projektspezifische Benutzer-Modell liegt unter `apps/accounts/migrations/`. Der Webcontainer führt ausstehende Migrationen beim Start aus. Neue Datenbankänderungen dürfen ausschließlich über versionierte Django-Migrationen erfolgen.
 
 ## Deployment
 
-Ein Deployment ist noch nicht vorgesehen. Produktive Änderungen an Nginx, Docker-Ressourcen, Datenbanken oder Serverkonfigurationen erfolgen nicht automatisch und werden als manuelle, geprüfte Schritte dokumentiert.
+Das vorgesehene Ziel ist `https://schule.plebsapps.de`. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx und HTTPS werden separat eingerichtet, nachdem der Anwendungsstack erfolgreich geprüft wurde. Änderungen an Nginx oder Zertifikaten sind manuelle, ausdrücklich freizugebende Serverarbeiten.
 
 ## Backup und Wiederherstellung
 
-Backup- und Restore-Verfahren werden vor der Verarbeitung produktiver Daten implementiert und durch Wiederherstellungstests geprüft. Aktuell gibt es noch keine Anwendungsdaten oder erzeugten Zeugnisse zu sichern.
+Backup- und Restore-Verfahren werden vor der Verarbeitung produktiver Daten implementiert und durch Wiederherstellungstests geprüft. Das Volume `schule-postgres-data` ist persistent, gilt allein jedoch nicht als Backup.
 
 ## Praxislehrbuch
 
@@ -57,8 +112,9 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 ## Bekannte Einschränkungen
 
-- Das Projekt befindet sich in der Planungsphase.
-- Es gibt noch keinen Django-Anwendungscode.
+- Es existieren noch keine fachlichen Apps für Schüler, Klassen, Noten oder Zeugnisse.
+- Rollen und fachliche Berechtigungen sind noch nicht implementiert.
+- Nginx, HTTPS, Backup und Restore sind noch nicht eingerichtet.
 - Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
 - Offene Fachfragen sind in `PLAN.md` aufgeführt.
 
