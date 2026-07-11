@@ -881,4 +881,10 @@ Mangels vorhandener Vorlagen und Quelldateien wird das fachliche Modell ausdrüc
 
 Die Pflege erfolgt zunächst über die serverseitig berechtigte Django-Administration. Ein bloßer Staff-Status gewährt keinen fachlichen Zugriff. Vor der Noteneingabe folgen objektbezogene Berechtigungen nach Schule, Klasse und Fach, Audit-Protokollierung, Notenvalidierung und Konfliktschutz.
 
-Das Dashboard verwendet keine statischen Demonstrationszahlen mehr. Es ermittelt sichtbare Klassen, Schüler, Fächer und offene Zeugnisperioden aus der Datenbank. Fach- und Klassenlehrkräfte sehen ausschließlich eigene Zuordnungen; Administration und Schulleitung erhalten die Gesamtübersicht. Da noch kein Notenmodell existiert, werden keine erfundenen Fortschritts- oder Vollständigkeitswerte angezeigt.
+Das Dashboard verwendet keine statischen Demonstrationszahlen mehr. Es ermittelt sichtbare Klassen, Schüler, Fächer, abgeschlossene Noteneingaben und offene Zeugnisperioden aus der Datenbank. Fach- und Klassenlehrkräfte sehen ausschließlich eigene Zuordnungen; Administration und Schulleitung erhalten die Gesamtübersicht.
+
+### Demo-Noten- und Zeugnisablauf
+
+Für die kleine Demo ist eine tabellarische Noteneingabe pro Unterrichtszuordnung umgesetzt. Notenskala und Schrittweite werden serverseitig geprüft; Versionsnummern erkennen parallele Änderungen. Vollständige Eingaben können abgeschlossen und dadurch gesperrt werden. Nur Administration darf sie mit Audit-Eintrag wieder öffnen.
+
+Eine einfache druckbare HTML-Zeugnisvorschau zeigt Schüler, Klasse, Zeitraum und gespeicherte Noten. Sie ist ausdrücklich keine freigegebene oder archivierte Zeugnisversion. PDF-Archivierung, Fehlzeiten, Bemerkungen und der vollständige Freigabeprozess bleiben spätere Ausbaustufen.

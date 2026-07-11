@@ -131,6 +131,18 @@ tbody tr:last-child td { border-bottom: 0; }
 .field input:focus { border-color: var(--blue-600); outline: 3px solid rgb(40 100 220 / 13%); }
 .alert { margin-bottom: 1rem; padding: .75rem; font-size: .78rem; border-radius: 8px; }
 .alert-error { color: var(--red-700); background: var(--red-100); border: 1px solid #f3baba; }
+.alert-success { color: var(--green-600); background: var(--green-100); border: 1px solid #a9dec9; }
+.form-actions { display: flex; justify-content: flex-end; gap: .75rem; padding: 1rem 1.2rem; border-top: 1px solid var(--line); }
+.grade-input { width: 7rem; padding: .55rem .65rem; border: 1px solid #cfd6e2; border-radius: 8px; }
+.locked-note { padding: 1rem 1.2rem; color: var(--amber-600); background: var(--amber-100); }
+.report-sheet { width: min(850px, 100%); margin: 0 auto; padding: clamp(2rem, 6vw, 5rem); background: white; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.report-sheet header { text-align: center; }
+.report-sheet h1, .report-sheet h2 { margin: .3rem 0; }
+.report-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+.report-meta div { padding: .8rem; background: var(--canvas); }
+.report-meta dt { color: var(--muted); font-size: .7rem; }
+.report-meta dd { margin: .25rem 0 0; font-weight: 750; }
+.report-sheet footer { margin-top: 2rem; color: var(--muted); font-size: .75rem; }
 .security-note { display: flex; gap: .7rem; margin-top: 1.5rem; padding-top: 1.25rem; color: var(--muted); border-top: 1px solid var(--line); }
 .security-note p { margin: 0; font-size: .7rem; line-height: 1.4; }
 .security-note strong { color: var(--ink); }
@@ -163,4 +175,11 @@ tbody tr:last-child td { border-bottom: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+
+@media print {
+  .sidebar, .topbar, .no-print, .demo-banner { display: none !important; }
+  .app-shell, .app-content { display: block; }
+  .main-content { padding: 0; }
+  .report-sheet { width: 100%; border: 0; box-shadow: none; }
 }

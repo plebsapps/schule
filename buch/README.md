@@ -58,6 +58,7 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 - [Kapitel 4: GPT-5.6 Sol und die Codex-Oberflächen](04-gpt-5-6-sol-codex-oberflaechen.md)
 - [Kapitel 5: Backups entwerfen und Wiederherstellungen beweisen](05-backup-und-wiederherstellung.md)
 - [Kapitel 6: Mit unbekannten Fachdetails sicher beginnen](06-stammdaten-ohne-vorlagen.md)
+- [Kapitel 7: Eine kleine Demo fachlich vollständig machen](07-demo-noten-und-zeugnis.md)
 
 ## Redaktion der Prompts
 

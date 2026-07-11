@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Zeugnisvorschau {{ student }}{% endblock %}
+{% block page_title %}Zeugnisvorschau{% endblock %}
+{% block content %}
+  <article class="report-sheet">
+    <header><p class="eyebrow">Nicht freigegebene Demo-Vorschau</p><h1>{{ school_class.school_year.school.name }}</h1><h2>{{ period.name }} · Klasse {{ school_class.name }}</h2></header>
+    <dl class="report-meta"><div><dt>Name</dt><dd>{{ student.first_name }} {{ student.last_name }}</dd></div><div><dt>Geburtsdatum</dt><dd>{{ student.birth_date|date:"d.m.Y" }}</dd></div><div><dt>Schuljahr</dt><dd>{{ school_class.school_year.name }}</dd></div></dl>
+    <table><thead><tr><th>Fach</th><th>Note</th></tr></thead><tbody>{% for grade in grades %}<tr><td>{{ grade.sheet.assignment.subject.name }}</td><td><strong>{{ grade.value }}</strong></td></tr>{% empty %}<tr><td colspan="2">Noch keine Noten vorhanden.</td></tr>{% endfor %}</tbody></table>
+    <footer><p>Diese Ansicht ist eine einfache Demo und kein freigegebenes Zeugnis.</p><button class="button button-primary no-print" onclick="window.print()">Drucken</button></footer>
+  </article>
+{% endblock %}

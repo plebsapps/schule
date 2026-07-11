@@ -2,6 +2,7 @@ from django.db.models import Count, Q
 
 from apps.accounts.models import User
 from apps.classes.models import SchoolClass
+from apps.grades.models import GradeSheet
 from apps.schools.models import ReportPeriod
 
 
@@ -16,6 +17,11 @@ def build_dashboard(user):
         .annotate(
             student_count=Count("enrollments__student", distinct=True),
             subject_count=Count("teaching_assignments__subject", distinct=True),
+            completed_count=Count(
+                "teaching_assignments__grade_sheet",
+                filter=Q(teaching_assignments__grade_sheet__status=GradeSheet.Status.COMPLETED),
+                distinct=True,
+            ),
         )
         .distinct()
         .order_by("school_year__start_date", "name")
@@ -57,7 +63,7 @@ def build_dashboard(user):
                 "lead": lead.get_full_name() or lead.username if lead else "Nicht zugewiesen",
                 "students": school_class.student_count,
                 "subjects": school_class.subject_count,
-                "status": "Bereit für Notenmodul"
+                "status": f"{school_class.completed_count}/{school_class.subject_count} Fächer abgeschlossen"
                 if school_class.student_count and school_class.subject_count
                 else "Einrichtung offen",
             }
