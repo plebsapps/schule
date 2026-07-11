@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     "axes",
     "apps.accounts",
     "apps.core",
+    "apps.schools",
+    "apps.subjects",
+    "apps.classes",
+    "apps.students",
+    "apps.reports",
 ]
 
 MIDDLEWARE = [

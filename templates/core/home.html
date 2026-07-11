@@ -9,6 +9,16 @@
     <p><strong>Ausschließlich künstliche Beispieldaten.</strong> Diese Ansicht dient der Gestaltung und bildet noch kein verbindliches Fachmodell ab.</p>
   </div>
 
+  {% if perms.schools.add_school %}
+    <section class="panel" aria-labelledby="master-data-title">
+      <div class="panel-header">
+        <div><p class="eyebrow">Echte Datenbank</p><h2 id="master-data-title">Schulstammdaten verwalten</h2></div>
+        <a class="button button-primary" href="{% url 'admin:index' %}">Verwaltung öffnen</a>
+      </div>
+      <p>Schulen, Schuljahre, Perioden, Klassen, Schüler, Fächer, Lehrkräfte, Unterrichtszuordnungen und Vorlagen können jetzt dauerhaft erfasst werden. Noten bleiben bis zum nächsten geschützten Entwicklungsschritt deaktiviert.</p>
+    </section>
+  {% endif %}
+
   <section class="page-heading">
     <div>
       <p class="eyebrow">{{ dashboard.school_year }} · {{ dashboard.period }}</p>
