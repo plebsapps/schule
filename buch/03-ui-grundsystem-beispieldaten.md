@@ -31,7 +31,7 @@ Die Anwendung verwendet ein ruhiges, kontrastreiches Verwaltungsdesign mit:
 
 Externe Schriften, Trackingdienste und Bilddienste wurden bewusst vermieden. Dadurch entstehen weder unnötige Datenübertragungen noch zusätzliche Verfügbarkeits- und Datenschutzabhängigkeiten.
 
-[Bild007]
+![Bild007: UI-Grundsystem der Zeugnisverwaltung](../Bilder/bild007-ui-grundsystem.png)
 
 ## Umgang mit Beispieldaten
 
@@ -39,7 +39,7 @@ Die Demonstrationswerte sind sichtbar mit `DEMO` und dem Hinweis „Ausschließl
 
 Diese Lösung ist absichtlich vorläufig. Sobald die anonymisierten fachlichen Unterlagen analysiert und die Modelle freigegeben sind, werden versionierte Fixtures oder Management-Kommandos für realistische künstliche Datensätze ergänzt.
 
-[Bild008]
+![Bild008: Entwicklung von flüchtigen zu reproduzierbaren Beispieldaten](../Bilder/bild008-beispieldaten-reifegrad.png)
 
 ## Tests
 

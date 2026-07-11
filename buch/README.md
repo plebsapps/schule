@@ -73,7 +73,15 @@ Nach jeder größeren Aufgabe werden Kapitel, Kommandoreferenz und Projektchroni
 
 ## Bildkonzept
 
-Geplante Grafiken werden im Manuskript fortlaufend als `[Bild001]`, `[Bild002]` und so weiter markiert. Das [Bildverzeichnis](bildkonzept.md) beschreibt für jede Nummer Platzierung, Lernziel, Format, Pflichtinhalte, Datenschutzgrenzen und einen direkt nutzbaren DALL·E-Prompt. Die eigentliche Bilderzeugung erfolgt getrennt; bis dahin bleiben die Platzhalter im EPUB sichtbar.
+Geplante Grafiken werden im Manuskript fortlaufend als `[Bild001]`, `[Bild002]` und so weiter markiert. Das [Bildverzeichnis](bildkonzept.md) beschreibt für jede Nummer Platzierung, Lernziel, Format, Pflichtinhalte, Datenschutzgrenzen und einen direkt nutzbaren DALL·E-Prompt. Die eigentliche Bilderzeugung erfolgt getrennt; die fertigen Dateien liegen im Ordner `Bilder/` und werden direkt in das Buch eingebunden.
+
+Die fertigen Dateien liegen im Ordner `Bilder/` und werden aus dem Manuskript direkt referenziert.
+
+## Transparenz und Entstehung
+
+![Bild022: Buchtransparenz und Autor](../Bilder/bild022-buchtransparenz-autor.png)
+
+Diese zusätzliche Grafik macht die Entstehung des Lehrbuchs, die verwendeten Arbeitsartefakte und die Dokumentationsidee sichtbar.
 
 ## EPUB-Zwischenstand erzeugen
 

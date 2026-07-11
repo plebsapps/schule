@@ -30,7 +30,8 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | künstliche Beispieldaten | idempotenter Management-Befehl ohne anmeldbares Standardkonto | Kapitel 6 | erfasst |
 | Live-Dashboard | echte Stammdatenzahlen mit rollenbezogen eingeschränkten Abfragen | Kapitel 6 | erfasst |
 | Demo-Zeugnisablauf | Noteneingabe, Konfliktschutz, Abschluss, Audit und Druckvorschau | Kapitel 7 | erfasst |
-| Bildkonzept | 21 fortlaufende Platzhalter und exakte Generierungsbriefings | alle Kapitel und Bildverzeichnis | erfasst |
+| Bildkonzept | 22 fortlaufende Platzhalter und exakte Generierungsbriefings | alle Kapitel und Bildverzeichnis | erfasst |
+| Buchtransparenz | Entstehung, Arbeitsweise, Transparenz und Autor | `buch/README.md` und `projektchronik.md` | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
 | Betrieb | systemd-Aktivierung, externes Sicherungsziel, Monitoring, Aufbewahrungsentscheidung | zukünftige Betriebsarbeit | teilweise offen |
@@ -64,6 +65,12 @@ Die Ausarbeitung dieses Schritts steht in Kapitel 5. Ein Pull Request und sein E
 > Leider liegen uns noch keine Vorlagen vor, und das Datenmodell muss später möglicherweise angepasst werden. Trotzdem sollen Fächer, Schülerinnen und Schüler, Dokumentvorlagen für Zeugnisse, Noten, Lehrkräfte und alle weiteren schulischen Stammdaten eingegeben werden können. Merge zuerst Pull Request 9 und setze die Entwicklung anschließend fort.
 
 Die sichere Aufteilung und die noch bewusst gesperrte Noteneingabe werden in Kapitel 6 erläutert.
+
+## Buchtransparenz und Entstehung
+
+![Bild022: Buchtransparenz und Autor](../Bilder/bild022-buchtransparenz-autor.png)
+
+Die Chronik hält die Arbeitsartefakte des Lehrbuchs sichtbar fest: Prompts, Entscheidungen, Tests, Versionen und die Überarbeitung der Dokumentation. So bleibt nachvollziehbar, wie aus der Projektarbeit ein Lehrbuch entstand.
 
 ## Wiederkehrender Abschlusscheck
 

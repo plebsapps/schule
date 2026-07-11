@@ -29,7 +29,7 @@ Die Umsetzung wurde deshalb in vier getrennte Werkzeuge zerlegt:
 
 Diese Trennung macht den ungefährlichen Routinefall einfach und hält den riskanten Eingriff sichtbar.
 
-[Bild012]
+![Bild012: Lebenszyklus eines zuverlässigen Backups](../Bilder/bild012-backup-lebenszyklus.png)
 
 ## Wichtige Befehle
 
@@ -49,7 +49,7 @@ Eine SHA-256-Prüfsumme erkennt unbeabsichtigte Veränderungen, bietet aber kein
 
 Die systemd-Konfiguration wurde als Repository-Vorlage dokumentiert. Codex änderte keine globale Serverkonfiguration automatisch. Betriebskonto, absoluter Zielpfad, Überwachung, Aufbewahrungsfrist und verschlüsseltes externes Sicherungsziel müssen bewusst festgelegt werden.
 
-[Bild013]
+![Bild013: Drei Schutzebenen für Backups](../Bilder/bild013-backup-schutzebenen.png)
 
 ## Ein Testfehler, der keiner war
 
@@ -57,7 +57,7 @@ Beim ersten Python-Testlauf wurden versehentlich die produktiven Einstellungen a
 
 Der erfolgreiche Lauf verwendete deshalb ausdrücklich eine lokale Testkonfiguration mit aktiviertem Debug-Modus sowie deaktivierter HTTPS-Weiterleitung und sicheren Cookies. Die produktive Konfiguration wurde nicht verändert. Die Erkenntnis ist allgemein: Ein reproduzierbarer Testlauf muss nicht nur Abhängigkeiten, sondern auch seine Konfigurationsklasse eindeutig festlegen. Ein fehlgeschlagener Test darf erst nach Prüfung von Code, Umgebung und Erwartung einer Änderung zugeschrieben werden.
 
-[Bild014]
+![Bild014: Test- und Produktionskonfiguration auseinanderhalten](../Bilder/bild014-test-produktion-konfiguration.png)
 
 ## Übertragbare Erkenntnisse
 

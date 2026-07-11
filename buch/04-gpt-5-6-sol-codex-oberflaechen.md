@@ -22,7 +22,7 @@ Das Modell ist nur ein Teil der Arbeitsumgebung. Das tatsächliche Verhalten wir
 - aktuellen Gesprächskontext
 - Benutzerprompt
 
-[Bild009]
+![Bild009: Was Codex-Verhalten beeinflusst](../Bilder/bild009-gpt-5-6-sol-einfluss.png)
 
 ## Vier Befehlsarten
 
@@ -48,7 +48,7 @@ Terminalbefehle wie `codex doctor`, `codex resume` oder `codex review` starten o
 
 Git-, Docker-, Django-, Nginx- oder Testbefehle werden von Codex oder vom Benutzer im Terminal ausgeführt. Beispiele sind `git status`, `docker compose ps`, `pytest` und `python manage.py check`.
 
-[Bild010]
+![Bild010: Vier Befehlsarten](../Bilder/bild010-befehlsarten.png)
 
 ## Codex-Oberflächen
 
@@ -68,7 +68,7 @@ Die IDE-Erweiterung kann offene Dateien und markierten Code als Kontext bereitst
 
 Cloud-Aufgaben laufen in einer bereitgestellten Umgebung. Lokale Dateien, Zugriffsrechte und installierte Werkzeuge können sich von einer lokalen Sitzung unterscheiden.
 
-[Bild011]
+![Bild011: Codex-Oberflächen im Vergleich](../Bilder/bild011-codex-oberflaechen.png)
 
 ## Warum `/mode` nicht pauschal dokumentiert wird
 

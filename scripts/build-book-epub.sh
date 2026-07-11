@@ -16,6 +16,7 @@ docker run --rm \
   --standalone \
   --toc \
   --toc-depth=2 \
+  --epub-cover-image=static/images/book-covers/titelbild-gpt-5-6-sol.png \
   --metadata-file=buch/metadata.yaml \
   --css=buch/epub.css \
   --resource-path=.:buch \

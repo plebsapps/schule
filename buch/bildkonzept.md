@@ -1,6 +1,6 @@
 # Bildverzeichnis und Generierungsbriefings
 
-Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxislehrbuchs. Die Platzhalter `[Bild001]` bis `[Bild021]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
+Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxislehrbuchs. Die Platzhalter `[Bild001]` bis `[Bild022]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel oder in der ergänzenden Buchdokumentation. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
 
 ## Redaktionell überarbeiteter Arbeitsauftrag
 
@@ -232,15 +232,26 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 > Erzeuge ein drucktaugliches, stilisiertes Zeugnis-Mockup im Hochformat 4:5, weißes Papier auf sehr hellem Hintergrund. Oben „DEMO – Beispielschule am Stadtpark“, darunter „1. Halbjahr · Klasse DEMO-7A“. Schülername ausschließlich „Alex Muster“. Kleine Tabelle mit „Deutsch 2,0“, „Mathematik 2,5“, „Englisch 3,0“. Sehr deutlich oberhalb und im Fußbereich: „NICHT FREIGEGEBENE DEMO-VORSCHAU“. Seriöses Schulverwaltungsdesign, keine Unterschriften, keine Siegel, keine Logos, kein Wappen, keine echten Daten, keine weiteren Texte.
 
+## Bild022 – Buchtransparenz und Entstehung
+
+- Platzierung: `buch/projektchronik.md`, im Abschnitt zur Entstehung und Transparenz des Buchs
+- Lernziel: verdeutlichen, dass das Lehrbuch aus dokumentierten Arbeitsartefakten, Entscheidungen und Prüfungen entstanden ist
+- Format: Querformat 3:2
+- Muss zeigen: Buchstapel in der Mitte; daneben Karten für Prompts, Entscheidungen, Tests und Versionen; unten Zeitachse mit den Schritten Entstehung, Arbeitsweise, Transparenz; kleine Autorenkarte
+- DALL·E-Prompt:
+
+> Erzeuge eine drucktaugliche deutsche Fachbuchgrafik im reduzierten Vektorstil, Querformat 3:2, heller Hintergrund, dunkelblaue Linien, blaue, grüne und warme Gelb-Akzente. In der Mitte ein Buchstapel mit einer Buchkarte. Daneben vier Dokumentkarten mit den Überschriften „PROMPTS“, „ENTSCHEIDUNGEN“, „TESTS“ und „VERSIONEN“. Unten eine Zeitachse mit den Beschriftungen „Entstehung“, „Arbeitsweise“ und „Transparenz“. Ergänze eine kleine Autorenkarte mit der Beschriftung „Autor“. Klare Typografie, viel Weißraum, keine Logos, keine Personen, keine weiteren Texte, keine Wasserzeichen.
+
 ## Produktions- und Ablagehinweise
 
-Nach der Generierung soll jede Datei unter `buch/images/` nach folgendem Muster abgelegt werden:
+Nach der Generierung soll jede Datei unter `Bilder/` nach folgendem Muster abgelegt werden:
 
 ```text
 bild001-plan-und-agents.png
 bild002-git-workflow.png
 ...
 bild021-zeugnisvorschau.png
+bild022-buchtransparenz-autor.png
 ```
 
 Vor der Einbindung sind zu prüfen:

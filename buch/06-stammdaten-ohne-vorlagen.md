@@ -24,13 +24,13 @@ Der Fachkern trennt:
 
 Historische Zuordnungen stehen in eigenen Tabellen. Dadurch muss ein Klassenwechsel nicht durch Überschreiben alter Schülerdaten abgebildet werden.
 
-[Bild015]
+![Bild015: Fachliches Stammdatenmodell](../Bilder/bild015-fachliches-stammdatenmodell.png)
 
 ## Ein hilfreicher fehlgeschlagener Test
 
 Der erste Berechtigungstest erwartete, dass jeder Benutzer mit `is_staff=True` Schuldaten öffnen könne. Django antwortete korrekt mit HTTP 403: Staff-Zugang allein verleiht noch keine Modellberechtigung. Die Anwendung wurde nicht aufgeweicht. Stattdessen wurden Test und Navigation so korrigiert, dass jede Datenart ihre ausdrücklichen Anzeige-, Anlage-, Änderungs- und Löschrechte behält.
 
-[Bild016]
+![Bild016: Staff-Status ist keine Fachberechtigung](../Bilder/bild016-staff-ist-nicht-fachrecht.png)
 
 ## Warum Noten noch gesperrt bleiben
 
@@ -46,7 +46,7 @@ Auch dieser kurze Prompt wurde für die Buchfassung sprachlich geglättet. Statt
 
 Die künstliche Lehrkraft ist deaktiviert und hat kein verwendbares Passwort. Kontaktadressen verwenden die reservierte Endung `.invalid`. Zwei automatische Tests beweisen, dass ein zweiter Lauf keine Duplikate erzeugt und ein vorhandenes Administratorkonto unverändert bleibt. So werden Beispieldaten zu einem wiederholbaren Teil der Anwendung statt zu einem nicht nachvollziehbaren Eingriff in die Produktionsdatenbank.
 
-[Bild017]
+![Bild017: Idempotenter Beispieldaten-Befehl](../Bilder/bild017-idempotenter-demo-befehl.png)
 
 ## Vom Design-Dashboard zur echten Auswertung
 
@@ -56,4 +56,4 @@ Die statischen Beispielzahlen wurden daraufhin vollständig entfernt. Ein eigene
 
 Besonders wichtig war der Umgang mit noch nicht vorhandenen Noten. Statt weiterhin erfundene Prozentwerte anzuzeigen, nennt die Oberfläche ehrlich die Zahl der verbundenen Stammdaten und markiert Klassen als bereit für das spätere Notenmodul. Tests prüfen sowohl die korrekte Gesamtansicht als auch den negativen Sicherheitsfall: Eine nicht zugewiesene Lehrkraft darf weder fremde Klassen- noch Schulnamen im HTML erhalten.
 
-[Bild018]
+![Bild018: Rollenbezogene Dashboard-Abfrage](../Bilder/bild018-rollenbezogene-dashboard-abfrage.png)

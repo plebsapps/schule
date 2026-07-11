@@ -6,7 +6,7 @@ Nach der Planungsphase sollte die Anwendung auf demselben Server wie mehrere bes
 
 Die Prüfung zeigte: Die vorgesehenen internen Ports `8000` bis `8004` waren bereits belegt. Für die Zeugnisverwaltung wurde deshalb `127.0.0.1:8005` gewählt. Die Bindung an die Loopback-Adresse verhindert, dass Django den Reverse Proxy umgeht und direkt öffentlich erreichbar wird.
 
-[Bild004]
+![Bild004: Serverarchitektur der Anwendung](../Bilder/bild004-serverarchitektur.png)
 
 ## Redaktionell überarbeiteter Prompt
 
@@ -43,7 +43,7 @@ Der Stack erstellt weder Datenbank- noch Administrationspasswörter automatisch.
 
 Das Grundgerüst verändert keine vorhandene Nginx- oder Zertifikatskonfiguration. Erst wenn Django, PostgreSQL, Migrationen und Healthchecks funktionieren, wird der öffentliche HTTPS-Zugriff separat vorbereitet und geprüft.
 
-[Bild005]
+![Bild005: Getrennter Weg zu HTTPS](../Bilder/bild005-https-freigabe.png)
 
 ## Sicherheits- und Datenschutzüberlegungen
 
@@ -65,7 +65,7 @@ Der erste reale Start deckte einen Dateirechtefehler auf: Der Webcontainer lief 
 
 Die Korrektur bestand nicht darin, den Container wieder als Root auszuführen. Stattdessen werden ausschließlich die benötigten Anwendungsverzeichnisse beim Image-Build angelegt und dem nicht privilegierten Benutzer zugeordnet. Dieser Fehler zeigt, warum ein erfolgreicher Image-Build den tatsächlichen Containerstart mit Healthcheck nicht ersetzt.
 
-[Bild006]
+![Bild006: Containerrechte richtig korrigieren](../Bilder/bild006-non-root-rechte.png)
 
 ## Bewusste offene Sicherheitsentscheidung
 
