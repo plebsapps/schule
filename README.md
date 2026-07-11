@@ -102,7 +102,7 @@ Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröff
 
 ## Backup und Wiederherstellung
 
-Backup- und Restore-Verfahren werden vor der Verarbeitung produktiver Daten implementiert und durch Wiederherstellungstests geprüft. Das Volume `schule-postgres-data` ist persistent, gilt allein jedoch nicht als Backup.
+Ein PostgreSQL-Backup mit restriktiven Dateirechten wird über `./scripts/backup-postgres.sh` erstellt. Prüfsumme, Archivlesbarkeit und eine isolierte Wiederherstellungsprobe werden mit den zugehörigen Prüfskripten kontrolliert. Der destruktive Produktions-Restore benötigt eine ausdrückliche Bestätigung und legt zuerst ein Sicherheitsbackup an. Der vollständige Ablauf, systemd-Vorlagen und Sicherheitsanforderungen stehen in [docs/backup-restore.md](docs/backup-restore.md). Das Volume `schule-postgres-data` ist persistent, gilt allein jedoch nicht als Backup.
 
 ## Praxislehrbuch
 
@@ -116,7 +116,7 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 - Es existieren noch keine fachlichen Apps für Schüler, Klassen, Noten oder Zeugnisse.
 - Rollen und fachliche Berechtigungen sind noch nicht implementiert.
-- Backup und Restore sind noch nicht eingerichtet und getestet.
+- Die automatische systemd-Aktivierung, externe verschlüsselte Sicherung und Überwachung müssen auf dem Zielserver noch manuell eingerichtet werden.
 - Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
 - Offene Fachfragen sind in `PLAN.md` aufgeführt.
 

@@ -23,6 +23,7 @@ docker run --rm \
   buch/02-django-grundgeruest.md \
   buch/03-ui-grundsystem-beispieldaten.md \
   buch/04-gpt-5-6-sol-codex-oberflaechen.md \
+  buch/05-backup-und-wiederherstellung.md \
   buch/anhang-codex-kommandoreferenz.md \
   buch/projektchronik.md \
   --output=buch/build/arbeiten-mit-codex-zwischenstand.epub

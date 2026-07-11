@@ -1,0 +1,11 @@
+[Unit]
+Description=Tägliches PostgreSQL-Backup der schulischen Zeugnisverwaltung
+
+[Timer]
+OnCalendar=*-*-* 02:15:00
+RandomizedDelaySec=15m
+Persistent=true
+Unit=schule-postgres-backup.service
+
+[Install]
+WantedBy=timers.target
