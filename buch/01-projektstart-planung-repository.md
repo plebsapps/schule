@@ -37,6 +37,8 @@ Diese Trennung ist wichtig:
 - Der Plan erklärt das fachliche und technische Ziel.
 - Die Agentenregeln begrenzen und steuern die konkrete Arbeit.
 
+[Bild001]
+
 Für ein Lehrbuch ist diese Trennung ein gutes Muster, weil sie zeigt, wie Projektwissen und Arbeitsregeln getrennt gepflegt werden können.
 
 ## Erkenntnis 3: Repository-Anlage ist ein eigener Arbeitsschritt
@@ -51,6 +53,8 @@ Die Repository-Anlage bestand aus mehreren nachvollziehbaren Schritten:
 6. Remote-Repository anlegen.
 7. Branch `main` pushen.
 8. Remote-Stand verifizieren.
+
+[Bild002]
 
 Der Initialcommit lautete:
 
@@ -109,6 +113,8 @@ Für ein öffentliches Repository gelten deshalb verbindliche Grenzen:
 - ausschließlich künstliche und anonymisierte Testdaten
 
 Die Veröffentlichung des Quellcodes bedeutet ausdrücklich nicht, dass die später verarbeiteten Schuldaten öffentlich sein dürfen.
+
+[Bild003]
 
 ## Ergebnis
 

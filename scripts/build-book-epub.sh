@@ -26,6 +26,7 @@ docker run --rm \
   buch/05-backup-und-wiederherstellung.md \
   buch/06-stammdaten-ohne-vorlagen.md \
   buch/07-demo-noten-und-zeugnis.md \
+  buch/bildkonzept.md \
   buch/anhang-codex-kommandoreferenz.md \
   buch/projektchronik.md \
   --output=buch/build/arbeiten-mit-codex-zwischenstand.epub

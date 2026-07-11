@@ -6,6 +6,8 @@ Nach der Planungsphase sollte die Anwendung auf demselben Server wie mehrere bes
 
 Die Prüfung zeigte: Die vorgesehenen internen Ports `8000` bis `8004` waren bereits belegt. Für die Zeugnisverwaltung wurde deshalb `127.0.0.1:8005` gewählt. Die Bindung an die Loopback-Adresse verhindert, dass Django den Reverse Proxy umgeht und direkt öffentlich erreichbar wird.
 
+[Bild004]
+
 ## Redaktionell überarbeiteter Prompt
 
 > Das Projekt soll auf diesem Server unter `schule.plebsapps.de` betrieben werden. Der DNS-Eintrag wurde bereits in der Domainverwaltung gesetzt.
@@ -41,6 +43,8 @@ Der Stack erstellt weder Datenbank- noch Administrationspasswörter automatisch.
 
 Das Grundgerüst verändert keine vorhandene Nginx- oder Zertifikatskonfiguration. Erst wenn Django, PostgreSQL, Migrationen und Healthchecks funktionieren, wird der öffentliche HTTPS-Zugriff separat vorbereitet und geprüft.
 
+[Bild005]
+
 ## Sicherheits- und Datenschutzüberlegungen
 
 - PostgreSQL besitzt keine veröffentlichte Host-Portfreigabe.
@@ -60,6 +64,8 @@ Ein DNS-Eintrag allein macht noch kein Deployment. Codex sollte zuerst prüfen, 
 Der erste reale Start deckte einen Dateirechtefehler auf: Der Webcontainer lief wie vorgesehen ohne Rootrechte, aber das Arbeitsverzeichnis war noch Eigentum von Root. Deshalb konnte Django das Verzeichnis `staticfiles` bei `collectstatic` nicht anlegen und der Container startete wiederholt neu.
 
 Die Korrektur bestand nicht darin, den Container wieder als Root auszuführen. Stattdessen werden ausschließlich die benötigten Anwendungsverzeichnisse beim Image-Build angelegt und dem nicht privilegierten Benutzer zugeordnet. Dieser Fehler zeigt, warum ein erfolgreicher Image-Build den tatsächlichen Containerstart mit Healthcheck nicht ersetzt.
+
+[Bild006]
 
 ## Bewusste offene Sicherheitsentscheidung
 

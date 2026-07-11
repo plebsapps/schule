@@ -22,6 +22,8 @@ Das Modell ist nur ein Teil der Arbeitsumgebung. Das tatsächliche Verhalten wir
 - aktuellen Gesprächskontext
 - Benutzerprompt
 
+[Bild009]
+
 ## Vier Befehlsarten
 
 ### 1. Natürliche Prompts
@@ -46,6 +48,8 @@ Terminalbefehle wie `codex doctor`, `codex resume` oder `codex review` starten o
 
 Git-, Docker-, Django-, Nginx- oder Testbefehle werden von Codex oder vom Benutzer im Terminal ausgeführt. Beispiele sind `git status`, `docker compose ps`, `pytest` und `python manage.py check`.
 
+[Bild010]
+
 ## Codex-Oberflächen
 
 ### ChatGPT-Desktop-App
@@ -63,6 +67,8 @@ Die IDE-Erweiterung kann offene Dateien und markierten Code als Kontext bereitst
 ### Cloud-Ausführung
 
 Cloud-Aufgaben laufen in einer bereitgestellten Umgebung. Lokale Dateien, Zugriffsrechte und installierte Werkzeuge können sich von einer lokalen Sitzung unterscheiden.
+
+[Bild011]
 
 ## Warum `/mode` nicht pauschal dokumentiert wird
 
