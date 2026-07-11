@@ -33,3 +33,11 @@ Der erste Berechtigungstest erwartete, dass jeder Benutzer mit `is_staff=True` S
 Eine einfache Notentabelle wäre schnell erstellt. Sie wäre aber fachlich und sicherheitstechnisch unvollständig. Vor einer Freischaltung müssen mindestens die zugewiesene Schule, Klasse, das Fach, die Zeugnisperiode, deren Status, die Notenskala und die letzte Datensatzversion serverseitig geprüft werden. Außerdem sind Audit-Protokoll und Konfliktmeldung erforderlich.
 
 Die wichtige Codex-Erkenntnis lautet: Ein Auftrag darf in sichere, nutzbare Ausbaustufen zerlegt werden, wenn eine sofortige Gesamtumsetzung zentrale Schutzregeln verletzen würde. Die noch nicht erfüllte Anforderung muss dabei sichtbar bleiben und als nächster Schritt geplant werden.
+
+## Kleine Beispieldaten reproduzierbar erfassen
+
+> Erfasse bitte in kleinem Umfang Beispieldaten.
+
+Auch dieser kurze Prompt wurde für die Buchfassung sprachlich geglättet. Statt Daten einmalig per Datenbank-Shell einzutragen, entstand ein transaktionaler und idempotenter Django-Management-Befehl. Er erzeugt eine klar als `DEMO` benannte Schule, eine Klasse, drei Schüler, drei Fächer, Zuordnungen und eine Vorlagenbeschreibung.
+
+Die künstliche Lehrkraft ist deaktiviert und hat kein verwendbares Passwort. Kontaktadressen verwenden die reservierte Endung `.invalid`. Zwei automatische Tests beweisen, dass ein zweiter Lauf keine Duplikate erzeugt und ein vorhandenes Administratorkonto unverändert bleibt. So werden Beispieldaten zu einem wiederholbaren Teil der Anwendung statt zu einem nicht nachvollziehbaren Eingriff in die Produktionsdatenbank.
