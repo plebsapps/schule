@@ -2,11 +2,11 @@
 
 ## HSTS-Preload
 
-Die Produktionskonfiguration bereitet HSTS mit einem Jahr Laufzeit und `includeSubDomains` vor. `SECURE_HSTS_PRELOAD` bleibt zunächst deaktiviert.
+Die Produktionskonfiguration aktiviert HSTS mit einem Jahr Laufzeit, `includeSubDomains` und `preload`.
 
-Begründung: Die Aufnahme in Browser-Preload-Listen ist eine langfristige Entscheidung und kann nicht kurzfristig rückgängig gemacht werden. Vor einer Aktivierung müssen HTTPS-Betrieb, Zertifikatserneuerung und alle betroffenen Subdomains dauerhaft abgesichert sein.
+Begründung: Der HTTPS-Betrieb ist bereits produktiv, die Zertifikatskette wird regelmäßig erneuert und die betroffene Domain ist klar abgegrenzt. Für dieses Projekt ist die Preload-Variante daher die saubere Endkonfiguration.
 
-Auswirkung: `python manage.py check --deploy` meldet bis zu dieser Entscheidung die Warnung `security.W021`. Die Warnung wird nicht unterdrückt.
+Auswirkung: `python manage.py check --deploy` meldet die Warnung `security.W021` nicht mehr.
 
 ## Öffentlicher Zugriff
 
