@@ -32,16 +32,20 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 4. GPT-5.6 Sol, Codex-Oberflächen und Befehlsarten
 5. Backups entwerfen und Wiederherstellungen beweisen
 6. Mit unbekannten Fachdetails sicher beginnen
-7. Gute Prompts und dauerhafte Projektregeln
-8. Berechtigungen, Sandbox und sichere Ausführung
 
 ### Teil III: Praktische Weiterentwicklung
 
-9. Fachmodelle und Migrationen
-10. Rollen und serverseitige Berechtigungen
-11. Noteneingabe, Konfliktschutz und Freigabe
-12. Zeugnisversionen und PDF-Erzeugung
-13. Import und Audit
+7. Eine kleine Demo fachlich vollständig machen
+
+### Geplante Vertiefung
+
+8. Gute Prompts und dauerhafte Projektregeln
+9. Berechtigungen, Sandbox und sichere Ausführung
+10. Fachmodelle und Migrationen
+11. Rollen und serverseitige Berechtigungen
+12. Noteneingabe, Konfliktschutz und Freigabe
+13. Zeugnisversionen und PDF-Erzeugung
+14. Import und Audit
 
 ### Anhang
 
@@ -53,6 +57,9 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 
 ## Vorhandene Kapitel
 
+- [Transparenz: Wie dieses Buch entstanden ist](00-transparenz.md)
+- [Über den Autor – redaktionelle Vorlage](00-ueber-den-autor.md)
+- [Redaktionelles Inhaltsverzeichnis](00-inhaltsverzeichnis.md)
 - [Kapitel 1: Projektstart, Planung und Repository-Anlage](01-projektstart-planung-repository.md)
 - [Kapitel 2: Vom Plan zum technischen Grundgerüst](02-django-grundgeruest.md)
 - [Kapitel 3: Ein professionelles UI mit sicheren Beispieldaten](03-ui-grundsystem-beispieldaten.md)
@@ -73,7 +80,7 @@ Nach jeder größeren Aufgabe werden Kapitel, Kommandoreferenz und Projektchroni
 
 ## Bildkonzept
 
-Geplante Grafiken werden im Manuskript fortlaufend als `[Bild001]`, `[Bild002]` und so weiter markiert. Das [Bildverzeichnis](bildkonzept.md) beschreibt für jede Nummer Platzierung, Lernziel, Format, Pflichtinhalte, Datenschutzgrenzen und einen direkt nutzbaren DALL·E-Prompt. Die eigentliche Bilderzeugung erfolgt getrennt; bis dahin bleiben die Platzhalter im EPUB sichtbar.
+Geplante Grafiken werden im Manuskript fortlaufend als `[Bild001]`, `[Bild002]` und so weiter markiert. Das [Bildverzeichnis](bildkonzept.md) beschreibt für jede Nummer Platzierung, Lernziel, Format, Pflichtinhalte, Datenschutzgrenzen und einen direkt nutzbaren DALL·E-Prompt. Die eigentliche Bilderzeugung erfolgt getrennt; bis dahin bleiben die Platzhalter im EPUB sichtbar. Aktuell sind 22 Motive geplant.
 
 ## EPUB-Zwischenstand erzeugen
 

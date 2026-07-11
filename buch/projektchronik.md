@@ -30,7 +30,8 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | künstliche Beispieldaten | idempotenter Management-Befehl ohne anmeldbares Standardkonto | Kapitel 6 | erfasst |
 | Live-Dashboard | echte Stammdatenzahlen mit rollenbezogen eingeschränkten Abfragen | Kapitel 6 | erfasst |
 | Demo-Zeugnisablauf | Noteneingabe, Konfliktschutz, Abschluss, Audit und Druckvorschau | Kapitel 7 | erfasst |
-| Bildkonzept | 21 fortlaufende Platzhalter und exakte Generierungsbriefings | alle Kapitel und Bildverzeichnis | erfasst |
+| Bildkonzept | 22 fortlaufende Platzhalter und exakte Generierungsbriefings | alle Kapitel und Bildverzeichnis | erfasst |
+| Buch-Frontmatter | Transparenzkapitel, Autorenvorlage und redaktionelles Inhaltsverzeichnis | Frontmatter | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
 | Betrieb | systemd-Aktivierung, externes Sicherungsziel, Monitoring, Aufbewahrungsentscheidung | zukünftige Betriebsarbeit | teilweise offen |

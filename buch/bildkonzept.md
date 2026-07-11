@@ -1,6 +1,6 @@
 # Bildverzeichnis und Generierungsbriefings
 
-Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxislehrbuchs. Die Platzhalter `[Bild001]` bis `[Bild021]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
+Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxislehrbuchs. Die Platzhalter `[Bild001]` bis `[Bild022]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
 
 ## Redaktionell überarbeiteter Arbeitsauftrag
 
@@ -232,6 +232,16 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 > Erzeuge ein drucktaugliches, stilisiertes Zeugnis-Mockup im Hochformat 4:5, weißes Papier auf sehr hellem Hintergrund. Oben „DEMO – Beispielschule am Stadtpark“, darunter „1. Halbjahr · Klasse DEMO-7A“. Schülername ausschließlich „Alex Muster“. Kleine Tabelle mit „Deutsch 2,0“, „Mathematik 2,5“, „Englisch 3,0“. Sehr deutlich oberhalb und im Fußbereich: „NICHT FREIGEGEBENE DEMO-VORSCHAU“. Seriöses Schulverwaltungsdesign, keine Unterschriften, keine Siegel, keine Logos, kein Wappen, keine echten Daten, keine weiteren Texte.
 
+## Bild022 – Mensch und Codex im transparenten Entstehungsprozess
+
+- Platzierung: Transparenzkapitel, nach dem redaktionell überarbeiteten Arbeitsauftrag
+- Lernziel: menschliche Verantwortung und KI-Unterstützung klar voneinander abgrenzen
+- Format: Querformat 16:9
+- Muss zeigen: Mensch setzt Ziel und gibt frei; Codex analysiert und erstellt Vorschläge; Git, Tests und Review prüfen; daraus entsteht das Buch
+- DALL·E-Prompt:
+
+> Erzeuge ein transparentes Entstehungsdiagramm für ein deutsches Fachbuch, Querformat 16:9. Links eine neutrale menschliche Rolle mit den Aufgaben „Ziel“, „Entscheidung“, „Freigabe“, „Verantwortung“. Daneben ein neutrales technisches Codex-System mit „Analyse“, „Vorschlag“, „Code“, „Redaktion“. Beide führen in eine gemeinsame Prüfstrecke mit „Git“, „Tests“, „Review“, „Datenschutz“. Rechts entsteht ein Buch mit dem Titel „Arbeiten mit Codex“. Zeige klar, dass die menschliche Rolle die endgültige Freigabe erteilt. Keine Markenlogos, keine realen Personen, keine Roboterfigur, heller reduzierter Vektorstil, keine weiteren Texte.
+
 ## Produktions- und Ablagehinweise
 
 Nach der Generierung soll jede Datei unter `buch/images/` nach folgendem Muster abgelegt werden:
@@ -241,6 +251,7 @@ bild001-plan-und-agents.png
 bild002-git-workflow.png
 ...
 bild021-zeugnisvorschau.png
+bild022-transparente-buchentstehung.png
 ```
 
 Vor der Einbindung sind zu prüfen:
