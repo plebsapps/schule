@@ -1,7 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.db import connection
-from django.http import JsonResponse
+from django.http import FileResponse, JsonResponse
 from django.shortcuts import render
+from django.conf import settings
 
 from .dashboard import build_dashboard
 
@@ -78,6 +79,11 @@ def health(request):
 
 def image_style_gallery(request):
     return render(request, "public/image_style_gallery.html", {"styles": IMAGE_STYLES})
+
+
+def epub_download(request):
+    epub_path = settings.BASE_DIR / "static" / "downloads" / "arbeiten-mit-codex-zwischenstand.epub"
+    return FileResponse(open(epub_path, "rb"), as_attachment=True, filename=epub_path.name, content_type="application/epub+zip")
 
 
 @login_required

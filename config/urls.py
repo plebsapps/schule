@@ -9,6 +9,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("anmelden/", auth_views.LoginView.as_view(), name="login"),
     path("abmelden/", auth_views.LogoutView.as_view(), name="logout"),
+    path("arbeiten-mit-codex-zwischenstand.epub", views.epub_download, name="epub-download"),
     path("health/", views.health, name="health"),
     path("bilderstill.html", views.image_style_gallery, name="image-style-gallery"),
     path("noten/", grade_views.assignment_list, name="grade-assignment-list"),
