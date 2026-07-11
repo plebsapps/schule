@@ -2,7 +2,7 @@
 
 Dieses Repository enthält die Planung und schrittweise Umsetzung einer webbasierten Zeugnisverwaltung für Schulen. Die Anwendung soll eine bestehende Excel- und Seriendrucklösung ablösen und sensible Schülerdaten innerhalb einer kontrollierten Serverumgebung verarbeiten.
 
-Der aktuelle Stand ist das öffentlich erreichbare technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthchecks, Nginx und HTTPS sind vorhanden. Fachmodule folgen in späteren Phasen.
+Der aktuelle Stand ist das öffentlich erreichbare technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthchecks, Nginx und HTTPS sind vorhanden. Ein erster Fachstand für Schulstammdaten wird schrittweise ergänzt.
 
 Die Anwendung besitzt ein responsives, serverseitig gerendertes UI-Grundsystem. Das aktuelle Dashboard zeigt ausschließlich deutlich gekennzeichnete künstliche Beispieldaten; diese sind nicht in der Datenbank gespeichert und legen das spätere Fachmodell nicht fest.
 
@@ -96,6 +96,10 @@ Alle Testdaten sind künstlich.
 
 Die initiale Migration für das projektspezifische Benutzer-Modell liegt unter `apps/accounts/migrations/`. Der Webcontainer führt ausstehende Migrationen beim Start aus. Neue Datenbankänderungen dürfen ausschließlich über versionierte Django-Migrationen erfolgen.
 
+## Schulstammdaten
+
+Berechtigte Verwaltungsbenutzer können Schulen, Zeiträume, Lehrkräfte, Fächer, Klassen, Schüler, Klassenzuordnungen, Unterrichtszuordnungen und Zeugnisvorlagen-Metadaten in der serverseitigen Administration pflegen. Eingabereihenfolge, Berechtigungen und bewusste Grenzen stehen in [docs/master-data.md](docs/master-data.md).
+
 ## Deployment
 
 Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx beendet TLS und leitet Anfragen intern weiter. Die geprüften Vorlagen und Betriebsabläufe stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
@@ -114,8 +118,8 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 ## Bekannte Einschränkungen
 
-- Es existieren noch keine fachlichen Apps für Schüler, Klassen, Noten oder Zeugnisse.
-- Rollen und fachliche Berechtigungen sind noch nicht implementiert.
+- Die Stammdatenmodelle und Modellberechtigungen sind begonnen; objektbezogene Zugriffe nach Schule, Klasse und Fach fehlen noch.
+- Noteneingabe, Audit, Freigabe und PDF-Zeugnisse sind noch nicht implementiert.
 - Die automatische systemd-Aktivierung, externe verschlüsselte Sicherung und Überwachung müssen auf dem Zielserver noch manuell eingerichtet werden.
 - Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
 - Offene Fachfragen sind in `PLAN.md` aufgeführt.

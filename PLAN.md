@@ -874,3 +874,9 @@ Ein wiederholbarer EPUB3-Zwischenstand kann über das versionsfeste offizielle P
 Für Phase 8 stehen versionierte Skripte für PostgreSQL-Backups, Integritätsprüfungen, isolierte Wiederherstellungstests und einen ausdrücklich zu bestätigenden Produktions-Restore bereit. Backups werden mit restriktiven Rechten außerhalb der Git-Historie abgelegt; das Produktions-Restore-Skript erstellt vor dem Eingriff ein zusätzliches Sicherheitsbackup.
 
 Vorlagen für einen täglichen systemd-Timer sind dokumentiert, werden aber nicht automatisch auf dem Server installiert. Noch offen sind die datenschutzrechtlich freigegebene Aufbewahrungsfrist, ein verschlüsseltes externes Sicherungsziel und die produktive Überwachung fehlgeschlagener Läufe.
+
+### Phase 3: erster Stammdatenstand
+
+Mangels vorhandener Vorlagen und Quelldateien wird das fachliche Modell ausdrücklich iterativ entwickelt. Ein erster erweiterbarer Stand umfasst Schule, Schuljahr, Zeugnisperiode, Lehrkräfte mit Rollen, Fächer und Notenskalen, Klassen, Schüler, historische Klassenzuordnungen, Unterrichtszuordnungen und Metadaten versionierter Zeugnisvorlagen.
+
+Die Pflege erfolgt zunächst über die serverseitig berechtigte Django-Administration. Ein bloßer Staff-Status gewährt keinen fachlichen Zugriff. Vor der Noteneingabe folgen objektbezogene Berechtigungen nach Schule, Klasse und Fach, Audit-Protokollierung, Notenvalidierung und Konfliktschutz.

@@ -21,6 +21,12 @@
         <a class="nav-item is-active" href="{% url 'home' %}" aria-current="page"><span aria-hidden="true">▦</span> Übersicht</a>
         {% if user.is_staff %}
           <p class="nav-label">Administration</p>
+          {% if perms.schools.view_school %}<a class="nav-item" href="{% url 'admin:schools_school_changelist' %}"><span aria-hidden="true">⌂</span> Schulen</a>{% endif %}
+          {% if perms.students.view_student %}<a class="nav-item" href="{% url 'admin:students_student_changelist' %}"><span aria-hidden="true">♙</span> Schüler</a>{% endif %}
+          {% if perms.classes.view_schoolclass %}<a class="nav-item" href="{% url 'admin:classes_schoolclass_changelist' %}"><span aria-hidden="true">▤</span> Klassen</a>{% endif %}
+          {% if perms.subjects.view_subject %}<a class="nav-item" href="{% url 'admin:subjects_subject_changelist' %}"><span aria-hidden="true">◇</span> Fächer</a>{% endif %}
+          {% if perms.accounts.view_user %}<a class="nav-item" href="{% url 'admin:accounts_user_changelist' %}"><span aria-hidden="true">♧</span> Lehrkräfte</a>{% endif %}
+          {% if perms.reports.view_reporttemplate %}<a class="nav-item" href="{% url 'admin:reports_reporttemplate_changelist' %}"><span aria-hidden="true">▱</span> Vorlagen</a>{% endif %}
           <a class="nav-item" href="{% url 'admin:index' %}"><span aria-hidden="true">⚙</span> Django-Administration</a>
         {% endif %}
       </nav>
