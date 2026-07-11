@@ -3,7 +3,7 @@ from django.db import connection
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from .demo_data import DEMO_DASHBOARD
+from .dashboard import build_dashboard
 
 
 def health(request):
@@ -15,4 +15,4 @@ def health(request):
 
 @login_required
 def home(request):
-    return render(request, "core/home.html", {"dashboard": DEMO_DASHBOARD})
+    return render(request, "core/home.html", {"dashboard": build_dashboard(request.user)})

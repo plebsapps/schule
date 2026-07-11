@@ -41,3 +41,11 @@ Die wichtige Codex-Erkenntnis lautet: Ein Auftrag darf in sichere, nutzbare Ausb
 Auch dieser kurze Prompt wurde für die Buchfassung sprachlich geglättet. Statt Daten einmalig per Datenbank-Shell einzutragen, entstand ein transaktionaler und idempotenter Django-Management-Befehl. Er erzeugt eine klar als `DEMO` benannte Schule, eine Klasse, drei Schüler, drei Fächer, Zuordnungen und eine Vorlagenbeschreibung.
 
 Die künstliche Lehrkraft ist deaktiviert und hat kein verwendbares Passwort. Kontaktadressen verwenden die reservierte Endung `.invalid`. Zwei automatische Tests beweisen, dass ein zweiter Lauf keine Duplikate erzeugt und ein vorhandenes Administratorkonto unverändert bleibt. So werden Beispieldaten zu einem wiederholbaren Teil der Anwendung statt zu einem nicht nachvollziehbaren Eingriff in die Produktionsdatenbank.
+
+## Vom Design-Dashboard zur echten Auswertung
+
+> Lass uns das Dashboard so weiterentwickeln, dass es tatsächlich mit den vorhandenen Daten arbeitet.
+
+Die statischen Beispielzahlen wurden daraufhin vollständig entfernt. Ein eigener Dashboard-Selektor ermittelt Klassen, Schüler, Fächer und offene Zeugnisperioden aus der Datenbank. Dabei wird nicht nur die Darstellung, sondern bereits die Abfrage eingeschränkt: Fach- und Klassenlehrkräfte erhalten ausschließlich zugewiesene Klassen. Administration und Schulleitung sehen die Gesamtübersicht.
+
+Besonders wichtig war der Umgang mit noch nicht vorhandenen Noten. Statt weiterhin erfundene Prozentwerte anzuzeigen, nennt die Oberfläche ehrlich die Zahl der verbundenen Stammdaten und markiert Klassen als bereit für das spätere Notenmodul. Tests prüfen sowohl die korrekte Gesamtansicht als auch den negativen Sicherheitsfall: Eine nicht zugewiesene Lehrkraft darf weder fremde Klassen- noch Schulnamen im HTML erhalten.

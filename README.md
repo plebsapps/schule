@@ -4,7 +4,7 @@ Dieses Repository enthält die Planung und schrittweise Umsetzung einer webbasie
 
 Der aktuelle Stand ist das öffentlich erreichbare technische Grundgerüst: Django-Anmeldung, PostgreSQL, Docker Compose, Healthchecks, Nginx und HTTPS sind vorhanden. Ein erster Fachstand für Schulstammdaten wird schrittweise ergänzt.
 
-Die Anwendung besitzt ein responsives, serverseitig gerendertes UI-Grundsystem. Das aktuelle Dashboard zeigt ausschließlich deutlich gekennzeichnete künstliche Beispieldaten; diese sind nicht in der Datenbank gespeichert und legen das spätere Fachmodell nicht fest.
+Die Anwendung besitzt ein responsives, serverseitig gerendertes UI-Grundsystem. Das Dashboard wertet die gespeicherten Stammdaten aus und zeigt nur die für das angemeldete Konto sichtbaren Klassen und Zuordnungen. Eine Notenauswertung folgt erst mit dem geschützten Notenmodul.
 
 ## Zielbild
 

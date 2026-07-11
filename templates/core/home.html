@@ -4,9 +4,9 @@
 {% block page_title %}Übersicht{% endblock %}
 
 {% block content %}
-  <div class="demo-banner" role="note">
-    <span class="demo-badge">DEMO</span>
-    <p><strong>Ausschließlich künstliche Beispieldaten.</strong> Diese Ansicht dient der Gestaltung und bildet noch kein verbindliches Fachmodell ab.</p>
+  <div class="demo-banner" role="status">
+    <span class="demo-badge">LIVE</span>
+    <p><strong>Direkt aus der Datenbank.</strong> Angezeigt werden ausschließlich die für Ihr Konto sichtbaren Stammdaten. Eine Notenauswertung folgt mit dem Notenmodul.</p>
   </div>
 
   {% if perms.schools.add_school %}
@@ -23,12 +23,12 @@
     <div>
       <p class="eyebrow">{{ dashboard.school_year }} · {{ dashboard.period }}</p>
       <h1>Guten Tag, {{ user.first_name|default:user.username }}.</h1>
-      <p>Hier sehen Sie den beispielhaften Bearbeitungsstand Ihrer Klassen.</p>
+      <p>{{ dashboard.scope }} mit dem aktuellen Stand der gespeicherten Schulstammdaten.</p>
     </div>
-    <span class="period-badge"><span class="status-dot" aria-hidden="true"></span> Eingabe geöffnet</span>
+    <span class="period-badge"><span class="status-dot" aria-hidden="true"></span> {% if dashboard.period_is_open %}Eingabe geöffnet{% else %}Keine offene Periode{% endif %}</span>
   </section>
 
-  <section class="summary-grid" aria-label="Beispielhafte Kennzahlen">
+  <section class="summary-grid" aria-label="Gespeicherte Kennzahlen">
     {% for item in dashboard.summary %}
       <article class="summary-card tone-{{ item.tone }}">
         <p>{{ item.label }}</p>
@@ -41,24 +41,24 @@
   <div class="dashboard-grid">
     <section class="panel panel-wide" aria-labelledby="classes-title">
       <div class="panel-header">
-        <div><p class="eyebrow">Bearbeitungsstand</p><h2 id="classes-title">Meine Beispielklassen</h2></div>
+        <div><p class="eyebrow">Gespeicherte Zuordnungen</p><h2 id="classes-title">Sichtbare Klassen</h2></div>
         <span class="muted">{{ dashboard.period }}</span>
       </div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>Klasse</th><th>Klassenleitung</th><th>Fortschritt</th><th>Fehlend</th><th>Status</th></tr></thead>
+          <thead><tr><th>Klasse</th><th>Schule / Schuljahr</th><th>Klassenleitung</th><th>Schüler</th><th>Fächer</th><th>Status</th></tr></thead>
           <tbody>
             {% for class in dashboard.classes %}
               <tr>
                 <td><strong>{{ class.name }}</strong></td>
+                <td>{{ class.school }}<br><small>{{ class.school_year }}</small></td>
                 <td>{{ class.lead }}</td>
-                <td>
-                  <div class="progress-label"><span>{{ class.complete }} %</span></div>
-                  <div class="progress" role="progressbar" aria-label="Fortschritt Klasse {{ class.name }}" aria-valuenow="{{ class.complete }}" aria-valuemin="0" aria-valuemax="100"><span style="width: {{ class.complete }}%"></span></div>
-                </td>
-                <td>{{ class.missing }}</td>
+                <td>{{ class.students }}</td>
+                <td>{{ class.subjects }}</td>
                 <td><span class="status-chip">{{ class.status }}</span></td>
               </tr>
+            {% empty %}
+              <tr><td colspan="6">Für dieses Konto sind noch keine Klassen zugeordnet.</td></tr>
             {% endfor %}
           </tbody>
         </table>
@@ -66,7 +66,7 @@
     </section>
 
     <section class="panel" aria-labelledby="tasks-title">
-      <div class="panel-header"><div><p class="eyebrow">Nächste Schritte</p><h2 id="tasks-title">Offene Aufgaben</h2></div></div>
+      <div class="panel-header"><div><p class="eyebrow">Aus den Stammdaten</p><h2 id="tasks-title">Nächste Schritte</h2></div></div>
       <ul class="task-list">
         {% for task in dashboard.tasks %}
           <li>

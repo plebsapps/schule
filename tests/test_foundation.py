@@ -1,9 +1,8 @@
 import pytest
 from django.contrib.auth import get_user_model
 from django.contrib.staticfiles import finders
+from django.core.management import call_command
 from django.urls import reverse
-
-from apps.core.demo_data import DEMO_DASHBOARD
 
 
 @pytest.mark.django_db
@@ -30,19 +29,22 @@ def test_authenticated_user_can_open_home(client):
 
     assert response.status_code == 200
     content = response.content.decode()
-    assert "Ausschließlich künstliche Beispieldaten" in content
-    assert "Lehrkraft Beispiel" in content
+    assert "Direkt aus der Datenbank" in content
+    assert "Keine zugewiesenen Klassen" in content
 
 
 @pytest.mark.django_db
-def test_demo_dashboard_does_not_create_domain_records(client):
-    user = get_user_model().objects.create_user(username="kuenstliche-lehrkraft")
+def test_superuser_dashboard_uses_persisted_demo_master_data(client):
+    call_command("create_demo_master_data")
+    user = get_user_model().objects.create_superuser(username="kuenstliche-verwaltung", password="rein-kuenstlich-123")
     client.force_login(user)
 
-    client.get(reverse("home"))
+    response = client.get(reverse("home"))
+    content = response.content.decode()
 
-    assert get_user_model().objects.count() == 1
-    assert DEMO_DASHBOARD["school_year"] == "2026/2027"
+    assert "DEMO-7A" in content
+    assert "DEMO – Beispielschule am Stadtpark" in content
+    assert "Meine Beispielklassen" not in content
 
 
 def test_login_page_uses_local_design_assets(client):
