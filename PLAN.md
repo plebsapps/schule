@@ -880,3 +880,5 @@ Vorlagen für einen täglichen systemd-Timer sind dokumentiert, werden aber nich
 Mangels vorhandener Vorlagen und Quelldateien wird das fachliche Modell ausdrücklich iterativ entwickelt. Ein erster erweiterbarer Stand umfasst Schule, Schuljahr, Zeugnisperiode, Lehrkräfte mit Rollen, Fächer und Notenskalen, Klassen, Schüler, historische Klassenzuordnungen, Unterrichtszuordnungen und Metadaten versionierter Zeugnisvorlagen.
 
 Die Pflege erfolgt zunächst über die serverseitig berechtigte Django-Administration. Ein bloßer Staff-Status gewährt keinen fachlichen Zugriff. Vor der Noteneingabe folgen objektbezogene Berechtigungen nach Schule, Klasse und Fach, Audit-Protokollierung, Notenvalidierung und Konfliktschutz.
+
+Das Dashboard verwendet keine statischen Demonstrationszahlen mehr. Es ermittelt sichtbare Klassen, Schüler, Fächer und offene Zeugnisperioden aus der Datenbank. Fach- und Klassenlehrkräfte sehen ausschließlich eigene Zuordnungen; Administration und Schulleitung erhalten die Gesamtübersicht. Da noch kein Notenmodell existiert, werden keine erfundenen Fortschritts- oder Vollständigkeitswerte angezeigt.
