@@ -27,6 +27,7 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | Datenbanksicherung | geschütztes PostgreSQL-Backup, Prüfsumme und Aufbewahrung | Kapitel 5 und Betriebsdokumentation | erfasst |
 | Restore-Test | isolierte kurzlebige PostgreSQL-Instanz ohne Ausgabe von Fachdaten | Kapitel 5 und Betriebsdokumentation | erfasst |
 | erster Fachkern | Stammdaten trotz fehlender Vorlagen sicher und erweiterbar beginnen | Kapitel 6 | erfasst |
+| künstliche Beispieldaten | idempotenter Management-Befehl ohne anmeldbares Standardkonto | Kapitel 6 | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
 | Betrieb | systemd-Aktivierung, externes Sicherungsziel, Monitoring, Aufbewahrungsentscheidung | zukünftige Betriebsarbeit | teilweise offen |

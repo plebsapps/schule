@@ -48,3 +48,13 @@ Normale Lehrkräfte dürfen die Stammdatenverwaltung nicht öffnen. Rollen allei
 Die Dashboard-Kennzahlen bleiben vorerst künstliche Beispieldaten. Noten können in diesem Stand noch nicht eingegeben werden. Eine Noteneingabe wird erst freigeschaltet, wenn serverseitige Objektberechtigungen, Notenvalidierung, Audit-Protokollierung und Schutz vor parallelem Überschreiben implementiert und getestet sind.
 
 Die Zeugnisvorlagenverwaltung speichert nur Bezeichnung, Art, Klassenstufe, Vorlagenschlüssel und Version. Freie HTML-Eingaben oder Datei-Uploads sind aus Sicherheits- und Reproduzierbarkeitsgründen noch nicht möglich.
+
+## Künstlichen Beispieldatensatz anlegen
+
+Ein kleiner, eindeutig mit `DEMO` gekennzeichneter Datensatz kann wiederholbar angelegt werden:
+
+```bash
+docker compose exec web python manage.py create_demo_master_data
+```
+
+Der Befehl ist transaktional und idempotent. Er verändert oder löscht keine vorhandenen Schulen, Schüler oder Administratorkonten. Die erzeugte Beispiel-Lehrkraft ist deaktiviert und besitzt kein verwendbares Passwort. Alle Namen, Nummern, Kontaktangaben und Geburtsdaten sind künstlich; reservierte `.invalid`-Adressen verhindern einen versehentlichen E-Mail-Versand.

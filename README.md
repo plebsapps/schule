@@ -100,6 +100,8 @@ Die initiale Migration für das projektspezifische Benutzer-Modell liegt unter `
 
 Berechtigte Verwaltungsbenutzer können Schulen, Zeiträume, Lehrkräfte, Fächer, Klassen, Schüler, Klassenzuordnungen, Unterrichtszuordnungen und Zeugnisvorlagen-Metadaten in der serverseitigen Administration pflegen. Eingabereihenfolge, Berechtigungen und bewusste Grenzen stehen in [docs/master-data.md](docs/master-data.md).
 
+Ein kleiner, vollständig künstlicher und wiederholbar erzeugbarer Beispieldatensatz steht über `python manage.py create_demo_master_data` bereit. Er ist deutlich mit `DEMO` gekennzeichnet und enthält keine echten Schülerdaten oder anmeldbare Standardkonten.
+
 ## Deployment
 
 Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx beendet TLS und leitet Anfragen intern weiter. Die geprüften Vorlagen und Betriebsabläufe stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
