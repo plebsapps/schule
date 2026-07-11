@@ -19,6 +19,9 @@ docker run --rm \
   --metadata-file=buch/metadata.yaml \
   --css=buch/epub.css \
   --resource-path=.:buch \
+  buch/00-transparenz.md \
+  buch/00-ueber-den-autor.md \
+  buch/00-inhaltsverzeichnis.md \
   buch/01-projektstart-planung-repository.md \
   buch/02-django-grundgeruest.md \
   buch/03-ui-grundsystem-beispieldaten.md \
