@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Noteneingabe | Zeugnisverwaltung{% endblock %}
+{% block page_title %}Noteneingabe{% endblock %}
+{% block content %}
+  <section class="page-heading"><div><p class="eyebrow">Demo-Ablauf</p><h1>Klasse und Fach auswählen</h1><p>Es werden nur serverseitig berechtigte Unterrichtszuordnungen angezeigt.</p></div></section>
+  <section class="panel"><div class="table-scroll"><table>
+    <thead><tr><th>Klasse</th><th>Fach</th><th>Zeugnisperiode</th><th>Lehrkraft</th><th></th></tr></thead>
+    <tbody>{% for assignment in assignments %}<tr>
+      <td>{{ assignment.school_class.name }}</td><td>{{ assignment.subject.name }}</td><td>{{ assignment.report_period.name }}</td><td>{{ assignment.teacher.get_full_name|default:assignment.teacher.username }}</td>
+      <td><a class="button button-primary" href="{% url 'grade-entry' assignment.pk %}">Öffnen</a></td>
+    </tr>{% empty %}<tr><td colspan="5">Keine Unterrichtszuordnung verfügbar.</td></tr>{% endfor %}</tbody>
+  </table></div></section>
+{% endblock %}

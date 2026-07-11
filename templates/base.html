@@ -19,6 +19,7 @@
       <nav class="primary-nav">
         <p class="nav-label">Arbeitsbereich</p>
         <a class="nav-item is-active" href="{% url 'home' %}" aria-current="page"><span aria-hidden="true">▦</span> Übersicht</a>
+        <a class="nav-item" href="{% url 'grade-assignment-list' %}"><span aria-hidden="true">✓</span> Noteneingabe</a>
         {% if user.is_staff %}
           <p class="nav-label">Administration</p>
           {% if perms.schools.view_school %}<a class="nav-item" href="{% url 'admin:schools_school_changelist' %}"><span aria-hidden="true">⌂</span> Schulen</a>{% endif %}
@@ -50,7 +51,10 @@
           </form>
         </div>
       </header>
-      <main id="main-content" class="main-content">{% block content %}{% endblock %}</main>
+      <main id="main-content" class="main-content">
+        {% for message in messages %}<div class="alert {% if message.tags == 'error' %}alert-error{% else %}alert-success{% endif %}" role="alert">{{ message }}</div>{% endfor %}
+        {% block content %}{% endblock %}
+      </main>
     </div>
   {% else %}
     <main id="main-content" class="auth-main">{% block auth_content %}{% endblock %}</main>

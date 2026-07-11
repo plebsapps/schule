@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ assignment.subject.name }} · {{ assignment.school_class.name }}{% endblock %}
+{% block page_title %}Noteneingabe{% endblock %}
+{% block content %}
+  <section class="page-heading"><div><p class="eyebrow">{{ assignment.report_period.name }}</p><h1>{{ assignment.school_class.name }} · {{ assignment.subject.name }}</h1><p>Zulässig: {{ assignment.subject.grade_min }} bis {{ assignment.subject.grade_max }}, Schrittweite {{ assignment.subject.grade_step }}.</p></div><span class="status-chip">{{ sheet.get_status_display|default:"In Bearbeitung" }}</span></section>
+  <form method="post" class="panel">{% csrf_token %}
+    <div class="table-scroll"><table><thead><tr><th>Schüler</th><th>Note</th><th>Stand</th><th>Zeugnis</th></tr></thead><tbody>
+    {% for row in rows %}<tr><td><strong>{{ row.student.last_name }}, {{ row.student.first_name }}</strong></td><td>
+      <input class="grade-input" name="grade_{{ row.student.pk }}" value="{% if row.grade %}{{ row.grade.value }}{% endif %}" inputmode="decimal" {% if sheet.status == 'completed' %}disabled{% endif %}>
+      <input type="hidden" name="version_{{ row.student.pk }}" value="{{ row.grade.version|default:0 }}">
+    </td><td>{% if row.grade %}v{{ row.grade.version }} · {{ row.grade.updated_at|date:"d.m.Y H:i" }}{% else %}Noch offen{% endif %}</td><td><a href="{% url 'report-preview' assignment.school_class_id assignment.report_period_id row.student.pk %}">Vorschau</a></td></tr>{% endfor %}
+    </tbody></table></div>
+    {% if sheet.status != 'completed' %}<div class="form-actions"><button class="button button-quiet" name="action" value="save">Zwischenspeichern</button><button class="button button-primary" name="action" value="complete">Vollständig abschließen</button></div>{% else %}<div class="locked-note">Diese Eingabe ist abgeschlossen. Ein Administrator kann sie in der Administration wieder öffnen.</div>{% endif %}
+  </form>
+{% endblock %}

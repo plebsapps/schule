@@ -102,6 +102,10 @@ Berechtigte Verwaltungsbenutzer können Schulen, Zeiträume, Lehrkräfte, Fäche
 
 Ein kleiner, vollständig künstlicher und wiederholbar erzeugbarer Beispieldatensatz steht über `python manage.py create_demo_master_data` bereit. Er ist deutlich mit `DEMO` gekennzeichnet und enthält keine echten Schülerdaten oder anmeldbare Standardkonten.
 
+## Demo-Noteneingabe und Zeugnisvorschau
+
+Berechtigte Lehrkräfte können über **Noteneingabe** die Schüler einer zugewiesenen Klasse bewerten, Eingaben zwischenspeichern und vollständig abschließen. Die einfache Zeugnisvorschau verwendet diese gespeicherten Noten und besitzt ein Drucklayout. Berechtigungen, Konfliktschutz, Audit und bewusste Grenzen sind in [docs/demo-grade-flow.md](docs/demo-grade-flow.md) beschrieben.
+
 ## Deployment
 
 Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröffentlicht Django nur an `127.0.0.1:8005`; Nginx beendet TLS und leitet Anfragen intern weiter. Die geprüften Vorlagen und Betriebsabläufe stehen in [docs/deployment.md](docs/deployment.md). Änderungen an Nginx oder Zertifikaten benötigen Administratorrechte und einen erfolgreichen `nginx -t` vor jedem Reload.
@@ -121,7 +125,7 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 ## Bekannte Einschränkungen
 
 - Die Stammdatenmodelle und Modellberechtigungen sind begonnen; objektbezogene Zugriffe nach Schule, Klasse und Fach fehlen noch.
-- Noteneingabe, Audit, Freigabe und PDF-Zeugnisse sind noch nicht implementiert.
+- Die Demo-Noteneingabe, Sperre, Audit-Basis und HTML-Zeugnisvorschau sind vorhanden; PDF-Archivierung und vollständige Freigabe fehlen noch.
 - Die automatische systemd-Aktivierung, externe verschlüsselte Sicherung und Überwachung müssen auf dem Zielserver noch manuell eingerichtet werden.
 - Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
 - Offene Fachfragen sind in `PLAN.md` aufgeführt.
