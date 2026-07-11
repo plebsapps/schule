@@ -10,6 +10,7 @@ urlpatterns = [
     path("anmelden/", auth_views.LoginView.as_view(), name="login"),
     path("abmelden/", auth_views.LogoutView.as_view(), name="logout"),
     path("health/", views.health, name="health"),
+    path("bilderstill.html", views.image_style_gallery, name="image-style-gallery"),
     path("noten/", grade_views.assignment_list, name="grade-assignment-list"),
     path("noten/<int:assignment_id>/", grade_views.grade_entry, name="grade-entry"),
     path(

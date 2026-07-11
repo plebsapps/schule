@@ -1,0 +1,26 @@
+:root { color: #172443; background: #f3f5f8; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-height: 100vh; }
+.skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 20; padding: .7rem 1rem; background: white; border-radius: 8px; }
+.skip-link:focus { top: 1rem; }
+.gallery-hero { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding: clamp(2rem, 6vw, 5rem) max(1rem, calc((100vw - 1500px) / 2)); color: white; background: radial-gradient(circle at 80% 10%, #2c5ca8, transparent 35%), #101b35; }
+.hero-copy { max-width: 850px; }
+.eyebrow { margin: 0 0 .6rem; color: #a9c5ff; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+h1 { max-width: 15ch; margin: 0; font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1; letter-spacing: -.055em; }
+.intro { max-width: 65ch; margin: 1.25rem 0 0; color: #c8d4e9; line-height: 1.7; }
+.hero-note { display: grid; max-width: 300px; gap: .35rem; padding: 1rem; color: #dce8fa; background: rgb(255 255 255 / 8%); border: 1px solid rgb(255 255 255 / 15%); border-radius: 12px; }
+.hero-note span { color: #9fb0ca; font-size: .78rem; line-height: 1.5; }
+.gallery-grid { display: grid; width: min(1500px, calc(100% - 2rem)); margin: 2rem auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.design-card { overflow: hidden; background: white; border: 1px solid #dce2eb; border-radius: 16px; box-shadow: 0 15px 40px rgb(16 27 53 / 8%); }
+.image-link { display: block; overflow: hidden; background: #e8edf4; }
+.image-link:focus-visible { outline: 4px solid #2864dc; outline-offset: -4px; }
+.image-link img { display: block; width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: cover; transition: transform .25s ease; }
+.image-link:hover img { transform: scale(1.015); }
+.card-copy { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 1rem; padding: 1.2rem; }
+.number { display: grid; width: 46px; height: 46px; place-items: center; color: white; font-size: .8rem; font-weight: 900; background: #2864dc; border-radius: 50%; }
+.card-copy h2 { margin: 0; font-size: 1.05rem; }
+.card-copy p { margin: .4rem 0 0; color: #657086; font-size: .78rem; line-height: 1.5; }
+footer { padding: 1rem 1rem 3rem; color: #657086; text-align: center; font-size: .78rem; }
+@media (max-width: 800px) { .gallery-hero { align-items: start; flex-direction: column; } .gallery-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .image-link img { transition: none; } }

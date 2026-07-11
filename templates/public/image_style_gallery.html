@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bilderstil auswählen | Arbeiten mit Codex</title>
+  <link rel="stylesheet" href="{% static 'css/image-styles.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#designs">Zu den Entwürfen springen</a>
+  <header class="gallery-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Praxislehrbuch Arbeiten mit Codex</p>
+      <h1>Welcher Bilderstil passt zum Buch?</h1>
+      <p class="intro">Zehn Entwürfe zeigen dasselbe Grundthema in unterschiedlichen visuellen Sprachen. Notiere einfach die Nummer deines Favoriten.</p>
+    </div>
+    <div class="hero-note"><strong>Nur Stilvorschau</strong><span>Die 22 endgültigen Buchgrafiken entstehen erst nach der Auswahl.</span></div>
+  </header>
+
+  <main id="designs" class="gallery-grid">
+    {% for style in styles %}
+      <article class="design-card" id="design-{{ style.number }}">
+        <a class="image-link" href="{% static 'images/style-previews/'|add:style.file %}" target="_blank" rel="noopener" aria-label="Design {{ style.number }} in voller Größe öffnen">
+          <img src="{% static 'images/style-previews/'|add:style.file %}" alt="Stilentwurf {{ style.number }}: {{ style.name }}" width="1672" height="941" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+        </a>
+        <div class="card-copy">
+          <span class="number">{{ style.number }}</span>
+          <div><h2>{{ style.name }}</h2><p>{{ style.description }}</p></div>
+        </div>
+      </article>
+    {% endfor %}
+  </main>
+
+  <footer><p>Alle Motive sind künstliche Stilentwürfe ohne echte Schülerdaten. Klick auf ein Bild öffnet die Vollansicht.</p></footer>
+</body>
+</html>
