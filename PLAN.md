@@ -868,3 +868,9 @@ Die Buchstruktur unterscheidet Projektchronik, Fachkapitel und versionsbezogene 
 Die Projektchronik wird nach jeder größeren Aufgabe fortgeschrieben. Dadurch bleiben Prompts, Entscheidungen, Befehle, Tests, Blocker, Sicherheitsüberlegungen und Ergebnisse bis zur späteren Druckfassung nachvollziehbar.
 
 Ein wiederholbarer EPUB3-Zwischenstand kann über das versionsfeste offizielle Pandoc-Containerimage erzeugt werden. Die Markdown-Dateien bleiben die maßgeblichen Quellen; generierte EPUB-Dateien werden nicht versioniert.
+
+### Backup und Wiederherstellung
+
+Für Phase 8 stehen versionierte Skripte für PostgreSQL-Backups, Integritätsprüfungen, isolierte Wiederherstellungstests und einen ausdrücklich zu bestätigenden Produktions-Restore bereit. Backups werden mit restriktiven Rechten außerhalb der Git-Historie abgelegt; das Produktions-Restore-Skript erstellt vor dem Eingriff ein zusätzliches Sicherheitsbackup.
+
+Vorlagen für einen täglichen systemd-Timer sind dokumentiert, werden aber nicht automatisch auf dem Server installiert. Noch offen sind die datenschutzrechtlich freigegebene Aufbewahrungsfrist, ein verschlüsseltes externes Sicherungsziel und die produktive Überwachung fehlgeschlagener Läufe.

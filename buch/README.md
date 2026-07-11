@@ -30,16 +30,17 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 ### Teil II: Codex verstehen und bedienen
 
 4. GPT-5.6 Sol, Codex-Oberflächen und Befehlsarten
-5. Gute Prompts und dauerhafte Projektregeln
-6. Berechtigungen, Sandbox und sichere Ausführung
+5. Backups entwerfen und Wiederherstellungen beweisen
+6. Gute Prompts und dauerhafte Projektregeln
+7. Berechtigungen, Sandbox und sichere Ausführung
 
 ### Teil III: Praktische Weiterentwicklung
 
-7. Fachmodelle und Migrationen
-8. Rollen und serverseitige Berechtigungen
-9. Noteneingabe, Konfliktschutz und Freigabe
-10. Zeugnisversionen und PDF-Erzeugung
-11. Import, Audit, Backup und Restore
+8. Fachmodelle und Migrationen
+9. Rollen und serverseitige Berechtigungen
+10. Noteneingabe, Konfliktschutz und Freigabe
+11. Zeugnisversionen und PDF-Erzeugung
+12. Import und Audit
 
 ### Anhang
 
@@ -54,6 +55,7 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 - [Kapitel 2: Vom Plan zum technischen Grundgerüst](02-django-grundgeruest.md)
 - [Kapitel 3: Ein professionelles UI mit sicheren Beispieldaten](03-ui-grundsystem-beispieldaten.md)
 - [Kapitel 4: GPT-5.6 Sol und die Codex-Oberflächen](04-gpt-5-6-sol-codex-oberflaechen.md)
+- [Kapitel 5: Backups entwerfen und Wiederherstellungen beweisen](05-backup-und-wiederherstellung.md)
 
 ## Redaktion der Prompts
 

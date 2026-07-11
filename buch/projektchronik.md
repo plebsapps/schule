@@ -24,9 +24,11 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | Codex-Kommandos | App-, CLI-, Git-, Docker- und Django-Referenz | Kommandoreferenz | erfasst |
 | EPUB-Zwischenstand | wiederholbarer Pandoc-Containerbuild, Metadaten und EPUB-CSS | `buch/README.md` und Buildskript | erfasst |
 | GitHub-Buchrelease | EPUB als öffentlicher Prerelease-Download mit SHA-256-Prüfung | `buch/README.md` und Release-Notizen | erfasst |
+| Datenbanksicherung | geschütztes PostgreSQL-Backup, Prüfsumme und Aufbewahrung | Kapitel 5 und Betriebsdokumentation | erfasst |
+| Restore-Test | isolierte kurzlebige PostgreSQL-Instanz ohne Ausgabe von Fachdaten | Kapitel 5 und Betriebsdokumentation | erfasst |
 | Fachmodelle | Unterlagenanalyse, Stammdaten und Berechtigungen | zukünftige Kapitel | offen |
 | Noten und Zeugnisse | Validierung, Locking, Freigabe, PDF, Versionen | zukünftige Kapitel | offen |
-| Betrieb | Backup, Restore-Test, Monitoring, Aufbewahrung | zukünftige Kapitel | offen |
+| Betrieb | systemd-Aktivierung, externes Sicherungsziel, Monitoring, Aufbewahrungsentscheidung | zukünftige Betriebsarbeit | teilweise offen |
 
 ## Bisherige Pull Requests
 
@@ -39,10 +41,17 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im späteren
 | #5 | UI-Grundsystem und künstliches Demo-Dashboard | gemergt |
 | #6 | Buchstruktur, GPT-5.6-Sol-Grundlage und Codex-Kommandoreferenz | gemergt |
 | #7 | wiederholbarer EPUB3-Buildprozess | gemergt |
+| #8 | öffentlicher EPUB-Prerelease in README und Buch dokumentiert | gemergt |
 
 ## Redaktionell überarbeiteter Prompt zum EPUB-Zwischenstand
 
 > Merge den aktuellen Buchstand nach `main` und erstelle anschließend eine EPUB-Datei als Zwischenstand des Praxislehrbuchs.
+
+## Redaktionell überarbeiteter Prompt zu Backup und Restore
+
+> Führe in der vereinbarten Reihenfolge fort: Veröffentliche zuerst den vorhandenen Dokumentationsstand. Implementiere anschließend PostgreSQL-Backup und -Wiederherstellung. Danach analysieren wir die anonymisierten fachlichen Unterlagen und beginnen mit der nächsten Entwicklungsphase.
+
+Die Ausarbeitung dieses Schritts steht in Kapitel 5. Ein Pull Request und sein Ergebnis werden nach Abschluss ergänzt.
 
 ## Wiederkehrender Abschlusscheck
 
