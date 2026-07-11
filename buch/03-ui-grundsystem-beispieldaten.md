@@ -31,11 +31,15 @@ Die Anwendung verwendet ein ruhiges, kontrastreiches Verwaltungsdesign mit:
 
 Externe Schriften, Trackingdienste und Bilddienste wurden bewusst vermieden. Dadurch entstehen weder unnötige Datenübertragungen noch zusätzliche Verfügbarkeits- und Datenschutzabhängigkeiten.
 
+[Bild007]
+
 ## Umgang mit Beispieldaten
 
 Die Demonstrationswerte sind sichtbar mit `DEMO` und dem Hinweis „Ausschließlich künstliche Beispieldaten“ gekennzeichnet. Namen verwenden Begriffe wie „Beispiel“, „Muster“ und „Demo“. Die Werte liegen in einer eigenen Quellcodedatei und erzeugen keine Datenbankobjekte.
 
 Diese Lösung ist absichtlich vorläufig. Sobald die anonymisierten fachlichen Unterlagen analysiert und die Modelle freigegeben sind, werden versionierte Fixtures oder Management-Kommandos für realistische künstliche Datensätze ergänzt.
+
+[Bild008]
 
 ## Tests
 

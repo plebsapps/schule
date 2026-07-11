@@ -47,6 +47,7 @@ Modellzugang, Codex-Oberflächen und Kommandos können sich ändern. Deshalb nen
 
 - [Codex-Kommandoreferenz](anhang-codex-kommandoreferenz.md)
 - [Projektchronik und Vollständigkeitskontrolle](projektchronik.md)
+- [Bildverzeichnis und Generierungsbriefings](bildkonzept.md)
 - Git-, Docker- und Betriebsbefehle
 - Glossar und Checklisten
 
@@ -69,6 +70,10 @@ Vor der Aufnahme werden echte personenbezogene Daten, Secrets, Zugangstokens und
 ## Vollständigkeitsprinzip
 
 Nach jeder größeren Aufgabe werden Kapitel, Kommandoreferenz und Projektchronik geprüft. Die Chronik dient als Inhaltsregister: Ein Ereignis gilt für das Buch erst dann als erfasst, wenn Ausgangslage, Prompt, Entscheidung, wichtige Befehle, Prüfungen, Blocker, Sicherheitsaspekte und Ergebnis dokumentiert oder eindeutig einem geplanten Kapitel zugeordnet sind.
+
+## Bildkonzept
+
+Geplante Grafiken werden im Manuskript fortlaufend als `[Bild001]`, `[Bild002]` und so weiter markiert. Das [Bildverzeichnis](bildkonzept.md) beschreibt für jede Nummer Platzierung, Lernziel, Format, Pflichtinhalte, Datenschutzgrenzen und einen direkt nutzbaren DALL·E-Prompt. Die eigentliche Bilderzeugung erfolgt getrennt; bis dahin bleiben die Platzhalter im EPUB sichtbar.
 
 ## EPUB-Zwischenstand erzeugen
 
