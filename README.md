@@ -124,6 +124,7 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 ## Bekannte Einschränkungen
 
+- `schule.plebsapps.de` ist nur im Schulnetz vorgesehen; Zugriff von zu Hause erfolgt ausschließlich über VPN.
 - Die Stammdatenmodelle und Modellberechtigungen sind begonnen; objektbezogene Zugriffe nach Schule, Klasse und Fach fehlen noch.
 - Die Demo-Noteneingabe, Sperre, Audit-Basis und HTML-Zeugnisvorschau sind vorhanden; PDF-Archivierung und vollständige Freigabe fehlen noch.
 - Die automatische systemd-Aktivierung, externe verschlüsselte Sicherung und Überwachung müssen auf dem Zielserver noch manuell eingerichtet werden.

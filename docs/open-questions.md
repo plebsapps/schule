@@ -8,6 +8,10 @@ Begründung: Der HTTPS-Betrieb ist bereits produktiv, die Zertifikatskette wird 
 
 Auswirkung: `python manage.py check --deploy` meldet die Warnung `security.W021` nicht mehr.
 
-## Öffentlicher Zugriff
+## Zugriffsbeschränkung
 
-Vor der Nginx-/HTTPS-Freigabe ist fachlich zu entscheiden, ob `schule.plebsapps.de` aus dem gesamten Internet oder nur über Schulnetz beziehungsweise VPN erreichbar sein soll. Unabhängig davon bleiben Authentifizierung und serverseitige Berechtigungen erforderlich.
+`schule.plebsapps.de` wird nur im Schulnetz betrieben. Externe Zugriffe erfolgen ausschließlich über VPN.
+
+Begründung: Die Anwendung verarbeitet sensible personenbezogene Schuldaten. Eine Begrenzung auf Schulnetz und VPN reduziert das Risiko unnötiger Exposition und passt zur Datenschutzanforderung dieses Projekts.
+
+Unabhängig davon bleiben Authentifizierung und serverseitige Berechtigungen erforderlich.

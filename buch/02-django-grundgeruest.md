@@ -71,6 +71,12 @@ Die Korrektur bestand nicht darin, den Container wieder als Root auszuführen. S
 
 Djangos Deployment-Prüfung meldete HSTS-Preload als nicht aktiviert. Diese Warnung wurde bewusst nicht durch unüberlegtes Aktivieren oder Ausblenden beseitigt. Die Aufnahme in Browser-Preload-Listen ist langfristig und setzt einen dauerhaft zuverlässigen HTTPS-Betrieb voraus. Der offene Punkt wurde deshalb für die spätere Nginx-/HTTPS-Phase dokumentiert.
 
+## Zugriffsbegrenzung aus Datenschutzgründen
+
+`schule.plebsapps.de` wird nur im Schulnetz betrieben. Wer von zu Hause arbeiten muss, nutzt dafür ausschließlich VPN.
+
+Diese Begrenzung ist keine Komfortentscheidung, sondern eine Datenschutzmaßnahme. Schulische Schuldaten sollen nicht unnötig im offenen Internet verfügbar sein. Authentifizierung, Rollen und serverseitige Berechtigungen bleiben davon unberührt.
+
 ## Vorbereitung von Nginx und HTTPS
 
 Das bereits vorhandene Let's-Encrypt-Zertifikat für `plebsapps.de` wurde über den öffentlich ausgelieferten Zertifikatsinhalt geprüft. Es enthielt `pdb.plebsapps.de`, `plebsapps.de` und `www.plebsapps.de`, aber nicht `schule.plebsapps.de`. Für die neue Anwendung ist deshalb ein eigenes Zertifikat erforderlich.

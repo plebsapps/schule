@@ -2,7 +2,6 @@
 
 Offene Punkte im Projekt:
 
-- Fachlich entscheiden, ob `schule.plebsapps.de` aus dem gesamten Internet oder nur über Schulnetz beziehungsweise VPN erreichbar sein soll.
 - Objektbezogene Berechtigungen nach Schule, Klasse und Fach vollständig umsetzen.
 - PDF-Archivierung und vollständige Freigabelogik für Zeugnisse ergänzen.
 - Die automatische `systemd`-Aktivierung auf dem Zielserver manuell einrichten.
