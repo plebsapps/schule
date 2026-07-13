@@ -131,9 +131,9 @@ Nach dem ersten Schritt lagen vor:
 
 Bei Projekten mit sensiblen Daten sollte Codex zuerst Regeln, Plan und Repository-Struktur stabilisieren. Erst danach sollte Anwendungscode entstehen.
 
-## Redaktionell überarbeitete Prompts
+## Prompts
 
-Die folgenden Arbeitsaufträge wurden für die Druckfassung sprachlich überarbeitet. Inhalt und Absicht wurden nicht verändert.
+Die folgenden Arbeitsaufträge dokumentieren die maßgeblichen Benutzeranfragen dieser Projektphase.
 
 ### Arbeitsauftrag: Projektregeln und Plan lesen
 

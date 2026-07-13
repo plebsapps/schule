@@ -4,7 +4,7 @@
 
 Nach dem technischen Deployment funktionierten Anmeldung, Datenbank und HTTPS, die Oberfläche bestand jedoch nur aus ungestalteten Standardformularen. Für die weitere Entwicklung musste ein visuelles Grundsystem geschaffen werden, bevor zahlreiche Fachseiten voneinander abweichende Einzellösungen erzeugen.
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Die Anwendung benötigt ein professionelles und konsistentes Design. Ergänze außerdem geeignete Beispieldaten.
 

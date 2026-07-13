@@ -10,7 +10,7 @@ Die Anwendung lief bereits mit PostgreSQL in Docker Compose. Die Datenbank war n
 2. Wie wird regelmäßig geprüft, dass dieses Backup tatsächlich wiederherstellbar ist?
 3. Wie lässt sich eine produktive Wiederherstellung so absichern, dass sie nicht versehentlich gestartet wird?
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Führe in der vereinbarten Reihenfolge fort: Veröffentliche zuerst den vorhandenen Dokumentationsstand. Implementiere anschließend PostgreSQL-Backup und -Wiederherstellung. Danach analysieren wir die anonymisierten fachlichen Unterlagen und beginnen mit der nächsten Entwicklungsphase.
 

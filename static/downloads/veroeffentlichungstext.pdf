@@ -1,0 +1,60 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1947 >>
+stream
+0.73 0.05 0.10 rg 0 770 595 72 re f
+BT /F2 27 Tf 52 720 Td (Arbeiten mit OpenAI Codex) Tj ET
+BT /F1 15 Tf 52 684 Td (Praxisbeispiel am Beispiel einer schulischen) Tj ET
+BT /F1 15 Tf 52 664 Td (Zeugnisverwaltung) Tj ET
+BT /F2 12 Tf 52 625 Td (Autor: Ralf W. Balz) Tj ET
+0.73 0.05 0.10 RG 52 606 m 543 606 l S
+BT /F2 17 Tf 52 572 Td (Buchbeschreibung) Tj ET
+BT /F1 10 Tf 52 544 Td (Wie lässt sich OpenAI Codex in einem realen Softwareprojekt verantwortungsvoll) Tj ET
+BT /F1 10 Tf 52 529 Td (und nachvollziehbar einsetzen? Dieses Praxisbeispiel begleitet die Entwicklung) Tj ET
+BT /F1 10 Tf 52 514 Td (einer kleinen schulischen Zeugnisverwaltung – von den ersten Projektregeln und) Tj ET
+BT /F1 10 Tf 52 499 Td (der Planung über den professionellen Git-Workflow bis zur getesteten Django-) Tj ET
+BT /F1 10 Tf 52 484 Td (Anwendung im Docker-Betrieb.) Tj ET
+BT /F1 10 Tf 52 460 Td (Anhand konkreter Arbeitsaufträge zeigt das Buch, wie Codex Anforderungen) Tj ET
+BT /F1 10 Tf 52 445 Td (analysiert, Änderungen in überschaubaren Schritten umsetzt, Fehler untersucht) Tj ET
+BT /F1 10 Tf 52 430 Td (und Ergebnisse überprüft. Behandelt werden außerdem Datenschutz,) Tj ET
+BT /F1 10 Tf 52 415 Td (Berechtigungen, künstliche Beispieldaten, Dokumentation, Tests, Deployment,) Tj ET
+BT /F1 10 Tf 52 400 Td (Backups und die Zusammenarbeit über GitHub.) Tj ET
+BT /F1 10 Tf 52 376 Td (Die Entwicklung mit GPT-5.6 Sol dient als praktische Grundlage. Erfolge,) Tj ET
+BT /F1 10 Tf 52 361 Td (Fehlversuche und getroffene Entscheidungen bleiben sichtbar, damit Leserinnen) Tj ET
+BT /F1 10 Tf 52 346 Td (und Leser die Arbeitsweise auf eigene Projekte übertragen können. Das) Tj ET
+BT /F1 10 Tf 52 331 Td (begleitende freie Projekt steht unter der GNU General Public License Version 3) Tj ET
+BT /F1 10 Tf 52 316 Td (und kann im öffentlichen GitHub-Repository nachvollzogen werden.) Tj ET
+0.30 0.30 0.30 rg
+BT /F1 9 Tf 52 48 Td (Freies Projekt unter der GNU GPLv3) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000002255 00000 n 
+0000002352 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2454
+%%EOF

@@ -1,6 +1,6 @@
 # Kapitel 9: Eine kleine Demo fachlich vollständig machen
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Stelle für die kleine Demo noch drei Punkte fertig: eine echte Noteneingabe, einen einfachen Zeugnisentwurf und einen kleinen Abschluss- beziehungsweise Sperrstatus. Danach wechseln wir mit der Priorität zum Praxisbeispiel.
 

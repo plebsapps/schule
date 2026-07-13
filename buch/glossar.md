@@ -128,7 +128,7 @@ Das relationale Datenbanksystem der Zeugnisverwaltung. Es speichert Anwendungsda
 Die Datei, die Ziel, Umfang, Architektur und wichtige Projektentscheidungen beschreibt. Sie beantwortet, was gebaut werden soll. `AGENTS.md` beschreibt dagegen, nach welchen Regeln Codex daran arbeitet.
 
 **Prompt**<br>
-Ein in natürlicher Sprache formulierter Arbeitsauftrag an ein KI-System. Ein guter Prompt nennt Ziel, relevanten Kontext, Grenzen und gewünschtes Ergebnis. Benutzerprompts werden für das Buch sprachlich überarbeitet, ohne ihre fachliche Absicht zu verändern.
+Ein in natürlicher Sprache formulierter Arbeitsauftrag an ein KI-System. Ein guter Prompt nennt Ziel, relevanten Kontext, Grenzen und gewünschtes Ergebnis. Im Buch werden solche Anfragen als „Prompt“ oder „Arbeitsauftrag“ gekennzeichnet.
 
 **Pull Request**<br>
 Ein nachvollziehbarer Vorschlag, Änderungen aus einem Branch in den Standard-Branch zu übernehmen. Ein Pull Request bündelt Diff, Beschreibung, Prüfstatus, Diskussion und Review. Er wird erst gemergt, wenn die notwendigen Prüfungen und Freigaben vorliegen.

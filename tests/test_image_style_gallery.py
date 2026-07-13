@@ -26,3 +26,19 @@ def test_all_style_preview_assets_are_local():
 
 def test_title_cover_asset_is_local():
     assert finders.find("images/book-covers/titelbild-gpt-5-6-sol.png") is not None
+
+
+def test_title_cover_can_be_downloaded_from_short_public_url(client):
+    response = client.get(reverse("title-image-download"))
+
+    assert response.status_code == 200
+    assert response["Content-Type"] == "image/png"
+    assert 'filename="Titelbild.png"' in response["Content-Disposition"]
+
+
+def test_publication_text_pdf_can_be_downloaded(client):
+    response = client.get(reverse("publication-pdf-download"))
+
+    assert response.status_code == 200
+    assert response["Content-Type"] == "application/pdf"
+    assert "Ver%C3%B6fentlichungstext.pdf" in response["Content-Disposition"]

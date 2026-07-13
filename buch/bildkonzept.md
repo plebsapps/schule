@@ -2,7 +2,7 @@
 
 Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxisbeispiels. Die Platzhalter `[Bild001]` bis `[Bild022]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel oder in der ergänzenden Buchdokumentation. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
 
-## Redaktionell überarbeiteter Arbeitsauftrag
+## Arbeitsauftrag
 
 > Aktualisiere jetzt das Buch und plane passende Abbildungen. Identifiziere alle Stellen, an denen eine Grafik das Verständnis verbessert, und füge dort fortlaufende Platzhalter im Format `[Bild001]` ein. Erstelle zusätzlich eine vollständige Liste aller Bilder. Beschreibe für jedes Bild so exakt, was dargestellt werden muss, dass es anschließend in einem getrennten Arbeitsschritt mit DALL·E erzeugt werden kann.
 

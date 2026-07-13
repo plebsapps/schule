@@ -140,9 +140,7 @@ def test_book_documents_project_access_repository_and_privacy_boundary():
 
 
 def test_chapter_ten_starts_with_public_read_only_demo_access_box():
-    chapter = (REPOSITORY_ROOT / "buch" / "10-showcase-abschluss-lesekonto-systemd.md").read_text(
-        encoding="utf-8"
-    )
+    chapter = (REPOSITORY_ROOT / "buch" / "10-showcase-abschluss-lesekonto-systemd.md").read_text(encoding="utf-8")
     css = EPUB_CSS.read_text(encoding="utf-8")
     lines = chapter.splitlines()
 
@@ -180,6 +178,24 @@ def test_book_consistently_describes_itself_as_a_practical_example():
 
     book_readme = (REPOSITORY_ROOT / "buch" / "README.md").read_text(encoding="utf-8")
     assert "Ziel dieses Praxisbeispiels" in book_readme
+
+
+def test_prompt_headings_use_short_labels_after_single_editorial_notice():
+    foreword = (REPOSITORY_ROOT / "buch" / "Vorwort.md").read_text(encoding="utf-8")
+    normalized_foreword = " ".join(foreword.split())
+    markdown_files = list((REPOSITORY_ROOT / "buch").glob("*.md"))
+    headings = [
+        line
+        for markdown_file in markdown_files
+        for line in markdown_file.read_text(encoding="utf-8").splitlines()
+        if line.startswith("#")
+    ]
+
+    assert "Ein einmaliger redaktioneller Hinweis gilt für das gesamte Buch" in foreword
+    assert "keine wörtlichen Transkripte" in normalized_foreword
+    assert not any("Redaktionell überarbeitet" in heading for heading in headings)
+    assert any(heading.endswith(" Prompt") for heading in headings)
+    assert any(heading.endswith(" Arbeitsauftrag") for heading in headings)
 
 
 def test_markdown_tables_have_consistent_rows_and_at_most_six_columns():

@@ -2,7 +2,7 @@
 
 Ein Softwareprojekt kann nicht immer auf vollständige Vorlagen, Tabellen und Prozessbeschreibungen warten. Gleichzeitig wäre es gefährlich, aus wenigen Annahmen sofort ein starres Datenmodell oder eine scheinbar fertige Noteneingabe zu bauen. Dieses Kapitel zeigt den gewählten Mittelweg: ein kleiner, erweiterbarer Fachkern mit klar markierten Grenzen.
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Leider liegen uns noch keine Vorlagen vor, und das Datenmodell muss später möglicherweise angepasst werden. Trotzdem sollen Fächer, Schülerinnen und Schüler, Dokumentvorlagen für Zeugnisse, Noten, Lehrkräfte und alle weiteren schulischen Stammdaten eingegeben werden können. Merge zuerst Pull Request 9 und setze die Entwicklung anschließend fort.
 
