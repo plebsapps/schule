@@ -4,7 +4,7 @@
 
 Das Praxisbeispiel soll nicht nur die entstehende Zeugnisverwaltung zeigen, sondern auch erklären, wie Codex bedient und sicher in einem echten Projekt eingesetzt wird. Dazu müssen Modell, Oberfläche und Befehlsart sauber getrennt werden.
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Strukturiere das Praxisbeispiel zunächst übersichtlich und lege eine Codex-Befehlsreferenz an. Danach soll die Entwicklung der Webseite wieder Priorität erhalten. Das Buch muss alle wichtigen Ereignisse der Zusammenarbeit vollständig erfassen und GPT-5.6 Sol als Arbeitsgrundlage dokumentieren.
 

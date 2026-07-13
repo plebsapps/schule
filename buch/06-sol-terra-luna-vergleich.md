@@ -1,6 +1,6 @@
 # Kapitel 6: GPT-5.6 Sol, Terra und Luna im Vergleich
 
-## Redaktionell überarbeiteter Arbeitsauftrag
+## Arbeitsauftrag
 
 > Erkläre die Unterschiede zwischen GPT-5.6 Sol, Terra und Luna. Stelle Einsatzzweck, Stärken, Grenzen, Geschwindigkeit, Kosten und Verfügbarkeit anhand offizieller Quellen gegenüber. Ergänze eine drucktaugliche Vergleichstabelle und eine Entscheidungshilfe mit datenschutzkonformen Praxisbeispielen aus dem Projekt.
 
@@ -51,7 +51,7 @@ Für viele normale Codex-Aufgaben ist Terra eine naheliegende Ausgangswahl:
 - vorhandene Django-Modelle und Tests analysieren,
 - eine klar abgegrenzte Formularänderung implementieren,
 - Tests ergänzen und verständliche Fehlermeldungen formulieren,
-- Dokumentation und redaktionell überarbeitete Prompts pflegen,
+- Dokumentation und Prompts pflegen,
 - einen Pull Request zusammenfassen oder auf Konsistenz prüfen,
 - bekannte Betriebsabläufe anhand vorhandener Anleitungen kontrollieren.
 

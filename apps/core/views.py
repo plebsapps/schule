@@ -70,6 +70,8 @@ IMAGE_STYLES = (
 )
 
 EPUB_FILENAME = "arbeiten-mit-openai-codex.epub"
+TITLE_IMAGE_FILENAME = "Titelbild.png"
+PUBLICATION_PDF_FILENAME = "Veröfentlichungstext.pdf"
 
 
 def health(request):
@@ -90,6 +92,26 @@ def epub_download(request):
         as_attachment=True,
         filename=EPUB_FILENAME,
         content_type="application/epub+zip",
+    )
+
+
+def title_image_download(request):
+    image_path = settings.BASE_DIR / "static" / "images" / "book-covers" / "titelbild-gpt-5-6-sol.png"
+    return FileResponse(
+        open(image_path, "rb"),
+        as_attachment=True,
+        filename=TITLE_IMAGE_FILENAME,
+        content_type="image/png",
+    )
+
+
+def publication_pdf_download(request):
+    pdf_path = settings.BASE_DIR / "static" / "downloads" / "veroeffentlichungstext.pdf"
+    return FileResponse(
+        open(pdf_path, "rb"),
+        as_attachment=True,
+        filename=PUBLICATION_PDF_FILENAME,
+        content_type="application/pdf",
     )
 
 

@@ -1,6 +1,6 @@
 # Kapitel 5: Was ist neu in GPT-5.6?
 
-## Redaktionell überarbeiteter Arbeitsauftrag
+## Arbeitsauftrag
 
 > Ergänze das Praxisbeispiel um ein Kapitel mit dem Titel „Was ist neu in GPT-5.6?“. Erkläre die wichtigsten Veränderungen gegenüber den direkten Vorgängern anhand offizieller Quellen. Das Kapitel soll Vergleichstabellen und konkrete Praxisbeispiele enthalten. Aktualisiere außerdem Inhaltsverzeichnis, Kapitelnummerierung, Build-Reihenfolge und alle weiteren betroffenen Buchstellen.
 
@@ -90,7 +90,7 @@ Eine mehrstufige Untersuchung kann Containerstatus, Healthcheck, Gunicorn, Host-
 
 Auftrag: Eine neue Funktion soll implementiert, getestet und anschließend für das Praxisbeispiel dokumentiert werden.
 
-Hier müssen Quellcode, Tests, Betriebsdokumentation, Projektchronik, redaktionell überarbeiteter Prompt und EPUB-Build zusammenpassen. Ein leistungsfähigeres Modell kann diese Querverbindungen leichter verfolgen. Die verbindliche Vollständigkeitskontrolle bleibt dennoch notwendig, weil kein Modell allein garantieren kann, dass wirklich jede betroffene Stelle erkannt wurde.
+Hier müssen Quellcode, Tests, Betriebsdokumentation, Projektchronik, Prompt und EPUB-Build zusammenpassen. Ein leistungsfähigeres Modell kann diese Querverbindungen leichter verfolgen. Die verbindliche Vollständigkeitskontrolle bleibt dennoch notwendig, weil kein Modell allein garantieren kann, dass wirklich jede betroffene Stelle erkannt wurde.
 
 ### Beispiel 4: Datenschutz als unveränderliche Grenze
 

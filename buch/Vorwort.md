@@ -92,6 +92,12 @@ jeden Befehl sofort selbst auszuführen. Wichtiger ist die wiederkehrende
 Arbeitsweise: zuerst lesen und Risiken erkennen, dann klein und kontrolliert
 ändern, anschließend testen, dokumentieren und erst danach veröffentlichen.
 
+Ein einmaliger redaktioneller Hinweis gilt für das gesamte Buch: Die als
+„Prompt“ oder „Arbeitsauftrag“ gekennzeichneten Benutzeranfragen wurden für die
+druckbare Fassung in Rechtschreibung, Grammatik, Zeichensetzung und Struktur
+verbessert. Ihre fachliche Absicht bleibt unverändert; sie sind keine
+wörtlichen Transkripte.
+
 Dieses Buch verspricht deshalb keine Abkürzung ohne Lernaufwand. Es soll zeigen,
 dass ein reales Projekt auch mit unterschiedlichen Vorkenntnissen bewältigt
 werden kann, wenn Anforderungen klar formuliert, Entscheidungen sichtbar

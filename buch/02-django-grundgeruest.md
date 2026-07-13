@@ -8,7 +8,7 @@ Die Prüfung zeigte: Die vorgesehenen internen Ports `8000` bis `8004` waren ber
 
 ![Bild004: Serverarchitektur der Anwendung](../Bilder/bild004-serverarchitektur.png)
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Das Projekt soll auf diesem Server unter `schule.plebsapps.de` betrieben werden. Der DNS-Eintrag wurde bereits in der Domainverwaltung gesetzt.
 >

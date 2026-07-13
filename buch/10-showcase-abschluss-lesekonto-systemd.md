@@ -11,7 +11,7 @@ Das Konto besitzt ausschließlich Leserechte. Es kann keine Daten anlegen,
 ändern oder löschen und das eigene Passwort nicht ändern.
 :::
 
-## Redaktionell überarbeiteter Prompt
+## Prompt
 
 > Schließe den Show-case sauber ab. Der Docker-Compose-Stack soll nach einem Serverneustart automatisch wieder starten, und das Praxisbeispiel benötigt zusätzlich ein separates Lesekonto mit reinen Lese-Rechten. Alle dafür relevanten Arbeitsschritte sollen nachvollziehbar dokumentiert werden. Sensible Zugangsdaten werden nicht im Buch als Klartext gespeichert.
 

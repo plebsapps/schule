@@ -53,17 +53,17 @@ Diese Chronik verhindert, dass wichtige Schritte der Zusammenarbeit im Buch verl
 | #8 | öffentlicher EPUB-Prerelease in README und Buch dokumentiert | gemergt |
 | #9 | PostgreSQL-Backup, Restore-Test und Betriebsdokumentation | gemergt |
 
-## Redaktionell überarbeiteter Prompt zum EPUB-Zwischenstand
+## Prompt zum EPUB-Zwischenstand
 
 > Merge den aktuellen Buchstand nach `main` und erstelle anschließend eine EPUB-Datei als Zwischenstand des Praxisbeispiels.
 
-## Redaktionell überarbeiteter Prompt zu Backup und Restore
+## Prompt zu Backup und Restore
 
 > Führe in der vereinbarten Reihenfolge fort: Veröffentliche zuerst den vorhandenen Dokumentationsstand. Implementiere anschließend PostgreSQL-Backup und -Wiederherstellung. Danach analysieren wir die anonymisierten fachlichen Unterlagen und beginnen mit der nächsten Entwicklungsphase.
 
 Die Ausarbeitung dieses Schritts steht in Kapitel 7. Ein Pull Request und sein Ergebnis werden nach Abschluss ergänzt.
 
-## Redaktionell überarbeiteter Prompt zum ersten Fachkern
+## Prompt zum ersten Fachkern
 
 > Leider liegen uns noch keine Vorlagen vor, und das Datenmodell muss später möglicherweise angepasst werden. Trotzdem sollen Fächer, Schülerinnen und Schüler, Dokumentvorlagen für Zeugnisse, Noten, Lehrkräfte und alle weiteren schulischen Stammdaten eingegeben werden können. Merge zuerst Pull Request 9 und setze die Entwicklung anschließend fort.
 
@@ -79,7 +79,7 @@ Die Chronik hält die Arbeitsartefakte des Praxisbeispiels sichtbar fest: Prompt
 
 Nach jeder größeren Aufgabe beantworten:
 
-1. Ist der redaktionell verbesserte Benutzerprompt dokumentiert?
+1. Ist der maßgebliche Benutzerprompt dokumentiert?
 2. Sind Ausgangslage und Ziel verständlich?
 3. Sind Analyse, Risiken und Entscheidung festgehalten?
 4. Sind wichtige Codex-, Git-, Docker- und Testbefehle erfasst?
@@ -98,13 +98,13 @@ Parallel dazu wurde ein separates Lesekonto für das Praxisbeispiel vorbereitet.
 
 Die übrigen, für den Show-case nicht mehr benötigten Betriebs- und Fachpunkte wurden aus der offenen Arbeitsliste entfernt. Damit bleibt die Restarbeit bewusst klein und nachvollziehbar.
 
-## Redaktionell überarbeiteter Prompt zum Show-case-Abschluss
+## Prompt zum Show-case-Abschluss
 
 > Schließe den Show-case sauber ab. Der Docker-Compose-Stack soll nach einem Serverneustart automatisch wieder starten, und das Praxisbeispiel benötigt zusätzlich ein separates Lesekonto mit reinen Lese-Rechten. Alle dafür relevanten Arbeitsschritte sollen nachvollziehbar dokumentiert werden. Sensible Zugangsdaten werden nicht im Buch als Klartext gespeichert.
 
 ## Buchgrafiken im EPUB zuverlässig zentrieren
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Zentriere sämtliche Bilder im EPUB. Sie dürfen weder rechtsbündig erscheinen noch über den verfügbaren Seitenbereich hinausragen. Entferne diesen Punkt nach erfolgreicher Umsetzung aus der offenen Aufgabenliste.
 
@@ -116,7 +116,7 @@ Ein automatisierter Layouttest schützt die maßgeblichen CSS-Regeln. Nach dem N
 
 ## Überbreite Codeblöcke im EPUB verhindern
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Überarbeite die Darstellung aller Codeblöcke so, dass lange Befehle, Pfade und andere nicht trennbare Zeichenfolgen bei keiner unterstützten Zoomstufe über den Seitenrand laufen. Entferne diesen Punkt nach erfolgreicher Umsetzung aus der offenen Aufgabenliste.
 
@@ -128,7 +128,7 @@ Ein automatisierter Layouttest prüft Seitenbegrenzung, Umbruch und die Vererbun
 
 ## Tabellen für schmale Seiten und hohe Zoomstufen absichern
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Überarbeite die Tabellen in der Projektchronik und der Vollständigkeitskontrolle so, dass sie nicht über den Seitenrand hinausragen. Verwende eine kleinere, weiterhin lesbare Schrift und sichere auch lange Begriffe gegen Überbreite ab. Entferne den Punkt nach erfolgreicher Prüfung aus der Aufgabenliste.
 
@@ -140,7 +140,7 @@ Automatische Tests prüfen die maßgeblichen CSS-Regeln, eine einheitliche Spalt
 
 ## Einheitliches Drucklayout für das gesamte EPUB
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Vereinheitliche jetzt das Drucklayout des gesamten Buchs. Prüfe Überschriften, Abstände, Seitenumbrüche, Bildunterschriften, Listen, Zitate, Tabellen und Codeblöcke. Entferne den Punkt nach erfolgreicher Umsetzung aus der Aufgabenliste.
 
@@ -152,7 +152,7 @@ Um verwaiste Überschriften zu vermeiden, werden Überschriften nicht vom folgen
 
 ## Bewusster Verzicht auf zusätzliche Screenshots
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Entferne den offenen Screenshot-Punkt. Zusätzliche Bildschirmaufnahmen wären redundant, weil das Projekt direkt aufgerufen werden kann und das Buch bereits über ein vollständiges, einheitliches Bildkonzept verfügt.
 
@@ -164,7 +164,7 @@ Sollte eine spätere Buchauflage dennoch Screenshots verwenden, gelten weiterhin
 
 ## Zentrales Quellenverzeichnis statt separatem Versionskatalog
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Lege ein zentrales Quellenverzeichnis an und entferne diesen Punkt anschließend aus der Aufgabenliste. Ein zusätzlicher vollständiger Versionskatalog erscheint für das Praxisbeispiel nicht nützlich und soll ebenfalls aus der offenen Liste gestrichen werden.
 
@@ -176,7 +176,7 @@ Auf eine zusätzliche Tabelle sämtlicher Programm- und Betriebsversionen wird b
 
 ## Glossar für Projekt- und Codex-Begriffe
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Erstelle jetzt das Glossar des Buchs. Erkläre die zentralen Begriffe verständlich und konsistent mit den Kapiteln und der Codex-Kommandoreferenz. Entferne den Punkt nach erfolgreicher Umsetzung aus der Aufgabenliste.
 
@@ -188,7 +188,7 @@ Ein automatisierter Test stellt sicher, dass alle verpflichtenden Begriffe vorha
 
 ## Neuer Buchtitel und erneuertes Titelbild
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Ändere den Buchtitel in „Arbeiten mit OpenAI Codex“ und den Untertitel in „Praxisbeispiel am Beispiel einer schulischen Zeugnisverwaltung“. Erneuere außerdem das Titelbild und passe alle relevanten Stellen an.
 
@@ -202,7 +202,7 @@ Die sichtbare Datumszeile der automatisch erzeugten EPUB-Titelseite wird als „
 
 ## Schlussredaktion und Freigabeprüfung
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Prüfe das gesamte Buch noch einmal vollständig, erzeuge anschließend das EPUB neu und lösche die abgeschlossene Aufgabenliste.
 
@@ -216,7 +216,7 @@ Nach erfolgreicher automatisierter Prüfung wurde die leere Arbeitsliste `TODO.m
 
 ## Passwortschutz des Lesekontos
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Das Lesekonto `Buch` kann derzeit sein eigenes Passwort ändern. Sperre diese
 > Möglichkeit serverseitig, ohne die reine Leseberechtigung oder den Zugang zur
@@ -234,7 +234,7 @@ Administratoren.
 
 ## Fremde Projektadressen aus der Buchfassung entfernen
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Entferne konkrete Adressen fremder Projekte aus dem Buch. Diese Systeme
 > unterliegen eigenen hohen Datenschutzanforderungen und gehören nicht zur
@@ -249,7 +249,7 @@ Manuskript noch im veröffentlichten E-Book zurückbleibt.
 
 ## Projektzugang, Repository und paginierte Codeblöcke
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Arbeite alle offenen Punkte der Buchliste ab. Ergänze Projektadresse,
 > Lesekonto, die Abgrenzung zwischen öffentlichem Show-case und produktivem
@@ -276,7 +276,7 @@ EPUB-Struktur; die Prüffassung wird anschließend neu veröffentlicht.
 
 ## Kein Selbstverweis auf den EPUB-Download
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Entferne den direkten Download-Link des E-Books aus dem Buch. Die Datei darf
 > weiterhin außerhalb des Buchtexts bereitgestellt werden, soll aber innerhalb
@@ -292,7 +292,7 @@ zusätzlich das tatsächlich erzeugte EPUB-Archiv geprüft.
 
 ## Einheitliche Einordnung als Praxisbeispiel
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Verwende im gesamten Buch konsequent die Bezeichnung „Praxisbeispiel“. Das
 > Werk dokumentiert die konkrete Entwicklung der schulischen
@@ -309,7 +309,7 @@ EPUB-Metadaten auf eine einheitliche Bezeichnung.
 
 ## Vorwort zu Grundlagen und Voraussetzungen
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Ergänze ein Vorwort, das die wichtigsten Grundlagen kurz erklärt und die
 > erwarteten Vorkenntnisse offen benennt. Stelle zugleich klar, dass das Buch
@@ -332,7 +332,7 @@ Vorwort im Inhaltsverzeichnis vor Kapitel 1 erscheint.
 
 ## Öffentlicher Zugangskasten für die Demo
 
-### Redaktionell überarbeiteter Prompt
+### Prompt
 
 > Ergänze unmittelbar nach der Überschrift von Kapitel 10 einen gut sichtbaren
 > Kasten mit URL, Benutzername und Passwort der im Internet erreichbaren Demo.
@@ -351,3 +351,34 @@ bleiben verboten. Für ein reales Schulsystem gelten weiterhin individuelle
 Konten sowie Schulnetz- beziehungsweise VPN-Zugriff. Tests prüfen Inhalt,
 Position und Gestaltung des Kastens sowie die unveränderten serverseitigen
 Schreib- und Passwortsperren.
+
+## Kurze Überschriften für Prompts und Arbeitsaufträge
+
+### Prompt
+
+> Ersetze die wiederkehrenden ausführlichen redaktionellen Zusätze in den
+> Überschriften durch die kurzen Bezeichnungen „Arbeitsauftrag“ beziehungsweise
+> „Prompt“. Der einmalige redaktionelle Hinweis am Anfang des Buchs genügt.
+
+### Entscheidung und Prüfung
+
+Die ausführliche Kennzeichnung wird nicht mehr in jedem Kapitel und jedem
+Chronikeintrag wiederholt. Das Vorwort erklärt einmalig, dass alle als „Prompt“
+oder „Arbeitsauftrag“ bezeichneten Abschnitte sprachlich für die Buchfassung
+bearbeitet wurden, ohne ihre Absicht zu verändern. Ein Test prüft sämtliche
+Markdown-Überschriften und verhindert die erneute Verwendung der langen Form.
+
+## Veröffentlichungsinformation als PDF
+
+### Arbeitsauftrag
+
+> Erstelle eine PDF für die Veröffentlichung mit Titel, Untertitel,
+> Autorenname und Buchbeschreibung und stelle sie über die Projektwebsite zum
+> Herunterladen bereit.
+
+### Umsetzung und Prüfung
+
+Die Veröffentlichungsinformation wird aus einer eigenen Textquelle im
+Buchverzeichnis als einseitiges A4-Dokument erzeugt. Der Download enthält keine
+Demo-Zugangsdaten oder sensiblen lokalen Angaben. Automatische Tests prüfen den
+öffentlichen Endpunkt, den Dateityp und den vorgeschlagenen Dateinamen.
