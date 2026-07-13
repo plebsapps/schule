@@ -1,7 +1,24 @@
 body {
+  margin: 5%;
   color: #1a2538;
   font-family: serif;
   line-height: 1.55;
+  text-align: left;
+  hyphens: auto;
+}
+
+body#cover {
+  margin: 0;
+  padding: 0;
+}
+
+.titlepage .date {
+  font-size: 0;
+}
+
+.titlepage .date::after {
+  content: "2026 - Juli";
+  font-size: 1rem;
 }
 
 h1,
@@ -10,23 +27,45 @@ h3 {
   color: #172443;
   font-family: sans-serif;
   line-height: 1.2;
+  break-after: avoid;
   page-break-after: avoid;
 }
 
 h1 {
-  margin-top: 2em;
+  margin: 0 0 1.25em;
   border-bottom: 0.08em solid #2864dc;
   padding-bottom: 0.25em;
+  font-size: 1.8em;
 }
 
 h2 {
-  margin-top: 1.6em;
+  margin: 1.65em 0 0.55em;
+  font-size: 1.35em;
+}
+
+h3 {
+  margin: 1.25em 0 0.45em;
+  font-size: 1.1em;
+}
+
+p {
+  margin: 0.65em 0;
 }
 
 p,
 li {
   orphans: 3;
   widows: 3;
+}
+
+ul,
+ol {
+  margin: 0.65em 0 0.9em;
+  padding-left: 1.55em;
+}
+
+li {
+  margin: 0.18em 0;
 }
 
 blockquote {
@@ -36,36 +75,173 @@ blockquote {
   background: #f4f6fa;
 }
 
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.demo-access {
+  box-sizing: border-box;
+  margin: 0 0 1.5em;
+  max-width: 100%;
+  border: 0.14em solid #b42318;
+  border-radius: 0.45em;
+  padding: 0.85em 1em;
+  background: #fff4f2;
+  color: #39120f;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.demo-access > :first-child {
+  margin-top: 0;
+  color: #8f1d14;
+  font-family: sans-serif;
+  font-size: 1.05em;
+}
+
+.demo-access > :last-child {
+  margin-bottom: 0;
+}
+
+.demo-access ul {
+  margin: 0.55em 0;
+}
+
+figure,
+#cover-image {
+  max-width: 100%;
+  margin-top: 1.3em;
+  margin-bottom: 1.3em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+#cover-image {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img,
+#cover-image svg {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+figcaption {
+  margin-top: 0.45em;
+  color: #4a5568;
+  font-family: sans-serif;
+  font-size: 0.82em;
+  line-height: 1.35;
+  text-align: center;
+}
+
 code {
   font-family: monospace;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 pre {
+  box-sizing: border-box;
+  margin: 0.9em 0 1.1em;
+  min-width: 0;
+  max-width: 100%;
   overflow-wrap: anywhere;
+  word-break: break-word;
   white-space: pre-wrap;
   border: 0.08em solid #dde3ec;
   padding: 0.8em;
   background: #f7f8fb;
+  font-size: 0.88em;
+  line-height: 1.4;
+  break-inside: auto;
+  page-break-inside: auto;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+pre code {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: inherit;
+  word-break: break-all;
+  white-space: pre-wrap !important;
+}
+
+pre code span,
+pre code a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  white-space: inherit;
+}
+
+th code,
+td code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 table {
+  box-sizing: border-box;
+  margin: 1.1em 0 1.35em;
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
-  font-size: 0.88em;
+  font-size: 0.74em;
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 th,
 td {
   border: 0.08em solid #cfd6e2;
-  padding: 0.4em;
+  min-width: 0;
+  padding: 0.28em 0.34em;
   text-align: left;
   vertical-align: top;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 th {
   background: #eaf1ff;
 }
 
+thead {
+  display: table-header-group;
+}
+
+tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
 a {
   color: #1c53c4;
+  overflow-wrap: anywhere;
+}
+
+hr {
+  margin: 1.8em 0;
+  border: 0;
+  border-top: 0.08em solid #cfd6e2;
 }

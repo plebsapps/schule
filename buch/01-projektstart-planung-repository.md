@@ -39,7 +39,7 @@ Diese Trennung ist wichtig:
 
 ![Bild001: Zwei Dokumente, zwei Aufgaben](../Bilder/bild001-plan-und-agents.png)
 
-Für ein Lehrbuch ist diese Trennung ein gutes Muster, weil sie zeigt, wie Projektwissen und Arbeitsregeln getrennt gepflegt werden können.
+Für dieses Praxisbeispiel ist diese Trennung ein gutes Muster, weil sie zeigt, wie Projektwissen und Arbeitsregeln getrennt gepflegt werden können.
 
 ## Erkenntnis 3: Repository-Anlage ist ein eigener Arbeitsschritt
 
@@ -125,7 +125,7 @@ Nach dem ersten Schritt lagen vor:
 - `AGENTS.md`
 - `PLAN.md`
 - ein sauberer Initialcommit
-- ein dokumentierter Arbeitsprozess für das spätere Lehrbuch
+- ein dokumentierter Arbeitsprozess für das spätere Praxisbeispiel
 
 ## Übertragbare Regel
 
@@ -143,7 +143,7 @@ Die folgenden Arbeitsaufträge wurden für die Druckfassung sprachlich überarbe
 
 > Ergänze die Projektregeln und Dokumentation um folgende Punkte:
 >
-> 1. Die relevanten Prompts sollen im Praxislehrbuch gespeichert werden. Für die Druckfassung sind Rechtschreibung, Grammatik und Form zu verbessern, ohne die fachliche Absicht zu verändern.
+> 1. Die relevanten Prompts sollen im Praxisbeispiel gespeichert werden. Für die Druckfassung sind Rechtschreibung, Grammatik und Form zu verbessern, ohne die fachliche Absicht zu verändern.
 > 2. Halte in `AGENTS.md` fest, dass nicht direkt auf dem Standard-Branch gearbeitet wird. Für jedes Feature ist ein eigener Branch anzulegen; die Integration in den Standard-Branch erfolgt professionell über Git und GitHub.
 > 3. Erstelle eine `README.md` im Wurzelverzeichnis des Repositorys.
 > 4. Stelle das GitHub-Repository auf öffentlich um und lizenziere das Projekt unter der GPLv3.

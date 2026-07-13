@@ -114,9 +114,11 @@ Die Anwendung ist unter `https://schule.plebsapps.de` erreichbar. Docker veröff
 
 Ein PostgreSQL-Backup mit restriktiven Dateirechten wird über `./scripts/backup-postgres.sh` erstellt. Prüfsumme, Archivlesbarkeit und eine isolierte Wiederherstellungsprobe werden mit den zugehörigen Prüfskripten kontrolliert. Der destruktive Produktions-Restore benötigt eine ausdrückliche Bestätigung und legt zuerst ein Sicherheitsbackup an. Der vollständige Ablauf, systemd-Vorlagen und Sicherheitsanforderungen stehen in [docs/backup-restore.md](docs/backup-restore.md). Das Volume `schule-postgres-data` ist persistent, gilt allein jedoch nicht als Backup.
 
-## Praxislehrbuch
+## Praxisbeispiel
 
-Das Verzeichnis [buch/](buch/) dokumentiert die Zusammenarbeit mit Codex als Praxislehrbuch. Relevante Prompts werden dort sprachlich und typografisch überarbeitet wiedergegeben, ohne ihre fachliche Absicht zu verändern. Echte Schülerdaten, Secrets und sensible lokale Systemdetails sind ausgeschlossen.
+Das Verzeichnis [buch/](buch/) dokumentiert die Zusammenarbeit mit Codex als Praxisbeispiel. Relevante Prompts werden dort sprachlich und typografisch überarbeitet wiedergegeben, ohne ihre fachliche Absicht zu verändern. Echte Schülerdaten, Secrets und sensible lokale Systemdetails sind ausgeschlossen.
+
+Die aktuelle EPUB-Prüffassung kann unter [Arbeiten mit OpenAI Codex](https://schule.plebsapps.de/arbeiten-mit-openai-codex.epub) heruntergeladen werden.
 
 ## Git-Workflow
 
@@ -124,16 +126,13 @@ Die Entwicklung erfolgt auf thematisch benannten Feature-Branches. Änderungen g
 
 ## Bekannte Einschränkungen
 
-- `schule.plebsapps.de` ist nur im Schulnetz vorgesehen; Zugriff von zu Hause erfolgt ausschließlich über VPN.
-- Die Stammdatenmodelle und Modellberechtigungen sind begonnen; objektbezogene Zugriffe nach Schule, Klasse und Fach fehlen noch.
-- Die Demo-Noteneingabe, Sperre, Audit-Basis und HTML-Zeugnisvorschau sind vorhanden; PDF-Archivierung und vollständige Freigabe fehlen noch.
-- Die automatische systemd-Aktivierung, externe verschlüsselte Sicherung und Überwachung müssen auf dem Zielserver noch manuell eingerichtet werden.
-- Konkrete Zeugnisvorlagen und anonymisierte Quelldaten müssen noch fachlich analysiert werden.
-- Offene Fachfragen sind in `PLAN.md` aufgeführt.
+- Der aktuelle Show-case ist mit ausschließlich künstlichen Daten und einem ausdrücklich öffentlichen Read-only-Demokonto über das Internet erreichbar. Ein Produktivsystem mit echten Schuldaten wäre dagegen nur im Schulnetz beziehungsweise von zu Hause über VPN zulässig.
+- Der Show-case ist abgeschlossen; weitere Features werden nicht mehr als offene Projektarbeit behandelt.
+- Für einen produktiven Betrieb wären zusätzliche Härtung, Monitoring, Freigabelogik und vollständige Betriebsprozesse weiterhin notwendig.
 
 ## Datenschutz und Sicherheit
 
-Dieses öffentliche Repository darf ausschließlich Quellcode, künstliche Testdaten und nicht sensible Dokumentation enthalten. Echte Schülerdaten, Zeugnisse, Zugangsdaten, Tokens, produktive Konfigurationen und Backups dürfen niemals veröffentlicht werden.
+Dieses öffentliche Repository darf ausschließlich Quellcode, künstliche Testdaten und nicht sensible Dokumentation enthalten. Echte Schülerdaten, Zeugnisse, produktive Zugangsdaten, Tokens, produktive Konfigurationen und Backups dürfen niemals veröffentlicht werden. Die einzige eng begrenzte Ausnahme ist das ausdrücklich freigegebene Kennwort des öffentlichen Read-only-Demokontos für künstliche Daten.
 
 Gestaltungs- und Barrierefreiheitsregeln sind in [docs/ui-guidelines.md](docs/ui-guidelines.md) dokumentiert.
 

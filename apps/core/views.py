@@ -1,8 +1,8 @@
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.db import connection
 from django.http import FileResponse, JsonResponse
 from django.shortcuts import render
-from django.conf import settings
 
 from .dashboard import build_dashboard
 
@@ -69,6 +69,8 @@ IMAGE_STYLES = (
     },
 )
 
+EPUB_FILENAME = "arbeiten-mit-openai-codex.epub"
+
 
 def health(request):
     with connection.cursor() as cursor:
@@ -82,8 +84,13 @@ def image_style_gallery(request):
 
 
 def epub_download(request):
-    epub_path = settings.BASE_DIR / "static" / "downloads" / "arbeiten-mit-codex-zwischenstand.epub"
-    return FileResponse(open(epub_path, "rb"), as_attachment=True, filename=epub_path.name, content_type="application/epub+zip")
+    epub_path = settings.BASE_DIR / "static" / "downloads" / EPUB_FILENAME
+    return FileResponse(
+        open(epub_path, "rb"),
+        as_attachment=True,
+        filename=EPUB_FILENAME,
+        content_type="application/epub+zip",
+    )
 
 
 @login_required

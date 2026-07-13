@@ -1,14 +1,14 @@
 ---
-title: "Arbeiten mit Codex mit GPT-5.6 Sol"
-subtitle: "Praxislehrbuch am Beispiel einer schulischen Zeugnisverwaltung"
+title: "Arbeiten mit OpenAI Codex"
+subtitle: "Praxisbeispiel am Beispiel einer schulischen Zeugnisverwaltung"
 author:
-  - "Projekt plebsapps.de"
+  - "Ralf W. Balz"
 lang: de-DE
-date: "2026-07-10"
+date: "2026-07"
 toc-title: "Inhaltsverzeichnis"
 rights: "GNU General Public License Version 3"
-identifier: "urn:uuid:schule-codex-praxislehrbuch-zwischenstand-2026-07-10"
+identifier: "urn:uuid:schule-codex-praxisbeispiel-zwischenstand-2026-07-12"
 description: |
-  Ein praxisnaher Zwischenstand zur sicheren und nachvollziehbaren Arbeit
-  mit Codex auf Grundlage von GPT-5.6 Sol.
+  Ein Praxisbeispiel zur sicheren und nachvollziehbaren Arbeit mit OpenAI Codex
+  am Beispiel einer schulischen Zeugnisverwaltung auf Grundlage von GPT-5.6 Sol.
 ...

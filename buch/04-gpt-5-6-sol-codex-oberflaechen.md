@@ -2,15 +2,15 @@
 
 ## Ausgangslage
 
-Das Praxislehrbuch soll nicht nur die entstehende Zeugnisverwaltung zeigen, sondern auch erklären, wie Codex bedient und sicher in einem echten Projekt eingesetzt wird. Dazu müssen Modell, Oberfläche und Befehlsart sauber getrennt werden.
+Das Praxisbeispiel soll nicht nur die entstehende Zeugnisverwaltung zeigen, sondern auch erklären, wie Codex bedient und sicher in einem echten Projekt eingesetzt wird. Dazu müssen Modell, Oberfläche und Befehlsart sauber getrennt werden.
 
 ## Redaktionell überarbeiteter Prompt
 
-> Strukturiere das Praxislehrbuch zunächst übersichtlich und lege eine Codex-Befehlsreferenz an. Danach soll die Entwicklung der Webseite wieder Priorität erhalten. Das Buch muss alle wichtigen Ereignisse der Zusammenarbeit vollständig erfassen und GPT-5.6 Sol als Arbeitsgrundlage dokumentieren.
+> Strukturiere das Praxisbeispiel zunächst übersichtlich und lege eine Codex-Befehlsreferenz an. Danach soll die Entwicklung der Webseite wieder Priorität erhalten. Das Buch muss alle wichtigen Ereignisse der Zusammenarbeit vollständig erfassen und GPT-5.6 Sol als Arbeitsgrundlage dokumentieren.
 
 ## Modellgrundlage
 
-Dieses Buch verwendet GPT-5.6 Sol mit der Modell-ID `gpt-5.6-sol` als benannte Arbeitsgrundlage. Die Modellfamilie wurde von OpenAI im Juni 2026 zunächst als Vorschau vorgestellt. Aussagen über Verfügbarkeit, Preise oder konkrete Fähigkeiten sind zeitabhängig und müssen vor einer späteren Drucklegung erneut anhand offizieller Quellen geprüft werden.
+Dieses Buch verwendet GPT-5.6 Sol mit der Modell-ID `gpt-5.6-sol` als benannte Arbeitsgrundlage. Die Modellfamilie wurde von OpenAI im Juni 2026 zunächst als Vorschau vorgestellt und am 9. Juli 2026 allgemein verfügbar gemacht. Aussagen über Verfügbarkeit, Preise oder konkrete Fähigkeiten sind zeitabhängig und müssen vor einer späteren Drucklegung erneut anhand offizieller Quellen geprüft werden. Kapitel 5 ordnet die Neuerungen gegenüber GPT-5.5 ausführlich ein.
 
 Das Modell ist nur ein Teil der Arbeitsumgebung. Das tatsächliche Verhalten wird zusätzlich beeinflusst durch:
 
@@ -98,11 +98,11 @@ Besonders gefährliche Optionen, die Sandbox oder Freigaben vollständig umgehen
 
 ## Quellenstand
 
-Die Referenz wurde am 10. Juli 2026 gegen die offiziellen OpenAI-Seiten zu Codex-Kommandos, Slash-Kommandos und GPT-5.6 Sol abgeglichen. Vor einer Druckauflage ist dieser Abgleich zu wiederholen.
+Die Referenz wurde am 12. Juli 2026 gegen die offiziellen OpenAI-Seiten zu Codex-Kommandos, Slash-Kommandos und GPT-5.6 Sol abgeglichen. Vor einer Druckauflage ist dieser Abgleich zu wiederholen.
 
 Offizielle Ausgangsquellen:
 
-- [GPT-5.6 Sol – OpenAI-Ankündigung](https://openai.com/index/previewing-gpt-5-6-sol/)
-- [GPT-5.6 Sol, Terra und Luna – OpenAI-Hilfe](https://help.openai.com/en/articles/20001325-a-preview-of-gpt-5-6-sol-terra-and-luna)
+- [GPT-5.6 – OpenAI-Ankündigung](https://openai.com/index/gpt-5-6/)
+- [GPT-5.6 in ChatGPT und Codex – OpenAI-Hilfe](https://help.openai.com/en/articles/20001354)
 - [Codex Developer Commands](https://learn.chatgpt.com/docs/developer-commands?surface=cli)
 - [Slash-Kommandos der ChatGPT-Desktop-App](https://learn.chatgpt.com/docs/reference/slash-commands)

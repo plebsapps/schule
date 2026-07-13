@@ -20,15 +20,22 @@ docker run --rm \
   --metadata-file=buch/metadata.yaml \
   --css=buch/epub.css \
   --resource-path=.:buch \
+  buch/Vorwort.md \
   buch/01-projektstart-planung-repository.md \
   buch/02-django-grundgeruest.md \
   buch/03-ui-grundsystem-beispieldaten.md \
   buch/04-gpt-5-6-sol-codex-oberflaechen.md \
-  buch/05-backup-und-wiederherstellung.md \
-  buch/06-stammdaten-ohne-vorlagen.md \
-  buch/07-demo-noten-und-zeugnis.md \
+  buch/05-was-ist-neu-in-gpt-5-6.md \
+  buch/06-sol-terra-luna-vergleich.md \
+  buch/07-backup-und-wiederherstellung.md \
+  buch/08-stammdaten-ohne-vorlagen.md \
+  buch/09-demo-noten-und-zeugnis.md \
+  buch/10-showcase-abschluss-lesekonto-systemd.md \
+  buch/Author.md \
   buch/bildkonzept.md \
   buch/anhang-codex-kommandoreferenz.md \
+  buch/glossar.md \
+  buch/quellenverzeichnis.md \
   buch/projektchronik.md \
   --output=buch/build/arbeiten-mit-codex-zwischenstand.epub
 
