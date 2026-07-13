@@ -177,6 +177,13 @@ Mindestens beachten:
 - keine Standardpasswörter
 - keine Debug-Ausgaben in Produktion
 
+Eng begrenzte Ausnahme für den öffentlichen Show-case: Ein ausdrücklich durch
+den Benutzer freigegebenes Demo-Kennwort darf dokumentiert werden, wenn das
+Konto ausschließlich künstliche Daten lesen kann, keine Schreibrechte besitzt,
+sein Passwort nicht selbst ändern kann und das Kennwort in keinem anderen
+System verwendet wird. Diese Ausnahme gilt niemals für produktive Konten,
+Administratoren, echte Schuldaten oder andere Secrets.
+
 `DEBUG` muss im Produktivbetrieb deaktiviert sein.
 
 `ALLOWED_HOSTS`, `CSRF_TRUSTED_ORIGINS` und Cookie-Einstellungen müssen korrekt konfigurierbar sein.
@@ -518,9 +525,9 @@ Nach jeder grösseren Aufgabe soll Codex berichten:
 7. welche manuellen Schritte notwendig sind
 8. welche Risiken oder offenen Punkte verbleiben
 
-## 26. Praxislehrbuch Arbeiten mit Codex
+## 26. Praxisbeispiel Arbeiten mit Codex
 
-Dieses Projekt dient zusätzlich als Praxisgrundlage für ein Lehrbuch zum Arbeiten mit Codex.
+Dieses Projekt dient zusätzlich als Praxisbeispiel zum Arbeiten mit Codex.
 
 Alle übertragbaren Erkenntnisse aus der Zusammenarbeit mit Codex müssen im Verzeichnis `buch/` dokumentiert werden.
 
@@ -536,9 +543,14 @@ Dazu gehören insbesondere:
 
 Die Buchdokumentation darf keine echten Schülerdaten, keine Secrets, keine Zugangstokens und keine sensiblen lokalen Systemdetails enthalten.
 
-Wenn eine Aufgabe für das Lehrbuch relevant ist, muss Codex prüfen, ob eine Datei in `buch/` ergänzt oder neu angelegt werden muss.
+Das ausdrücklich freigegebene Kennwort des öffentlichen Read-only-Demokontos
+gilt nicht als Secret. Es darf nur dokumentiert werden, solange das Konto
+ausschließlich künstliche Daten lesen kann und alle Bedingungen aus Abschnitt 8
+erfüllt bleiben.
 
-## 27. Prompts als Bestandteil des Praxislehrbuchs
+Wenn eine Aufgabe für das Praxisbeispiel relevant ist, muss Codex prüfen, ob eine Datei in `buch/` ergänzt oder neu angelegt werden muss.
+
+## 27. Prompts als Bestandteil des Praxisbeispiels
 
 Die für das Projekt relevanten Benutzer-Prompts müssen als nachvollziehbare Arbeitsaufträge im Verzeichnis `buch/` dokumentiert werden.
 

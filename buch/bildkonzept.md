@@ -1,6 +1,6 @@
 # Bildverzeichnis und Generierungsbriefings
 
-Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxislehrbuchs. Die Platzhalter `[Bild001]` bis `[Bild022]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel oder in der ergänzenden Buchdokumentation. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
+Dieses Verzeichnis beschreibt alle geplanten Abbildungen des Praxisbeispiels. Die Platzhalter `[Bild001]` bis `[Bild022]` stehen bereits an der vorgesehenen Stelle im jeweiligen Kapitel oder in der ergänzenden Buchdokumentation. Die Bilder werden in einem getrennten Arbeitsschritt erzeugt.
 
 ## Redaktionell überarbeiteter Arbeitsauftrag
 
@@ -134,7 +134,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild012 – Lebenszyklus eines zuverlässigen Backups
 
-- Platzierung: Kapitel 5, nach der Zerlegung in vier Werkzeuge
+- Platzierung: Kapitel 7, nach der Zerlegung in vier Werkzeuge
 - Lernziel: Backup ist erst mit Restore-Test vollständig
 - Format: Querformat 16:9
 - Muss zeigen: Dump → atomare Ablage → Prüfsumme → Aufbewahrung → isolierter Restore → Ergebnis
@@ -144,7 +144,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild013 – Drei Schutzebenen für Backups
 
-- Platzierung: Kapitel 5, nach Sicherheits- und Datenschutzentscheidungen
+- Platzierung: Kapitel 7, nach Sicherheits- und Datenschutzentscheidungen
 - Lernziel: Rechte, Verschlüsselung und externes Ziel nicht verwechseln
 - Format: Querformat 3:2
 - Muss zeigen: konzentrische Schutzschichten
@@ -154,7 +154,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild014 – Test- und Produktionskonfiguration auseinanderhalten
 
-- Platzierung: Kapitel 5, nach dem konfigurationsbedingten Testfehler
+- Platzierung: Kapitel 7, nach dem konfigurationsbedingten Testfehler
 - Lernziel: gleiche Anwendung, unterschiedliche Konfigurationsprofile
 - Format: Querformat 16:9
 - Muss zeigen: Testprofil und Produktionsprofil, falsche Kreuzung verursacht 301/Manifestfehler
@@ -164,7 +164,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild015 – Fachliches Stammdatenmodell
 
-- Platzierung: Kapitel 6, nach der Erklärung historischer Zuordnungen
+- Platzierung: Kapitel 8, nach der Erklärung historischer Zuordnungen
 - Lernziel: wichtigste Entitäten und Beziehungen verstehen
 - Format: sehr breites Querformat 2:1
 - Muss zeigen: Schule, Schuljahr, Periode, Klasse, Schüler, Klassenzuordnung, Fach, Lehrkraft, Unterrichtszuordnung, Vorlage
@@ -174,7 +174,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild016 – Staff-Status ist keine Fachberechtigung
 
-- Platzierung: Kapitel 6, nach dem fehlgeschlagenen Berechtigungstest
+- Platzierung: Kapitel 8, nach dem fehlgeschlagenen Berechtigungstest
 - Lernziel: Zugang zum Adminbereich und Modellrechte trennen
 - Format: Querformat 3:2
 - Muss zeigen: Anmeldung → is_staff-Gatter → Modellberechtigungs-Gatter → Daten; HTTP 403 bei fehlendem Recht
@@ -184,7 +184,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild017 – Idempotenter Beispieldaten-Befehl
 
-- Platzierung: Kapitel 6, nach der Beschreibung des Management-Befehls
+- Platzierung: Kapitel 8, nach der Beschreibung des Management-Befehls
 - Lernziel: wiederholte Ausführung ohne Duplikate erklären
 - Format: Querformat 16:9
 - Muss zeigen: erster Lauf erstellt DEMO-Objekte, zweiter Lauf erkennt sie, gleicher Endbestand
@@ -194,7 +194,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild018 – Rollenbezogene Dashboard-Abfrage
 
-- Platzierung: Kapitel 6, nach der Umstellung auf echte Dashboard-Daten
+- Platzierung: Kapitel 8, nach der Umstellung auf echte Dashboard-Daten
 - Lernziel: Daten bereits in der Abfrage filtern
 - Format: Querformat 16:9
 - Muss zeigen: Datenbank in Mitte; Admin/Schulleitung bekommt Gesamtübersicht; Lehrkraft nur zugewiesene Klasse; fremde Klasse blockiert
@@ -204,7 +204,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild019 – Vertikaler Demo-Zeugnisablauf
 
-- Platzierung: Kapitel 7, nach der Beschreibung des zusammenhängenden Ablaufs
+- Platzierung: Kapitel 9, nach der Beschreibung des zusammenhängenden Ablaufs
 - Lernziel: drei Demo-Punkte als eine Nutzungsreise zeigen
 - Format: breites Querformat 2:1
 - Muss zeigen: Zuordnung → Schülerliste → Noten → speichern → abschließen → gesperrt → Vorschau → Druck
@@ -214,7 +214,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild020 – Optimistisches Locking bei Noten
 
-- Platzierung: Kapitel 7, nach der Beschreibung der Versionsnummer
+- Platzierung: Kapitel 9, nach der Beschreibung der Versionsnummer
 - Lernziel: paralleles Überschreiben verständlich machen
 - Format: Querformat 16:9
 - Muss zeigen: Lehrkraft A und B laden v1; A speichert v2; B sendet v1; Konflikt statt Überschreiben
@@ -224,7 +224,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 
 ## Bild021 – Druckbare Zeugnisvorschau mit klarer Grenze
 
-- Platzierung: Kapitel 7, nach der bewussten Abgrenzung der Druckansicht
+- Platzierung: Kapitel 9, nach der bewussten Abgrenzung der Druckansicht
 - Lernziel: überzeugende Demo zeigen, ohne Freigabe vorzutäuschen
 - Format: Hochformat A4-ähnlich 4:5
 - Muss zeigen: stilisierte Vorschauseite mit künstlichen Daten und deutlichem Hinweis
@@ -235,7 +235,7 @@ Bei Diagrammen sollte nach der Generierung kontrolliert werden, ob alle Texte ko
 ## Bild022 – Buchtransparenz und Entstehung
 
 - Platzierung: `buch/projektchronik.md`, im Abschnitt zur Entstehung und Transparenz des Buchs
-- Lernziel: verdeutlichen, dass das Lehrbuch aus dokumentierten Arbeitsartefakten, Entscheidungen und Prüfungen entstanden ist
+- Lernziel: verdeutlichen, dass das Praxisbeispiel aus dokumentierten Arbeitsartefakten, Entscheidungen und Prüfungen entstanden ist
 - Format: Querformat 3:2
 - Muss zeigen: Buchstapel in der Mitte; daneben Karten für Prompts, Entscheidungen, Tests und Versionen; unten Zeitachse mit den Schritten Entstehung, Arbeitsweise, Transparenz; kleine Autorenkarte
 - DALL·E-Prompt:

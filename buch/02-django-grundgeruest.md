@@ -23,7 +23,7 @@ Die Prüfung zeigte: Die vorgesehenen internen Ports `8000` bis `8004` waren ber
 5. Abhängigkeiten und Supportzeiträume aus Primärquellen prüfen.
 6. Grundgerüst in kleinen, nachvollziehbaren Dateien erstellen.
 7. Migrationen, Tests, Linting und Containerstart prüfen.
-8. Dokumentation und Lehrbuch parallel aktualisieren.
+8. Dokumentation und Praxisbeispiel parallel aktualisieren.
 
 ## Wichtige Entscheidungen
 
@@ -73,13 +73,16 @@ Djangos Deployment-Prüfung meldete HSTS-Preload als nicht aktiviert. Diese Warn
 
 ## Zugriffsbegrenzung aus Datenschutzgründen
 
-`schule.plebsapps.de` wird nur im Schulnetz betrieben. Wer von zu Hause arbeiten muss, nutzt dafür ausschließlich VPN.
+Für ein Produktivsystem mit echten Schuldaten gilt weiterhin: Der Betrieb
+erfolgt nur im Schulnetz, und ein Zugriff von zu Hause nutzt ausschließlich
+VPN. Der später ausdrücklich veröffentlichte Show-case ist davon getrennt und
+enthält nur künstliche Daten.
 
 Diese Begrenzung ist keine Komfortentscheidung, sondern eine Datenschutzmaßnahme. Schulische Schuldaten sollen nicht unnötig im offenen Internet verfügbar sein. Authentifizierung, Rollen und serverseitige Berechtigungen bleiben davon unberührt.
 
 ## Vorbereitung von Nginx und HTTPS
 
-Das bereits vorhandene Let's-Encrypt-Zertifikat für `plebsapps.de` wurde über den öffentlich ausgelieferten Zertifikatsinhalt geprüft. Es enthielt `pdb.plebsapps.de`, `plebsapps.de` und `www.plebsapps.de`, aber nicht `schule.plebsapps.de`. Für die neue Anwendung ist deshalb ein eigenes Zertifikat erforderlich.
+Das bereits vorhandene Let's-Encrypt-Zertifikat gehörte zu einer anderen Anwendung und deckte `schule.plebsapps.de` nicht ab. Für die neue Anwendung war deshalb ein eigenes Zertifikat erforderlich. Konkrete Adressen fremder Projekte werden aus Datenschutzgründen nicht dokumentiert.
 
 Da Administratorrechte auf dem Server ein interaktives sudo-Passwort verlangen, wurden keine Zugangsdaten im Chat oder in Befehlsausgaben übertragen. Stattdessen entstanden zwei versionierte Nginx-Vorlagen:
 

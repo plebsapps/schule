@@ -10,7 +10,8 @@ def test_image_style_gallery_is_public_and_contains_all_designs(client):
 
     assert response.status_code == 200
     assert len(IMAGE_STYLES) == 10
-    assert "Arbeiten mit Codex mit GPT-5.6 Sol" in content
+    assert "Arbeiten mit OpenAI Codex" in content
+    assert "Praxisbeispiel am Beispiel einer schulischen Zeugnisverwaltung" in content
     assert "Freies Projekt nach GPLv3 auf GitHub" in content
     assert content.count('class="design-card"') == 10
     assert "Flat Vector" in content

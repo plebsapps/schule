@@ -26,6 +26,26 @@ Ein separater `certbot renew --dry-run` benötigt Administratorrechte und bleibt
 
 Die folgenden Serverbefehle benötigen Administratorrechte und müssen manuell auf dem Server ausgeführt werden. Vorhandene Site-Dateien dürfen nicht ersetzt werden.
 
+## 0. Docker-Compose-Autostart aktivieren
+
+Damit die Anwendung nach einem Serverneustart wieder hochkommt, wird ein systemd-Dienst für den Compose-Stack installiert. Die Container selbst besitzen zusätzlich `restart: unless-stopped`, damit sie nach einem Docker-Neustart ebenfalls wieder starten.
+
+Die Datei `deploy/systemd/schule-compose.service.example` ist eine Vorlage und verändert den Server nicht automatisch. Vor der Installation muss `__PROJECT_DIR__` durch den absoluten Repository-Pfad ersetzt werden.
+
+Dann auf dem Zielserver:
+
+```bash
+sudo install -o root -g root -m 0644 \
+  deploy/systemd/schule-compose.service.example \
+  /etc/systemd/system/schule-compose.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now schule-compose.service
+sudo systemctl status schule-compose.service
+```
+
+Falls Docker selbst noch nicht beim Booten aktiviert ist, muss das parallel ergänzt werden. Der Dienst benötigt keine manuelle Reaktivierung nach jedem Neustart, solange der Host die systemd-Einheit lädt.
+
 ## 1. Bootstrap-Site installieren
 
 ```bash

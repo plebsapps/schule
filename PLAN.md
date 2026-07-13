@@ -2,6 +2,14 @@
 
 # Zeugnisverwaltung für Schulen
 
+## Status des Projekts
+
+Show-case abgeschlossen / keine weiteren Features geplant.
+
+Dieses Repository wird nicht mehr als dauerhafte Baustelle behandelt. Neue Codex-Sessions sollen sich an den hier dokumentierten, bereits getroffenen Entscheidungen orientieren und keine abgelehnten oder für den Show-case verworfenen Punkte erneut als offene Arbeit auflisten.
+
+Für ein produktives System würden an dieser Stelle zusätzlich betrieblich relevante Anforderungen, Härtung, Monitoring, Freigabeprozesse und vollständige Betriebsdokumentation weitergeführt.
+
 ## 1. Ziel des Projekts
 
 Ziel ist die Ablösung einer bestehenden Excel- und Seriendrucklösung durch eine zentrale Webanwendung.
