@@ -18,6 +18,7 @@ docker run --rm \
   --toc-depth=2 \
   --epub-cover-image=static/images/book-covers/titelbild-gpt-5-6-sol.png \
   --metadata-file=buch/metadata.yaml \
+  --lua-filter=buch/epub-xhtml.lua \
   --css=buch/epub.css \
   --resource-path=.:buch \
   buch/Vorwort.md \
@@ -38,5 +39,7 @@ docker run --rm \
   buch/quellenverzeichnis.md \
   buch/projektchronik.md \
   --output=buch/build/arbeiten-mit-codex-zwischenstand.epub
+
+python3 "$repo_root/scripts/validate_epub.py" "$output_file"
 
 printf 'EPUB erstellt: %s\n' "$output_file"

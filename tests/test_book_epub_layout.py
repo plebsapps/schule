@@ -1,4 +1,5 @@
 import re
+import subprocess
 from pathlib import Path
 
 EPUB_CSS = Path(__file__).resolve().parents[1] / "buch" / "epub.css"
@@ -258,6 +259,30 @@ def test_book_build_contains_all_numbered_chapters_in_order():
         assert heading.startswith(f"# Kapitel {number}:")
         assert position > previous_position
         previous_position = position
+
+
+def test_committed_epub_contains_only_well_formed_xml_documents():
+    epub = REPOSITORY_ROOT / "static" / "downloads" / "arbeiten-mit-openai-codex.epub"
+    validator = REPOSITORY_ROOT / "scripts" / "validate_epub.py"
+
+    result = subprocess.run(
+        ["python3", str(validator), str(epub)],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+    assert result.returncode == 0, result.stderr or result.stdout
+
+
+def test_epub_build_normalizes_raw_html_line_breaks_and_validates_output():
+    build_script = (REPOSITORY_ROOT / "scripts" / "build-book-epub.sh").read_text(encoding="utf-8")
+    xhtml_filter = (REPOSITORY_ROOT / "buch" / "epub-xhtml.lua").read_text(encoding="utf-8")
+
+    assert "--lua-filter=buch/epub-xhtml.lua" in build_script
+    assert 'element.text:match("^<br%s*/?>$")' in xhtml_filter
+    assert "pandoc.LineBreak()" in xhtml_filter
+    assert 'scripts/validate_epub.py" "$output_file"' in build_script
 
 
 def test_foreword_explains_prerequisites_and_is_built_before_chapter_one():
