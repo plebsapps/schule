@@ -382,3 +382,20 @@ Die Veröffentlichungsinformation wird aus einer eigenen Textquelle im
 Buchverzeichnis als einseitiges A4-Dokument erzeugt. Der Download enthält keine
 Demo-Zugangsdaten oder sensiblen lokalen Angaben. Automatische Tests prüfen den
 öffentlichen Endpunkt, den Dateityp und den vorgeschlagenen Dateinamen.
+
+## XHTML-Fehler im EPUB beheben
+
+### Arbeitsauftrag
+
+> Korrigiere die EPUB-Datei, weil die Veröffentlichungsprüfung in
+> `EPUB/text/ch015.xhtml` nicht geschlossene `br`-Elemente meldet. Erzeuge
+> anschließend eine erneut einreichbare Datei.
+
+### Ursache, Umsetzung und Prüfung
+
+Das Glossar verwendete rohe HTML-Zeilenumbrüche. Pandoc übernahm `<br>` in die
+EPUB-Ausgabe, obwohl XHTML die selbstschließende Form `<br />` verlangt. Ein
+kleiner Pandoc-Filter wandelt solche Eingaben nun in native Zeilenumbrüche um.
+Zusätzlich bricht der Build künftig ab, wenn irgendein XML-, OPF-, NCX- oder
+XHTML-Dokument im EPUB nicht wohlgeformt ist. Ein Regressionstest prüft sowohl
+das veröffentlichte EPUB als auch die dauerhafte Einbindung dieser Sicherung.
